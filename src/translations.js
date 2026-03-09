@@ -284,6 +284,78 @@ export const translations = {
         title: 'Commencer par une consultation',
         text: "La première consultation permet de comprendre vos objectifs, d'évaluer votre état de santé et de déterminer le protocole le plus adapté. Aucune perfusion n'est réalisée sans cette évaluation préalable.",
       },
+      serums: {
+        title: 'Types de sérums proposés',
+        sessionLabel: 'Séance',
+        sessionDuration: '30-60 min',
+        benefitsLabel: 'Bienfaits',
+        ctaLabel: 'En savoir plus',
+        moreCard: {
+          title: 'Et bien plus encore',
+          subtitle: 'Sérums - Cocktails - Protocoles',
+          tags: ['Glutatión', 'CoQ10', 'Resveratrol', 'MSM'],
+          stat1Value: '∞',
+          stat1Label: 'Bienfaits',
+          stat2Value: '',
+          stat2Label: 'Formules & protocoles',
+        },
+        items: [
+          {
+            title: 'Vitamine C',
+            subtitle: 'Soutien immunitaire et antioxydant',
+            tags: ['Antioxydant', 'Immunité', 'Qualité de vie'],
+            benefits: [
+              'Puissant antioxydant',
+              'Renforce le système immunitaire',
+              'Réduit les effets secondaires de la chimiothérapie',
+              'Améliore la qualité de vie',
+            ],
+          },
+          {
+            title: 'Vitamine B12',
+            subtitle: 'Énergie, cognition et équilibre',
+            tags: ['Cognitif', 'Métabolisme', 'Humeur'],
+            benefits: [
+              'Améliore la fonction cognitive',
+              'Soutient le métabolisme',
+              'Améliore l\'humeur',
+              'Améliore le sommeil',
+            ],
+          },
+          {
+            title: 'Curcumine',
+            subtitle: 'Anti-inflammatoire naturel puissant',
+            tags: ['Anti-inflammatoire', 'Antioxydant'],
+            benefits: [
+              'Puissant anti-inflammatoire',
+              'Antioxydant',
+              'Potentiel anticancéreux',
+            ],
+          },
+          {
+            title: 'NAC',
+            subtitle: 'Détox et soutien immunitaire',
+            tags: ['Détox', 'Antioxydant', 'Immunité'],
+            benefits: [
+              'Antioxydant',
+              'Anti-inflammatoire',
+              'Désintoxiquant',
+              'Renforce le système immunitaire',
+            ],
+          },
+          {
+            title: 'NAD',
+            subtitle: 'Énergie cellulaire et vitalité',
+            tags: ['Énergie', 'Anti-âge', 'Clarté mentale'],
+            benefits: [
+              'Énergisant',
+              'Anti-âge',
+              'Améliore la fonction cellulaire',
+              'Soutient la clarté mentale',
+            ],
+          },
+        ],
+      },
     },
     medecineRegenerative: {
       hero: {
@@ -371,7 +443,15 @@ export const translations = {
       },
       history: {
         title: 'Pourquoi Clínica Les Lilas existe',
-        text: "Face à une offre souvent fragmentée entre médecine conventionnelle et approches complémentaires, nous avons voulu créer une clinique qui fait le pont : un lieu où chaque patient trouve un interlocuteur médical capable d'écouter, d'évaluer et de proposer un parcours cohérent, sans compromis sur la rigueur ni sur l'humanité du soin.",
+        paragraphs: [
+          "Une expérience personnelle a fait naître une conviction. En accompagnant notre mère dans son combat contre le cancer, nous avons compris l'importance d'une médecine qui soigne à la fois la maladie et la personne. C'est ainsi qu'est née notre clinique d'hyperthermie et de thérapies complémentaires, en collaboration avec des oncologues. Un lieu où science et humanité s'unissent pour offrir aux patients :",
+          "Notre mission est simple : renforcer les traitements, améliorer la qualité de vie et faire en sorte que l'espoir soit plus fort que la peur.",
+        ],
+        items: [
+          'Assistance complète.',
+          'Thérapies complémentaires validées.',
+          'Un soutien à chaque étape du parcours.',
+        ],
       },
       philosophy: {
         title: 'Notre philosophie',
@@ -816,6 +896,78 @@ export const translations = {
         title: 'Start with a consultation',
         text: "The first consultation allows us to understand your goals, evaluate your health status and determine the most suitable protocol. No infusion is administered without this prior evaluation.",
       },
+      serums: {
+        title: 'Types of serums offered',
+        sessionLabel: 'Session',
+        sessionDuration: '30-60 min',
+        benefitsLabel: 'Benefits',
+        ctaLabel: 'Learn more',
+        moreCard: {
+          title: 'And more',
+          subtitle: 'Serums - Cocktails - Protocols',
+          tags: ['Glutathione', 'CoQ10', 'Resveratrol', 'MSM'],
+          stat1Value: '∞',
+          stat1Label: 'Benefits',
+          stat2Value: '',
+          stat2Label: 'Formulas & protocols',
+        },
+        items: [
+          {
+            title: 'Vitamin C',
+            subtitle: 'Immune support and antioxidant',
+            tags: ['Antioxidant', 'Immunity', 'Quality of life'],
+            benefits: [
+              'Powerful antioxidant',
+              'Strengthens the immune system',
+              'Reduces chemotherapy side effects',
+              'Improves quality of life',
+            ],
+          },
+          {
+            title: 'Vitamin B12',
+            subtitle: 'Energy, cognition and balance',
+            tags: ['Cognitive', 'Metabolism', 'Mood'],
+            benefits: [
+              'Improves cognitive function',
+              'Supports metabolism',
+              'Improves mood',
+              'Improves sleep',
+            ],
+          },
+          {
+            title: 'Curcumin',
+            subtitle: 'Powerful natural anti-inflammatory',
+            tags: ['Anti-inflammatory', 'Antioxidant'],
+            benefits: [
+              'Powerful anti-inflammatory',
+              'Antioxidant',
+              'Potential anticancer properties',
+            ],
+          },
+          {
+            title: 'NAC',
+            subtitle: 'Detox and immune support',
+            tags: ['Detox', 'Antioxidant', 'Immunity'],
+            benefits: [
+              'Antioxidant',
+              'Anti-inflammatory',
+              'Detoxifying',
+              'Strengthens the immune system',
+            ],
+          },
+          {
+            title: 'NAD',
+            subtitle: 'Cellular energy and vitality',
+            tags: ['Energy', 'Anti-aging', 'Mental clarity'],
+            benefits: [
+              'Energizing',
+              'Anti-aging',
+              'Improves cellular function',
+              'Supports mental clarity',
+            ],
+          },
+        ],
+      },
     },
     medecineRegenerative: {
       hero: {
@@ -903,7 +1055,15 @@ export const translations = {
       },
       history: {
         title: 'Why Clínica Les Lilas exists',
-        text: "Faced with an often fragmented offering between conventional medicine and complementary approaches, we wanted to create a clinic that bridges the gap: a place where each patient finds a medical partner capable of listening, evaluating and proposing a coherent pathway, without compromising on rigor or the humanity of care.",
+        paragraphs: [
+          "A personal experience gave birth to a conviction. While accompanying our mother in her fight against cancer, we understood the importance of medicine that heals both the disease and the person. This is how our hyperthermia and complementary therapies clinic was born, in collaboration with oncologists. A place where science and humanity unite to offer patients:",
+          "Our mission is simple: strengthen treatments, improve quality of life, and make hope stronger than fear.",
+        ],
+        items: [
+          'Complete assistance.',
+          'Validated complementary therapies.',
+          'Support at every step of the journey.',
+        ],
       },
       philosophy: {
         title: 'Our philosophy',
@@ -1331,6 +1491,78 @@ export const translations = {
         title: 'Comenzar con una consulta',
         text: "La primera consulta permite comprender sus objetivos, evaluar su estado de salud y determinar el protocolo más adecuado. Ninguna perfusión se realiza sin esta evaluación previa.",
       },
+      serums: {
+        title: 'Tipos de sueros propuestos',
+        sessionLabel: 'Sesión',
+        sessionDuration: '30-60 min',
+        benefitsLabel: 'Beneficios',
+        ctaLabel: 'Saber más',
+        moreCard: {
+          title: 'Y mucho más',
+          subtitle: 'Sueros - Cócteles - Protocolos',
+          tags: ['Glutatión', 'CoQ10', 'Resveratrol', 'MSM'],
+          stat1Value: '∞',
+          stat1Label: 'Beneficios',
+          stat2Value: '',
+          stat2Label: 'Fórmulas y protocolos',
+        },
+        items: [
+          {
+            title: 'Vitamina C',
+            subtitle: 'Soporte inmunológico y antioxidante',
+            tags: ['Antioxidante', 'Inmunidad', 'Calidad de vida'],
+            benefits: [
+              'Potente antioxidante',
+              'Refuerza el sistema inmunológico',
+              'Reduce los efectos secundarios de la quimioterapia',
+              'Mejora la calidad de vida',
+            ],
+          },
+          {
+            title: 'Vitamina B12',
+            subtitle: 'Energía, cognición y equilibrio',
+            tags: ['Cognitivo', 'Metabolismo', 'Ánimo'],
+            benefits: [
+              'Mejora la función cognitiva',
+              'Apoya el metabolismo',
+              'Mejora el estado de ánimo',
+              'Mejora el sueño',
+            ],
+          },
+          {
+            title: 'Curcumina',
+            subtitle: 'Antiinflamatorio natural potente',
+            tags: ['Antiinflamatorio', 'Antioxidante'],
+            benefits: [
+              'Potente antiinflamatorio',
+              'Antioxidante',
+              'Potencial anticancerígeno',
+            ],
+          },
+          {
+            title: 'NAC',
+            subtitle: 'Desintoxicación y soporte inmunológico',
+            tags: ['Desintoxicante', 'Antioxidante', 'Inmunidad'],
+            benefits: [
+              'Antioxidante',
+              'Antiinflamatorio',
+              'Desintoxicante',
+              'Refuerza el sistema inmune',
+            ],
+          },
+          {
+            title: 'NAD',
+            subtitle: 'Energía celular y vitalidad',
+            tags: ['Energía', 'Antienvejecimiento', 'Claridad mental'],
+            benefits: [
+              'Energizante',
+              'Antienvejecimiento',
+              'Mejora la función celular',
+              'Apoya la claridad mental',
+            ],
+          },
+        ],
+      },
     },
     medecineRegenerative: {
       hero: {
@@ -1418,7 +1650,15 @@ export const translations = {
       },
       history: {
         title: 'Por qué existe Clínica Les Lilas',
-        text: "Ante una oferta a menudo fragmentada entre medicina convencional y enfoques complementarios, quisimos crear una clínica que tienda puentes: un lugar donde cada paciente encuentre un interlocutor médico capaz de escuchar, evaluar y proponer un recorrido coherente, sin comprometer el rigor ni la humanidad del cuidado.",
+        paragraphs: [
+          "Una experiencia personal dio origen a una convicción. Acompañando a nuestra madre en su lucha contra el cáncer, comprendimos la importancia de una medicina que cura tanto la enfermedad como a la persona. Así nació nuestra clínica de hipertermia y terapias complementarias, en colaboración con oncólogos. Un lugar donde ciencia y humanidad se unen para ofrecer a los pacientes:",
+          "Nuestra misión es sencilla: reforzar los tratamientos, mejorar la calidad de vida y hacer que la esperanza sea más fuerte que el miedo.",
+        ],
+        items: [
+          'Asistencia completa.',
+          'Terapias complementarias validadas.',
+          'Un apoyo en cada etapa del recorrido.',
+        ],
       },
       philosophy: {
         title: 'Nuestra filosofía',

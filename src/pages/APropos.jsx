@@ -9,6 +9,8 @@ import { ROUTES } from '../routes';
 const APropos = () => {
   const { t } = useLanguageStore();
   const commitmentItems = t('aPropos.commitment.items', { returnObjects: true });
+  const historyParagraphs = t('aPropos.history.paragraphs', { returnObjects: true });
+  const historyItems = t('aPropos.history.items', { returnObjects: true });
 
   return (
     <>
@@ -31,9 +33,23 @@ const APropos = () => {
           <h2 className="text-2xl md:text-3xl font-bold text-primary mb-6">
             {t('aPropos.history.title')}
           </h2>
-          <p className="text-lg text-text/80 leading-relaxed">
-            {t('aPropos.history.text')}
-          </p>
+          <div className="space-y-4">
+            {Array.isArray(historyParagraphs) &&
+              historyParagraphs.map((paragraph, index) => (
+                <React.Fragment key={index}>
+                  <p className="text-lg text-text/80 leading-relaxed">
+                    {paragraph}
+                  </p>
+                  {index === 0 && Array.isArray(historyItems) && (
+                    <ul className="list-disc list-inside text-lg text-text/80 leading-relaxed space-y-2 ml-2">
+                      {historyItems.map((item, i) => (
+                        <li key={i}>{item}</li>
+                      ))}
+                    </ul>
+                  )}
+                </React.Fragment>
+              ))}
+          </div>
         </div>
       </section>
 
