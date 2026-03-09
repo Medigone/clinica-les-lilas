@@ -1,0 +1,172 @@
+{
+  "navigation": {
+    "home": "Accueil",
+    "services": "Services",
+    "hyperthermia": "Hyperthermie",
+    "trials": "Essais cliniques",
+    "contact": "Contact",
+    "notreApproche": "Notre approche",
+    "hyperthermie": "Hyperthermie oncologique",
+    "sueroterapia": "Sérothérapie IV",
+    "aPropos": "À propos",
+    "mentionsLegales": "Mentions légales",
+    "politiqueConfidentialite": "Politique de confidentialité"
+  },
+  "language": {
+    "label": "Langue",
+    "options": {
+      "fr": "Français",
+      "en": "Anglais",
+      "es": "Espagnol"
+    }
+  },
+  "hero": {
+    "title": "Traitement oncologique\\npar hyperthermie",
+    "subtitle": "Otra forma de luchar !",
+    "scrollDown": "Scroll down"
+  },
+  "services": {
+    "title": "Nos services",
+    "stats": [
+      {
+        "number": "70%",
+        "description": "de réponses complètes dans certaines récidives mammaires avec hyperthermie + radiothérapie."
+      },
+      {
+        "number": "90-95%",
+        "description": "de contrôle local à 1 an grâce à l’hyperthermie combinée à la radiothérapie (traitements curatifs)."
+      },
+      {
+        "number": "20%",
+        "description": "de gain en contrôle tumoral dans les cancers du col de l’utérus avec hyperthermie + radiothérapie."
+      }
+    ]
+  },
+  "about": {
+    "title": "À propos de nous",
+    "paragraph1": "De l’épreuve personnelle est née une conviction.",
+    "paragraph2": "En accompagnant notre mère dans son combat contre le cancer, nous avons compris l’importance d’une médecine qui soigne à la fois la maladie et la personne.",
+    "paragraph3": "C’est ainsi qu’est née notre clinique d’hyperthermie et de traitements complémentaires, en partenariat avec des médecins oncologues.",
+    "paragraph4": "Un lieu où science et humanité se rejoignent pour offrir aux patients :",
+    "paragraph5": "Notre mission est simple : renforcer les traitements, améliorer la qualité de vie, et rendre l’espoir plus fort que la peur.",
+    "list": [
+      "un accompagnement global,",
+      "des thérapies complémentaires validées,",
+      "et un soutien à chaque étape du parcours."
+    ]
+  },
+  "hyperthermia": {
+    "button": "L’hyperthermie",
+    "paragraph1": "L’hyperthermie consiste à élever la température des cellules tumorales afin de renforcer leur sensibilité à la radiothérapie et/ou à la chimiothérapie.",
+    "paragraph2": "Entre juin 2015 et juin 2017, 106 patients porteurs de 159 lésions tumorales ont été inclus dans une étude prospective. L’hyperthermie a été réalisée en complément de la radiothérapie, avec possibilité de traitement systémique associé. Les séances étaient programmées deux fois par semaine, durant 60 minutes chacune, à l’aide d’un dispositif capacitif régional.",
+    "learnMore": "En savoir plus"
+  },
+  "team": {
+    "title": "Notre équipe",
+    "members": [
+      { "name": "Full Name", "title": "Job Title" },
+      { "name": "Full Name", "title": "Job Title" },
+      { "name": "Full Name", "title": "Job Title" },
+      { "name": "Full Name", "title": "Job Title" }
+    ]
+  },
+  "appointment": {
+    "title": "Prenez rendez-vous dès aujourd’hui",
+    "description": "Bénéficiez d’une prise en charge personnalisée : parce que chaque parcours est unique, nos spécialistes vous accompagnent pas à pas avec l’hyperthermie.",
+    "fullName": "Nom complet",
+    "fullNamePlaceholder": "Entrez votre nom complet",
+    "email": "Email",
+    "emailPlaceholder": "Entrez votre email",
+    "phone": "Téléphone",
+    "phonePlaceholder": "Entrez votre numéro de téléphone",
+    "message": "Message",
+    "messagePlaceholder": "Expliquez votre besoin",
+    "submit": "Contactez-nous !"
+  },
+  "contact": {
+    "title": "Contactez-nous",
+    "email": {
+      "title": "Envoyez-nous un mail",
+      "description": "On répond à toutes vos questions."
+    },
+    "phone": {
+      "title": "Appelez-nous",
+      "description": "Nous sommes là pour vous écouter."
+    },
+    "address": {
+      "title": "Rendez-nous visite",
+      "description": "Nous avons hâte de vous rencontrer.",
+      "full": "Avinguda de la Diagonal, 4,\n03550 Sant Joan d'Alacant,\nAlicante, Espagne"
+    }
+  },
+  "mentionsLegales": {
+    "h1": "Mentions légales",
+    "lastUpdate": "Dernière mise à jour : mars 2026",
+    "content": {
+      "informationsGenerales": {
+        "title": "1. Informations générales",
+        "text": "En application de l'article 10 de la Loi espagnole 34/2002 du 11 juillet relative aux services de la société de l'information et au commerce électronique (LSSI-CE), les informations légales suivantes sont portées à la connaissance des utilisateurs :",
+        "items": [
+          "Dénomination sociale : Clínica Les Lilas [S.L.]",
+          "CIF : [B-XXXXXXXX]",
+          "Siège social : Avinguda de la Diagonal, 4, 03550 Sant Joan d'Alacant, Alicante, Espagne",
+          "Téléphone : [+34 XXX XXX XXX]",
+          "Email : contact@clinicaleslilas.com",
+          "Registro Mercantil : [Inscrit au Registro Mercantil d'Alicante, Tomo XX, Folio XX, Hoja A-XXXXX]",
+          "Autorisation sanitaire : [N° XXXXXXX] – Conselleria de Sanitat Valenciana",
+          "Délégué à la Protection des Données (DPD) : dpo@clinicaleslilas.com"
+        ]
+      },
+      "hebergeur": {
+        "title": "2. Hébergeur",
+        "text": "Le site est hébergé par [Nom de l'hébergeur], dont le siège est situé à [Adresse de l'hébergeur]. Pour toute question relative à l'hébergement, vous pouvez contacter l'hébergeur directement à l'adresse ci-dessus."
+      },
+      "conditionsUtilisation": {
+        "title": "3. Conditions générales d'utilisation",
+        "text": "L'accès au site est libre et gratuit, à l'exception des coûts de connexion incombant à l'utilisateur. L'utilisation du site implique l'acceptation pleine et entière des présentes conditions. Clínica Les Lilas se réserve le droit de modifier à tout moment et sans préavis le contenu, la présentation et la configuration du site. L'utilisateur reconnaît être majeur et disposer de la capacité juridique nécessaire pour être lié par ces conditions. L'utilisateur s'engage à faire un usage licite du site et à ne pas entreprendre d'actions susceptibles d'endommager les systèmes informatiques ou les droits de tiers. L'accès au site ne crée aucune relation commerciale ou médicale automatique entre l'utilisateur et Clínica Les Lilas."
+      },
+      "propriete": {
+        "title": "4. Propriété intellectuelle et industrielle",
+        "text": "L'ensemble des contenus du site (textes, images, logos, vidéos, graphismes, code source, structure, design, marques et noms commerciaux) est la propriété exclusive de Clínica Les Lilas ou de leurs auteurs respectifs, et est protégé par la législation espagnole et internationale en matière de propriété intellectuelle et industrielle. Toute reproduction, distribution, communication publique ou transformation, totale ou partielle, à des fins commerciales, est strictement interdite sans autorisation écrite préalable. L'utilisateur peut consulter, imprimer et télécharger les contenus pour un usage strictement personnel et non commercial."
+      },
+      "politiqueLiens": {
+        "title": "5. Politique de liens",
+        "text": "Le site peut contenir des liens vers des sites tiers. Clínica Les Lilas n'assume aucune responsabilité quant au contenu, à la qualité ou à la disponibilité de ces sites et ne saurait être assimilée à leur éditeur. Tout établissement d'un lien hypertexte vers ce site est soumis à autorisation écrite préalable de Clínica Les Lilas. Tout lien ne doit pas induire en erreur sur l'identité ou l'origine des contenus, ni permettre une reproduction partielle des pages par cadre (framing)."
+      },
+      "responsabilite": {
+        "title": "6. Exclusion de garanties et de responsabilité",
+        "text": "Clínica Les Lilas ne garantit pas la disponibilité continue, l'exactitude ou l'exhaustivité des informations publiées sur ce site. Les informations médicales sont fournies à titre informatif uniquement et ne constituent pas un avis médical personnalisé. La clinique décline toute responsabilité pour tout dommage résultant de l'utilisation ou de l'impossibilité d'utiliser le site, de la présence de virus informatiques, ou de décisions prises sur la base des informations publiées."
+      },
+      "donnees": {
+        "title": "7. Protection des données personnelles",
+        "text": "Conformément au RGPD (UE 2016/679) et à la Loi Organique Espagnole 3/2018 (LOPDGDD), Clínica Les Lilas, en tant que responsable du traitement, collecte et traite vos données personnelles afin de répondre à vos demandes et de vous fournir ses services. Les données de santé font l'objet d'un traitement renforcé conformément à l'article 9 du RGPD. Vous disposez des droits suivants, exerceables à contact@clinicaleslilas.com ou auprès du DPD à dpo@clinicaleslilas.com :",
+        "items": [
+          "Droit d'accès à vos données personnelles",
+          "Droit de rectification des données inexactes",
+          "Droit à l'effacement (droit à l'oubli)",
+          "Droit à la limitation du traitement",
+          "Droit à la portabilité des données",
+          "Droit d'opposition au traitement",
+          "Droit de déposer une réclamation auprès de l'AEPD (www.aepd.es)"
+        ]
+      },
+      "cookies": {
+        "title": "8. Cookies",
+        "text": "Ce site utilise des cookies techniques nécessaires à son fonctionnement, et peut utiliser des cookies analytiques afin d'améliorer l'expérience utilisateur. Lors de votre première visite, votre consentement vous est demandé pour les cookies non essentiels. Vous pouvez à tout moment modifier vos préférences via les paramètres de votre navigateur. Pour plus de détails, consultez notre Politique de cookies."
+      },
+      "activitesIllicites": {
+        "title": "9. Signalement de contenus illicites",
+        "text": "Si vous constatez que des contenus accessibles via ce site portent atteinte à des droits de tiers, sont illicites ou contraires aux bonnes mœurs, vous pouvez nous en informer à contact@clinicaleslilas.com en précisant l'URL concernée, la nature de l'atteinte et vos coordonnées. La réception de ce signalement ne vaut pas connaissance effective au sens de la LSSI-CE et n'entraîne pas automatiquement l'obligation de retirer le contenu signalé."
+      },
+      "modifications": {
+        "title": "10. Modifications",
+        "text": "Clínica Les Lilas se réserve le droit de modifier à tout moment les présentes mentions légales ainsi que le contenu et la structure du site, sans préavis. Les modifications entrent en vigueur dès leur publication. Il est conseillé à l'utilisateur de consulter régulièrement cette page."
+      },
+      "loi": {
+        "title": "11. Loi applicable et juridiction compétente",
+        "text": "Le présent site est régi par la législation espagnole, notamment la Loi 34/2002 (LSSI-CE), la Loi Organique 3/2018 (LOPDGDD) et le RGPD (UE 2016/679). En cas de litige, les parties se soumettent à la juridiction des tribunaux d'Alicante (Espagne), sauf disposition légale contraire."
+      }
+    }
+  }
+}
+
