@@ -10,3 +10,6 @@ ReactDOM.createRoot(document.getElementById('root')).render(
   </React.StrictMode>,
 )
 
+// Signal pour vite-plugin-prerender — doit être APRÈS render()
+document.dispatchEvent(new Event('render-event'))
+

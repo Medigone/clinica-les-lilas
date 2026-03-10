@@ -16,6 +16,7 @@ const Hyperthermie = () => {
         title={t('meta.hyperthermie.title')}
         description={t('meta.hyperthermie.description')}
         path={ROUTES.HIPERTERMIA}
+        keywords={t('meta.hyperthermie.keywords')}
       />
 
       <HeroBlock

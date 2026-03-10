@@ -18,6 +18,7 @@ const APropos = () => {
         title={t('meta.aPropos.title')}
         description={t('meta.aPropos.description')}
         path={ROUTES.A_PROPOS}
+        keywords={t('meta.aPropos.keywords')}
       />
 
       <HeroBlock

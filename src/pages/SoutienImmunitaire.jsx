@@ -22,6 +22,7 @@ const SoutienImmunitaire = () => {
         title={t('meta.soutienImmunitaire.title')}
         description={t('meta.soutienImmunitaire.description')}
         path={ROUTES.SOUTIEN_IMMUNITAIRE}
+        keywords={t('meta.soutienImmunitaire.keywords')}
       />
 
       <HeroBlock

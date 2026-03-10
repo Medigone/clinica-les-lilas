@@ -54,6 +54,7 @@ const Contact = () => {
         title={t('meta.contact.title')}
         description={t('meta.contact.description')}
         path={ROUTES.CONTACT}
+        keywords={t('meta.contact.keywords')}
       />
 
       <HeroBlock

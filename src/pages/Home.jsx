@@ -52,6 +52,7 @@ const Home = () => {
         title={t('meta.home.title')}
         description={t('meta.home.description')}
         path={ROUTES.HOME}
+        keywords={t('meta.home.keywords')}
       />
 
       <HeroBlock

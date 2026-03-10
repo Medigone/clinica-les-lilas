@@ -83,6 +83,53 @@
     "messagePlaceholder": "Share your needs",
     "submit": "Contact us!"
   },
+  "meta": {
+    "home": {
+      "title": "Clínica Les Lilas | Sueroterapia Intravenosa en Alicante",
+      "description": "Clínica Les Lilas in Alicante: IV therapy, oncological hyperthermia, regenerative medicine and immune support. Costa Blanca, Spain. Book now.",
+      "keywords": "IV therapy, Alicante, Costa Blanca, Spain, integrative medicine, hyperthermia, vitamin C, NAD+"
+    },
+    "notreApproche": {
+      "title": "Our integrative approach | Clínica Les Lilas Alicante",
+      "description": "Personalized integrative medicine in Alicante. Full support, validated therapies. Clínica Les Lilas, Costa Blanca.",
+      "keywords": "integrative medicine, Alicante, personalized approach, Clínica Les Lilas, Costa Blanca"
+    },
+    "traitements": {
+      "title": "Complementary treatments | Clínica Les Lilas Alicante",
+      "description": "Oncological hyperthermia, IV therapy, regenerative medicine and immune support in Alicante. Clínica Les Lilas, Costa Blanca, Spain.",
+      "keywords": "complementary treatments, hyperthermia, IV therapy, regenerative medicine, Alicante, Costa Blanca"
+    },
+    "hyperthermie": {
+      "title": "Oncological hyperthermia in Alicante | Clínica Les Lilas",
+      "description": "Oncological hyperthermia in Alicante to enhance radiotherapy and chemotherapy. Clínica Les Lilas, Costa Blanca. Free consultation.",
+      "keywords": "oncological hyperthermia, Alicante, radiotherapy, chemotherapy, cancer, Costa Blanca"
+    },
+    "sueroterapia": {
+      "title": "IV therapy in Alicante | Clínica Les Lilas",
+      "description": "IV therapy in Alicante: vitamin C, NAD+, curcumin and more. Personalized treatments at Clínica Les Lilas, Costa Blanca. Book now.",
+      "keywords": "IV therapy, intravenous therapy, vitamin C, NAD+, curcumin, Alicante, Costa Blanca"
+    },
+    "medecineRegenerative": {
+      "title": "Regenerative medicine in Alicante | Clínica Les Lilas",
+      "description": "Regenerative medicine in Alicante: treatments to restore vitality and wellbeing. Clínica Les Lilas, Costa Blanca, Spain.",
+      "keywords": "regenerative medicine, Alicante, wellbeing, vitality, Costa Blanca, Spain"
+    },
+    "soutienImmunitaire": {
+      "title": "Immune support in Alicante | Clínica Les Lilas",
+      "description": "Immune system boost in Alicante. Personalized treatments at Clínica Les Lilas, Costa Blanca. Strengthen your natural defences.",
+      "keywords": "immune support, immune system, Alicante, defences, Costa Blanca"
+    },
+    "aPropos": {
+      "title": "About us | Clínica Les Lilas Alicante",
+      "description": "Discover Clínica Les Lilas in Alicante: our story, philosophy and commitment to integrative medicine. Costa Blanca, Spain.",
+      "keywords": "Clínica Les Lilas, Alicante, integrative medicine, about us, Costa Blanca"
+    },
+    "contact": {
+      "title": "Contact | Clínica Les Lilas Alicante",
+      "description": "Contact Clínica Les Lilas in Alicante. Book an appointment, get information or request a consultation. Sant Joan d'Alacant, Costa Blanca, Spain.",
+      "keywords": "contact, appointment, Clínica Les Lilas, Alicante, Sant Joan, Costa Blanca"
+    }
+  },
   "contact": {
     "title": "Get in touch",
     "email": {

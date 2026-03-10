@@ -23,6 +23,7 @@ const MedecineRegenerative = () => {
         title={t('meta.medecineRegenerative.title')}
         description={t('meta.medecineRegenerative.description')}
         path={ROUTES.MEDECINE_REGENERATIVE}
+        keywords={t('meta.medecineRegenerative.keywords')}
       />
 
       <HeroBlock

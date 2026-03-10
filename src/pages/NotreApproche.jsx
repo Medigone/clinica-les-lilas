@@ -16,6 +16,7 @@ const NotreApproche = () => {
         title={t('meta.notreApproche.title')}
         description={t('meta.notreApproche.description')}
         path={ROUTES.NOTRE_APPROCHE}
+        keywords={t('meta.notreApproche.keywords')}
       />
 
       <HeroBlock

@@ -23,6 +23,7 @@ const Traitements = () => {
         title={t('meta.traitements.title')}
         description={t('meta.traitements.description')}
         path={ROUTES.TRAITEMENTS}
+        keywords={t('meta.traitements.keywords')}
       />
 
       <HeroBlock

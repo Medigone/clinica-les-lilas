@@ -25,6 +25,7 @@ const Sueroterapia = () => {
         title={t('meta.sueroterapia.title')}
         description={t('meta.sueroterapia.description')}
         path={ROUTES.SUEROTERAPIA}
+        keywords={t('meta.sueroterapia.keywords')}
       />
 
       <HeroBlock
