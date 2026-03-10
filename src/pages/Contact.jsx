@@ -22,6 +22,8 @@ const Contact = () => {
     message: '',
     privacy: false,
   });
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [submitError, setSubmitError] = useState(null);
 
   const reasons = t('contactPage.reasons', { returnObjects: true });
   const languages = t('contactPage.languages', { returnObjects: true });
@@ -36,10 +38,35 @@ const Contact = () => {
     }));
   }, [searchParams]);
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    console.log('Form submitted:', formData);
-    navigate(ROUTES.CONTACT_MERCI);
+    setSubmitError(null);
+    setIsSubmitting(true);
+    try {
+      const res = await fetch(`https://formsubmit.co/ajax/${CONTACT.EMAIL}`, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json', Accept: 'application/json' },
+        body: JSON.stringify({
+          _subject: `Nouveau message - ${formData.reason || 'Contact'}`,
+          name: formData.name,
+          email: formData.email,
+          phone: formData.phone,
+          reason: formData.reason,
+          language: formData.language,
+          message: formData.message,
+        }),
+      });
+      const data = await res.json();
+      if (res.ok && (data.success === true || data.success === 'true')) {
+        navigate(ROUTES.CONTACT_MERCI);
+      } else {
+        throw new Error(data.message || 'Erreur');
+      }
+    } catch (err) {
+      setSubmitError(t('contactPage.form.submitError'));
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   const handleChange = (e) => {
@@ -164,6 +191,11 @@ const Contact = () => {
                     className="w-full px-4 py-3 rounded-lg border border-gray-200 focus:border-primary focus:ring-2 focus:ring-primary/20 outline-none resize-none"
                   />
                 </div>
+                {submitError && (
+                  <p className="text-sm text-red-600 bg-red-50 px-4 py-3 rounded-lg">
+                    {submitError}
+                  </p>
+                )}
                 <p className="text-sm text-text/70">
                   {t('contactPage.form.privacy')}
                 </p>
@@ -183,9 +215,10 @@ const Contact = () => {
                 </div>
                 <button
                   type="submit"
-                  className="w-full px-5 py-2.5 rounded-xl font-medium text-white bg-primary hover:bg-primary/90 hover:shadow-lg transition-all"
+                  disabled={isSubmitting}
+                  className="w-full px-5 py-2.5 rounded-xl font-medium text-white bg-primary hover:bg-primary/90 hover:shadow-lg transition-all disabled:opacity-70 disabled:cursor-not-allowed"
                 >
-                  {t('contactPage.form.submit')}
+                  {isSubmitting ? t('contactPage.form.submitLoading') : t('contactPage.form.submit')}
                 </button>
               </form>
               </div>
