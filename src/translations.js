@@ -88,6 +88,10 @@ export const translations = {
         title: 'Contact et rendez-vous | Clínica Les Lilas Alicante',
         description: 'Contactez Clínica Les Lilas à Alicante. Demandez une première consultation par téléphone, WhatsApp ou formulaire. Réponse rapide.',
       },
+      politiqueConfidentialite: {
+        title: 'Mentions légales et politique de confidentialité | Clínica Les Lilas',
+        description: 'Mentions légales, politique de confidentialité et protection des données personnelles. Clínica Les Lilas - Alicante.',
+      },
     },
     home: {
       hero: {
@@ -608,6 +612,19 @@ export const translations = {
       phone: 'Téléphone',
       message: 'Message',
     },
+    contactMerci: {
+      meta: {
+        title: 'Message envoyé | Clínica Les Lilas',
+        description: 'Votre message a bien été envoyé. Nous vous répondrons dans les plus brefs délais.',
+      },
+      hero: {
+        h1: 'Message envoyé',
+        subtitle: 'Merci pour votre demande',
+        text: '',
+      },
+      body: "Votre message a bien été reçu. Notre équipe vous répondra dans les plus brefs délais pour organiser votre première consultation.",
+      cta: "Retour à l'accueil",
+    },
     notFound: {
       message: 'Page non trouvée',
       backHome: "Retour à l'accueil",
@@ -699,6 +716,10 @@ export const translations = {
       contact: {
         title: 'Contact & Appointments | Clínica Les Lilas Alicante',
         description: 'Contact Clínica Les Lilas in Alicante. Request a first consultation by phone, WhatsApp or form. Quick response.',
+      },
+      politiqueConfidentialite: {
+        title: 'Legal notice and privacy policy | Clínica Les Lilas',
+        description: 'Legal notice, privacy policy and personal data protection. Clínica Les Lilas - Alicante.',
       },
     },
     home: {
@@ -1206,6 +1227,12 @@ export const translations = {
       },
     },
     appointment: { fullName: 'Name', email: 'Email', phone: 'Phone', message: 'Message' },
+    contactMerci: {
+      meta: { title: 'Message sent | Clínica Les Lilas', description: 'Your message has been sent. We will respond as soon as possible.' },
+      hero: { h1: 'Message sent', subtitle: 'Thank you for your request', text: '' },
+      body: "Your message has been received. Our team will respond as soon as possible to arrange your first consultation.",
+      cta: 'Back to home',
+    },
     notFound: { message: 'Page not found', backHome: 'Back to home' },
   },
 
@@ -1294,6 +1321,10 @@ export const translations = {
       contact: {
         title: 'Contacto y citas | Clínica Les Lilas Alicante',
         description: 'Contacte con Clínica Les Lilas en Alicante. Solicite una primera consulta por teléfono, WhatsApp o formulario. Respuesta rápida.',
+      },
+      politiqueConfidentialite: {
+        title: 'Aviso legal y política de privacidad | Clínica Les Lilas',
+        description: 'Aviso legal, política de privacidad y protección de datos personales. Clínica Les Lilas - Alicante.',
       },
     },
     home: {
@@ -1801,6 +1832,12 @@ export const translations = {
       },
     },
     appointment: { fullName: 'Nombre', email: 'Email', phone: 'Teléfono', message: 'Mensaje' },
+    contactMerci: {
+      meta: { title: 'Mensaje enviado | Clínica Les Lilas', description: 'Su mensaje ha sido enviado. Le responderemos lo antes posible.' },
+      hero: { h1: 'Mensaje enviado', subtitle: 'Gracias por su solicitud', text: '' },
+      body: "Su mensaje ha sido recibido. Nuestro equipo le responderá lo antes posible para organizar su primera consulta.",
+      cta: 'Volver al inicio',
+    },
     notFound: { message: 'Página no encontrada', backHome: 'Volver al inicio' },
   },
 };

@@ -4,6 +4,7 @@ import { useLanguageStore } from '../store/languageStore';
 import PageHead from '../components/PageHead';
 import HeroBlock from '../components/HeroBlock';
 import CTABlock from '../components/CTABlock';
+import SchemaServiceOrg from '../components/SchemaServiceOrg';
 import { ROUTES } from '../routes';
 
 const CARD_ICONS = [
@@ -18,6 +19,11 @@ const SoutienImmunitaire = () => {
 
   return (
     <>
+      <SchemaServiceOrg
+        name={t('meta.soutienImmunitaire.title')}
+        description={t('meta.soutienImmunitaire.description')}
+        path={ROUTES.SOUTIEN_IMMUNITAIRE}
+      />
       <PageHead
         title={t('meta.soutienImmunitaire.title')}
         description={t('meta.soutienImmunitaire.description')}

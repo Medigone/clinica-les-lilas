@@ -5,6 +5,7 @@ import { useLanguageStore } from '../store/languageStore';
 import PageHead from '../components/PageHead';
 import HeroBlock from '../components/HeroBlock';
 import CTABlock from '../components/CTABlock';
+import SchemaServiceOrg from '../components/SchemaServiceOrg';
 import { ROUTES } from '../routes';
 
 const CARD_ICONS = [
@@ -21,6 +22,11 @@ const Sueroterapia = () => {
 
   return (
     <>
+      <SchemaServiceOrg
+        name={t('meta.sueroterapia.title')}
+        description={t('meta.sueroterapia.description')}
+        path={ROUTES.SUEROTERAPIA}
+      />
       <PageHead
         title={t('meta.sueroterapia.title')}
         description={t('meta.sueroterapia.description')}

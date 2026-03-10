@@ -1,21 +1,20 @@
-import React, { useState, useEffect } from 'react';
-import { Link, useSearchParams } from 'react-router-dom';
+import React from 'react';
+import { Link, useNavigate, useSearchParams } from 'react-router-dom';
 import { Mail, MapPin, Phone } from 'iconoir-react';
 import { useLanguageStore } from '../store/languageStore';
 import { ROUTES, CONTACT } from '../routes';
-import MentionsLegalesModal from './MentionsLegalesModal';
 
 const Footer = () => {
   const { t, language } = useLanguageStore();
-  const [mentionsModalOpen, setMentionsModalOpen] = useState(false);
-  const [searchParams, setSearchParams] = useSearchParams();
+  const [searchParams] = useSearchParams();
+  const navigate = useNavigate();
 
-  useEffect(() => {
+  // Rediriger ?mentions=1 vers la page dédiée
+  React.useEffect(() => {
     if (searchParams.get('mentions') === '1') {
-      setMentionsModalOpen(true);
-      setSearchParams({}, { replace: true });
+      navigate(ROUTES.POLITIQUE_CONFIDENTIALITE, { replace: true });
     }
-  }, [searchParams, setSearchParams]);
+  }, [searchParams, navigate]);
 
   const footerLinks = [
     { key: 'home', path: ROUTES.HOME },
@@ -24,7 +23,7 @@ const Footer = () => {
     { key: 'sueroterapia', path: ROUTES.SUEROTERAPIA },
     { key: 'aPropos', path: ROUTES.A_PROPOS },
     { key: 'contact', path: ROUTES.CONTACT },
-    { key: 'mentionsLegales', isModal: true },
+    { key: 'mentionsLegales', path: ROUTES.POLITIQUE_CONFIDENTIALITE },
   ];
 
   return (
@@ -66,22 +65,12 @@ const Footer = () => {
             <ul className="space-y-2">
               {footerLinks.map((item) => (
                 <li key={item.key}>
-                  {item.isModal ? (
-                    <button
-                      type="button"
-                      onClick={() => setMentionsModalOpen(true)}
-                      className="text-white/75 hover:text-white transition-colors text-sm text-left"
-                    >
-                      {t(`navigation.${item.key}`)}
-                    </button>
-                  ) : (
-                    <Link
-                      to={item.key === 'contact' ? `${item.path}?language=${language}` : item.path}
-                      className="text-white/75 hover:text-white transition-colors text-sm"
-                    >
-                      {t(`navigation.${item.key}`)}
-                    </Link>
-                  )}
+                  <Link
+                    to={item.key === 'contact' ? `${item.path}?language=${language}` : item.path}
+                    className="text-white/75 hover:text-white transition-colors text-sm"
+                  >
+                    {t(`navigation.${item.key}`)}
+                  </Link>
                 </li>
               ))}
             </ul>
@@ -108,8 +97,6 @@ const Footer = () => {
           </p>
         </div>
       </div>
-
-      <MentionsLegalesModal isOpen={mentionsModalOpen} onClose={() => setMentionsModalOpen(false)} />
     </footer>
   );
 };

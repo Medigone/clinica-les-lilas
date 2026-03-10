@@ -4,6 +4,7 @@ import { useLanguageStore } from '../store/languageStore';
 import PageHead from '../components/PageHead';
 import HeroBlock from '../components/HeroBlock';
 import CTABlock from '../components/CTABlock';
+import SchemaServiceOrg from '../components/SchemaServiceOrg';
 import { ROUTES } from '../routes';
 
 const Hyperthermie = () => {
@@ -12,6 +13,11 @@ const Hyperthermie = () => {
 
   return (
     <>
+      <SchemaServiceOrg
+        name={t('meta.hyperthermie.title')}
+        description={t('meta.hyperthermie.description')}
+        path={ROUTES.HIPERTERMIA}
+      />
       <PageHead
         title={t('meta.hyperthermie.title')}
         description={t('meta.hyperthermie.description')}

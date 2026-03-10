@@ -10,6 +10,8 @@ export const ROUTES = {
   A_PROPOS: '/a-propos',
   CONTACT: '/contact',
   MENTIONS_LEGALES: '/mentions-legales',
+  POLITIQUE_CONFIDENTIALITE: '/politique-confidentialite',
+  CONTACT_MERCI: '/contact/merci',
 };
 
 // Contact info

@@ -4,6 +4,7 @@ import { useLanguageStore } from '../store/languageStore';
 import PageHead from '../components/PageHead';
 import HeroBlock from '../components/HeroBlock';
 import CTABlock from '../components/CTABlock';
+import SchemaServiceOrg from '../components/SchemaServiceOrg';
 import { ROUTES } from '../routes';
 
 const CARD_ICONS = [
@@ -19,6 +20,11 @@ const MedecineRegenerative = () => {
 
   return (
     <>
+      <SchemaServiceOrg
+        name={t('meta.medecineRegenerative.title')}
+        description={t('meta.medecineRegenerative.description')}
+        path={ROUTES.MEDECINE_REGENERATIVE}
+      />
       <PageHead
         title={t('meta.medecineRegenerative.title')}
         description={t('meta.medecineRegenerative.description')}

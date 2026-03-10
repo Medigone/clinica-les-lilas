@@ -13,6 +13,8 @@ import MedecineRegenerative from './pages/MedecineRegenerative';
 import SoutienImmunitaire from './pages/SoutienImmunitaire';
 import APropos from './pages/APropos';
 import Contact from './pages/Contact';
+import ContactMerci from './pages/ContactMerci';
+import PolitiqueConfidentialite from './pages/PolitiqueConfidentialite';
 import NotFound from './pages/NotFound';
 import { ROUTES } from './routes';
 
@@ -35,6 +37,8 @@ function App() {
               <Route path="traitements/soutien-immunitaire" element={<SoutienImmunitaire />} />
               <Route path="a-propos" element={<APropos />} />
               <Route path="contact" element={<Contact />} />
+              <Route path="contact/merci" element={<ContactMerci />} />
+              <Route path="politique-confidentialite" element={<PolitiqueConfidentialite />} />
               <Route path="*" element={<NotFound />} />
             </Route>
             {/* Redirections des anciennes URLs */}
@@ -45,8 +49,7 @@ function App() {
             <Route path="/soporte-inmunologico" element={<Navigate to={ROUTES.SOUTIEN_IMMUNITAIRE} replace />} />
             <Route path="/sobre-nosotros" element={<Navigate to={ROUTES.A_PROPOS} replace />} />
             <Route path="/contacto" element={<Navigate to={ROUTES.CONTACT} replace />} />
-            <Route path="/politique-confidentialite" element={<Navigate to="/?mentions=1" replace />} />
-            <Route path="/mentions-legales" element={<Navigate to="/?mentions=1" replace />} />
+            <Route path="/mentions-legales" element={<Navigate to={ROUTES.POLITIQUE_CONFIDENTIALITE} replace />} />
             <Route path="/faq" element={<Navigate to={ROUTES.HOME} replace />} />
             <Route path="/consulta-inicial" element={<Navigate to={ROUTES.CONTACT} replace />} />
             <Route path="/tu-recorrido" element={<Navigate to={ROUTES.NOTRE_APPROCHE} replace />} />

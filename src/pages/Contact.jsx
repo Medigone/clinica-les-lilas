@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { useSearchParams } from 'react-router-dom';
+import { useSearchParams, useNavigate } from 'react-router-dom';
 import { Clock, Mail, MapPin, Phone } from 'iconoir-react';
 import { useLanguageStore } from '../store/languageStore';
 import PageHead from '../components/PageHead';
@@ -12,6 +12,7 @@ const VALID_LANGUAGES = ['fr', 'en', 'es'];
 const Contact = () => {
   const { t } = useLanguageStore();
   const [searchParams] = useSearchParams();
+  const navigate = useNavigate();
   const [formData, setFormData] = useState({
     name: '',
     email: '',
@@ -38,6 +39,7 @@ const Contact = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
     console.log('Form submitted:', formData);
+    navigate(ROUTES.CONTACT_MERCI);
   };
 
   const handleChange = (e) => {
@@ -74,7 +76,7 @@ const Contact = () => {
                 <h2 className="text-xl font-bold text-primary mb-6">
                   {t('contactPage.form.title')}
                 </h2>
-                <form onSubmit={handleSubmit} className="space-y-6">
+                <form id="contact-form" onSubmit={handleSubmit} className="space-y-6">
                 <div>
                   <label className="block text-sm font-medium text-primary mb-2">
                     {t('contactPage.form.name')}
