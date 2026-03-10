@@ -92,6 +92,10 @@ export const translations = {
         title: 'Mentions légales et politique de confidentialité | Clínica Les Lilas',
         description: 'Mentions légales, politique de confidentialité et protection des données personnelles. Clínica Les Lilas - Alicante.',
       },
+      notFound: {
+        title: 'Page non trouvée | Clínica Les Lilas',
+        description: 'La page que vous recherchez n\'existe pas. Retournez à l\'accueil ou contactez-nous.',
+      },
     },
     home: {
       hero: {
@@ -628,8 +632,10 @@ export const translations = {
       cta: "Retour à l'accueil",
     },
     notFound: {
-      message: 'Page non trouvée',
+      title: 'Page non trouvée',
+      message: 'La page que vous recherchez n\'existe pas ou a été déplacée.',
       backHome: "Retour à l'accueil",
+      contactUs: 'Nous contacter',
     },
   },
 
@@ -722,6 +728,10 @@ export const translations = {
       politiqueConfidentialite: {
         title: 'Legal notice and privacy policy | Clínica Les Lilas',
         description: 'Legal notice, privacy policy and personal data protection. Clínica Les Lilas - Alicante.',
+      },
+      notFound: {
+        title: 'Page not found | Clínica Les Lilas',
+        description: 'The page you are looking for does not exist. Return to home or contact us.',
       },
     },
     home: {
@@ -1237,7 +1247,12 @@ export const translations = {
       body: "Your message has been received. Our team will respond as soon as possible to arrange your first consultation.",
       cta: 'Back to home',
     },
-    notFound: { message: 'Page not found', backHome: 'Back to home' },
+    notFound: {
+      title: 'Page not found',
+      message: 'The page you are looking for does not exist or has been moved.',
+      backHome: 'Back to home',
+      contactUs: 'Contact us',
+    },
   },
 
   es: {
@@ -1329,6 +1344,10 @@ export const translations = {
       politiqueConfidentialite: {
         title: 'Aviso legal y política de privacidad | Clínica Les Lilas',
         description: 'Aviso legal, política de privacidad y protección de datos personales. Clínica Les Lilas - Alicante.',
+      },
+      notFound: {
+        title: 'Página no encontrada | Clínica Les Lilas',
+        description: 'La página que buscas no existe. Vuelve al inicio o contáctanos.',
       },
     },
     home: {
@@ -1844,6 +1863,11 @@ export const translations = {
       body: "Su mensaje ha sido recibido. Nuestro equipo le responderá lo antes posible para organizar su primera consulta.",
       cta: 'Volver al inicio',
     },
-    notFound: { message: 'Página no encontrada', backHome: 'Volver al inicio' },
+    notFound: {
+      title: 'Página no encontrada',
+      message: 'La página que buscas no existe o ha sido movida.',
+      backHome: 'Volver al inicio',
+      contactUs: 'Contactarnos',
+    },
   },
 };
