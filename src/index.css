@@ -117,6 +117,12 @@ html {
   padding-right: 2.5rem;
 }
 
+/* Alignement vertical des icônes SVG dans les boutons CTA */
+.cta-btn svg {
+  vertical-align: middle;
+  display: inline-block;
+}
+
 /* Override absolu : gris foncé proche du noir */
 .bg-primary { background-color: #252525 !important; }
 .text-primary { color: #252525 !important; }

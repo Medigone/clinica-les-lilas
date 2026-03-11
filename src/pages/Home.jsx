@@ -40,6 +40,8 @@ const WHY_US_ICONS = [
   (props) => <ChatBubble {...props} />,
 ];
 
+const CARD_BG = 'bg-white';
+
 const Home = () => {
   const { t } = useLanguageStore();
   const valueBlocks = t('home.valueProposition.blocks', { returnObjects: true });
@@ -75,12 +77,16 @@ const Home = () => {
               valueBlocks.map((block, index) => (
                 <div
                   key={index}
-                  className="group p-8 rounded-3xl bg-white shadow-[0_2px_12px_rgba(0,0,0,0.04)] hover:shadow-[0_4px_20px_rgba(0,0,0,0.06)] transition-shadow duration-300 flex flex-col"
+                  className={`group p-8 rounded-[1.75rem] ${CARD_BG} border border-gray-200/60 shadow-[0_2px_12px_rgba(0,0,0,0.04)] hover:shadow-[0_4px_20px_rgba(0,0,0,0.06)] transition-all duration-300 flex flex-col`}
                 >
-                  <h3 className="text-lg md:text-xl font-bold text-primary mb-2 leading-snug tracking-tight flex items-center gap-2">
-                    {VALUE_BLOCK_ICONS[index] && VALUE_BLOCK_ICONS[index]({ className: 'w-5 h-5 shrink-0 text-primary/80' })}
-                    {block.title}
-                  </h3>
+                  <div className="flex items-center gap-2 mb-4">
+                    <div className="shrink-0 w-7 h-7 rounded-full overflow-hidden bg-white border border-gray-200/80 shadow-[0_1px_4px_rgba(0,0,0,0.06)] flex items-center justify-center text-primary/80">
+                      {VALUE_BLOCK_ICONS[index] && VALUE_BLOCK_ICONS[index]({ className: 'w-4 h-4' })}
+                    </div>
+                    <h3 className="text-lg md:text-xl font-bold text-primary leading-snug tracking-tight">
+                      {block.title}
+                    </h3>
+                  </div>
                   <p className="text-secondary text-sm md:text-[15px] font-normal leading-relaxed">
                     {block.description}
                   </p>
@@ -104,7 +110,7 @@ const Home = () => {
                 <Link
                   key={index}
                   to={card.path}
-                  className="block overflow-hidden bg-white rounded-2xl border border-gray-200 hover:border-primary/20 hover:shadow-lg transition-all"
+                  className={`block overflow-hidden rounded-[1.75rem] ${CARD_BG} border border-gray-200/60 shadow-[0_2px_12px_rgba(0,0,0,0.04)] hover:shadow-[0_4px_20px_rgba(0,0,0,0.06)] transition-all`}
                 >
                   <div className="h-44 overflow-hidden">
                     <img
@@ -138,12 +144,12 @@ const Home = () => {
               whyUsItems.map((item, index) => (
                 <div
                   key={index}
-                  className="group p-6 rounded-2xl bg-white shadow-[0_2px_12px_rgba(0,0,0,0.04)] hover:shadow-[0_4px_20px_rgba(0,0,0,0.08)] transition-all duration-300 flex items-start gap-4 border border-gray-100 hover:border-primary/10"
+                  className={`group p-6 rounded-[1.75rem] ${CARD_BG} border border-gray-200/60 shadow-[0_2px_12px_rgba(0,0,0,0.04)] hover:shadow-[0_4px_20px_rgba(0,0,0,0.06)] transition-all duration-300 flex items-start gap-2`}
                 >
-                  <div className="flex-shrink-0 w-12 h-12 rounded-xl bg-primary/5 flex items-center justify-center text-primary group-hover:bg-primary/10 transition-colors">
-                    {WHY_US_ICONS[index] && WHY_US_ICONS[index]({ className: 'w-6 h-6' })}
+                  <div className="flex-shrink-0 w-7 h-7 rounded-full overflow-hidden bg-white border border-gray-200/80 shadow-[0_1px_4px_rgba(0,0,0,0.06)] flex items-center justify-center text-primary/80">
+                    {WHY_US_ICONS[index] && WHY_US_ICONS[index]({ className: 'w-4 h-4' })}
                   </div>
-                  <p className="text-base text-text/80 leading-relaxed pt-0.5">
+                  <p className="text-base text-text/80 leading-relaxed">
                     {item}
                   </p>
                 </div>

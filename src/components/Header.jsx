@@ -97,6 +97,14 @@ const Header = () => {
             {t('navigation.aPropos')}
           </Link>
           <Link
+            to={ROUTES.BLOG}
+            className={`text-sm transition-colors whitespace-nowrap shrink-0 ${
+              location.pathname.startsWith(ROUTES.BLOG) ? 'text-primary font-semibold' : 'text-primary/80 hover:text-primary font-medium'
+            }`}
+          >
+            {t('navigation.blog')}
+          </Link>
+          <Link
             to={contactPath}
             className={`text-sm transition-colors whitespace-nowrap shrink-0 ${
               isActive(ROUTES.CONTACT) ? 'text-primary font-semibold' : 'text-primary/80 hover:text-primary font-medium'
@@ -204,6 +212,15 @@ const Header = () => {
                 }`}
               >
                 {t('navigation.aPropos')}
+              </Link>
+              <Link
+                to={ROUTES.BLOG}
+                onClick={() => setIsMenuOpen(false)}
+                className={`block py-3 px-4 text-left rounded-lg transition-colors ${
+                  location.pathname.startsWith(ROUTES.BLOG) ? 'bg-primary/10 text-primary font-semibold' : 'text-primary hover:bg-primary/5 font-medium'
+                }`}
+              >
+                {t('navigation.blog')}
               </Link>
               <Link
                 to={contactPath}

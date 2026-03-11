@@ -15,6 +15,8 @@ import APropos from './pages/APropos';
 import Contact from './pages/Contact';
 import ContactMerci from './pages/ContactMerci';
 import PolitiqueConfidentialite from './pages/PolitiqueConfidentialite';
+import Blog from './pages/Blog';
+import BlogPost from './pages/BlogPost';
 import NotFound from './pages/NotFound';
 import { ROUTES } from './routes';
 
@@ -39,6 +41,8 @@ function App() {
               <Route path="contact" element={<Contact />} />
               <Route path="contact/merci" element={<ContactMerci />} />
               <Route path="politique-confidentialite" element={<PolitiqueConfidentialite />} />
+              <Route path="blog" element={<Blog />} />
+              <Route path="blog/:slug" element={<BlogPost />} />
               <Route path="*" element={<NotFound />} />
             </Route>
             {/* Redirections des anciennes URLs */}

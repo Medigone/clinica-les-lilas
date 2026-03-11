@@ -1,24 +1,27 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { Calendar, ClipboardCheck, Clock, NavArrowRight, Plus, Star, User } from 'iconoir-react';
+import { NavArrowRight } from 'iconoir-react';
 import { useLanguageStore } from '../store/languageStore';
 import PageHead from '../components/PageHead';
 import HeroBlock from '../components/HeroBlock';
-import CTABlock from '../components/CTABlock';
 import SchemaServiceOrg from '../components/SchemaServiceOrg';
 import { ROUTES } from '../routes';
 
-const CARD_ICONS = [
-  (props) => <User {...props} />,
-  (props) => <ClipboardCheck {...props} />,
-  (props) => <Clock {...props} />,
-  (props) => <Star {...props} />,
-  (props) => <Calendar {...props} />,
+const CARD_GRADIENTS = [
+  'from-background to-orange-300/25',
+  'from-background to-sky-300/25',
+  'from-background to-teal-300/25',
+  'from-background to-amber-300/25',
+  'from-background to-rose-300/25',
 ];
 
 const Sueroterapia = () => {
   const { t, language } = useLanguageStore();
   const cards = t('sueroterapia.cards', { returnObjects: true });
+  const labels = t('sueroterapia.cardsLabels', { returnObjects: true });
+  const moreCard = t('sueroterapia.moreProtocolsCard', { returnObjects: true });
+  const indicationsItems = t('sueroterapia.indications.items', { returnObjects: true });
+  const whyUsItems = t('sueroterapia.whyUs.items', { returnObjects: true });
 
   return (
     <>
@@ -42,167 +45,201 @@ const Sueroterapia = () => {
         ctaReason="sueroterapia"
       />
 
-      {/* Sérums */}
-      {(() => {
-        const serums = t('sueroterapia.serums.items', { returnObjects: true });
-        const serumImages = [
-          '/assets/vitamine_c.png',
-          '/assets/Vitamina_B12.png',
-          '/assets/Curcumina.png',
-          '/assets/NAC.png',
-          '/assets/NAD.png',
-        ];
-        const serumGradients = [
-          'from-background to-orange-300/25',
-          'from-background to-sky-300/25',
-          'from-background to-amber-300/25',
-          'from-background to-rose-300/25',
-          'from-background to-teal-300/25',
-        ];
-        return Array.isArray(serums) && serums.length > 0 ? (
-          <section className="py-16 md:py-20">
-            <div className="max-w-7xl mx-auto px-6 md:px-12 lg:px-16">
-              <h2 className="text-2xl md:text-3xl font-bold text-primary text-center mb-12">
-                {t('sueroterapia.serums.title')}
-              </h2>
-              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                {serums.map((serum, index) => (
-                  <div
-                    key={index}
-                    className={`relative overflow-hidden rounded-[1.75rem] bg-gradient-to-b ${serumGradients[index]} border border-white/60 shadow-lg hover:shadow-xl transition-all flex flex-col backdrop-blur-sm`}
-                  >
-                    <div className="relative p-6 flex flex-col flex-1">
-                      <div className="flex items-start gap-4 mb-4">
-                        <div className="shrink-0 w-16 h-16 rounded-full overflow-hidden bg-white/80 border-2 border-white/90 shadow-md flex items-center justify-center">
-                          <img
-                            src={serumImages[index]}
-                            alt={serum.title}
-                            className="w-12 h-12 object-contain"
-                          />
-                        </div>
-                        <div className="min-w-0 flex-1">
-                          <h3 className="text-xl font-bold text-primary">{serum.title}</h3>
-                          <p className="text-sm text-secondary mt-0.5">{serum.subtitle}</p>
-                        </div>
-                      </div>
-                      {serum.tags?.length > 0 && (
-                        <div className="flex flex-wrap gap-2 mb-4">
-                          {serum.tags.map((tag, i) => (
-                            <span
-                              key={i}
-                              className="px-2.5 py-1 rounded-full text-xs font-medium bg-white/60 text-primary/90 border border-white/70"
-                            >
-                              {tag}
-                            </span>
-                          ))}
-                        </div>
-                      )}
-                      <div className="flex items-center gap-4 py-4 border-y border-white/40 my-auto">
-                        <div className="flex-1 text-center">
-                          <span className="block text-lg font-bold text-primary">
-                            {serum.benefits?.length ?? 0}
-                          </span>
-                          <span className="text-xs text-secondary">{t('sueroterapia.serums.benefitsLabel')}</span>
-                        </div>
-                        <div className="w-px h-8 bg-white/50" />
-                        <div className="flex-1 text-center">
-                          <span className="block text-sm font-semibold text-primary">
-                            {t('sueroterapia.serums.sessionDuration')}
-                          </span>
-                          <span className="text-xs text-secondary">{t('sueroterapia.serums.sessionLabel')}</span>
-                        </div>
-                      </div>
-                      <Link
-                        to={`${ROUTES.CONTACT}?reason=sueroterapia&language=${language}`}
-                        className="mt-4 w-full inline-flex items-center justify-center px-4 py-2.5 rounded-2xl text-sm font-medium bg-white/70 hover:bg-white/90 text-primary border border-white/80 hover:shadow-md transition-all"
-                      >
-                        {t('sueroterapia.serums.ctaLabel')}
-                      </Link>
+      {/* Protocoles de sueroterapia */}
+      <section className="py-16 md:py-20">
+        <div className="max-w-7xl mx-auto px-6 md:px-12 lg:px-16">
+          <h2 className="text-2xl md:text-3xl font-bold text-primary text-center mb-12">
+            {t('sueroterapia.protocolsTitle')}
+          </h2>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 items-stretch">
+            {Array.isArray(cards) &&
+              cards.map((card, index) => (
+                <div
+                  key={index}
+                  className={`relative overflow-hidden rounded-[1.75rem] bg-gradient-to-b ${CARD_GRADIENTS[index]} border border-white/60 shadow-lg hover:shadow-xl transition-all flex flex-col backdrop-blur-sm h-[440px]`}
+                >
+                  <div className="relative p-6 flex flex-col flex-1 min-h-0">
+                    {/* Titre : hauteur fixe 2 lignes */}
+                    <div className="h-[2.75rem] flex flex-col justify-center mb-1 overflow-hidden">
+                      <h3 className="text-xl font-bold text-primary leading-tight line-clamp-2" title={card.title}>{card.title}</h3>
                     </div>
-                  </div>
-                ))}
-                {/* Carte "Et bien plus encore" */}
-                <div className="relative overflow-hidden rounded-[1.75rem] bg-gradient-to-b from-background to-gray-300/25 border border-white/60 shadow-lg hover:shadow-xl transition-all flex flex-col backdrop-blur-sm">
-                  <div className="relative p-6 flex flex-col flex-1">
-                    <div className="flex items-start gap-4 mb-4">
-                      <div className="shrink-0 w-16 h-16 rounded-full overflow-hidden bg-white/80 border-2 border-white/90 shadow-md flex items-center justify-center">
-                        <Plus className="w-8 h-8 text-primary" strokeWidth={2} />
-                      </div>
-                      <div className="min-w-0 flex-1">
-                        <h3 className="text-xl font-bold text-primary">{t('sueroterapia.serums.moreCard.title')}</h3>
-                        <p className="text-sm text-secondary mt-0.5">{t('sueroterapia.serums.moreCard.subtitle')}</p>
-                      </div>
+                    {/* Sous-titre : hauteur fixe 2 lignes */}
+                    <div className="h-[2.5rem] flex flex-col justify-start mb-3 overflow-hidden">
+                      <p className="text-sm text-secondary leading-snug line-clamp-2" title={card.subtitle || ''}>
+                        {card.subtitle || '\u00A0'}
+                      </p>
                     </div>
-                    <div className="flex flex-wrap gap-2 mb-4">
-                      {t('sueroterapia.serums.moreCard.tags', { returnObjects: true })?.map((tag, i) => (
+                    {/* Tags : hauteur fixe 2 lignes (4rem pour afficher les 2 lignes de badges sans chevauchement avec Sérums) */}
+                    <div className="flex flex-wrap gap-2 mb-3 h-[4rem] overflow-hidden content-start items-start">
+                      {card.tags?.map((tag, i) => (
                         <span
                           key={i}
-                          className="px-2.5 py-1 rounded-full text-xs font-medium bg-white/60 text-primary/90 border border-white/70"
+                          className="px-2.5 py-1 rounded-full text-xs font-medium bg-white/60 text-primary/90 border border-white/70 shrink-0"
                         >
                           {tag}
                         </span>
                       ))}
                     </div>
-                    <div className="flex items-center gap-4 py-4 border-y border-white/40 my-auto">
-                      <div className="flex-1 text-center">
-                        <span className="block text-lg font-bold text-primary">
-                          {t('sueroterapia.serums.moreCard.stat1Value')}
+                    {/* Sérums : 2 lignes max */}
+                    <div className="mb-2 h-[2.75rem] text-sm overflow-hidden line-clamp-2" title={card.serums?.join(' · ') || ''}>
+                      <span className="font-semibold text-primary">{labels?.serums || 'Sérums'}: </span>
+                      <span className="text-primary/90">{card.serums?.join(' · ') || ''}</span>
+                    </div>
+                    {/* Glutathion : 1 ligne fixe */}
+                    <div className="mb-2 h-[1.5rem] text-sm flex items-center overflow-hidden">
+                      {card.glutathion && (
+                        <span className="truncate">
+                          <span className="font-semibold text-primary">{labels?.glutathion || 'Glutathion'}: </span>
+                          <span className="text-text/70 text-xs">{card.glutathion}</span>
                         </span>
-                        <span className="text-xs text-secondary">{t('sueroterapia.serums.moreCard.stat1Label')}</span>
-                      </div>
+                      )}
                     </div>
-                    <Link
-                      to={`${ROUTES.CONTACT}?reason=sueroterapia&language=${language}`}
-                      className="mt-4 w-full inline-flex items-center justify-center px-4 py-2.5 rounded-2xl text-sm font-medium bg-white/70 hover:bg-white/90 text-primary border border-white/80 hover:shadow-md transition-all"
-                    >
-                      {t('sueroterapia.serums.ctaLabel')}
-                    </Link>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </section>
-        ) : null;
-      })()}
-
-      {/* Cards */}
-      <section className="py-20">
-        <div className="max-w-7xl mx-auto px-6 md:px-12 lg:px-16">
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            {Array.isArray(cards) &&
-              cards.map((card, index) => (
-                <div
-                  key={index}
-                  className="block p-8 bg-white rounded-2xl border border-gray-200 hover:border-primary/20 hover:shadow-lg transition-all flex flex-col"
-                >
-                  <div className="flex items-center gap-3 mb-3">
-                    <span className="shrink-0 w-9 h-9 rounded-lg bg-primary/5 flex items-center justify-center text-primary/60">
-                      {CARD_ICONS[index] && CARD_ICONS[index]({ className: 'w-5 h-5' })}
-                    </span>
-                    <h3 className="text-xl font-bold text-primary">{card.title}</h3>
-                  </div>
-                  <div className="flex-1">
-                    {card.text && (
-                      <p className="text-text/70 leading-relaxed">{card.text}</p>
-                    )}
-                    {card.items && (
-                      <ul className={`space-y-2 ${card.text ? 'mt-4' : ''}`}>
-                        {card.items.map((item, i) => (
-                          <li key={i} className="flex items-start gap-2">
-                            <NavArrowRight className="w-3.5 h-3.5 text-primary mt-1 shrink-0" strokeWidth={2} />
-                            <span className="text-text/70 text-sm leading-relaxed">{item}</span>
-                          </li>
-                        ))}
-                      </ul>
+                    {/* Durée · Séances (badges) */}
+                    <div className="flex flex-wrap gap-2 gap-y-1 items-center text-sm mb-2 min-h-[1.75rem] overflow-hidden">
+                      {card.duration && (
+                        <span className="px-2.5 py-1 rounded-full text-xs font-medium bg-primary/5 text-primary border border-primary/10 shrink-0">
+                          {labels?.duration || 'Durée'}: {card.duration}
+                        </span>
+                      )}
+                      {card.sessions && (
+                        <span className="px-2.5 py-1 rounded-full text-xs font-medium bg-secondary/10 text-primary border border-secondary/20 shrink-0">
+                          {labels?.sessions || 'Séances'}: {card.sessions}
+                        </span>
+                      )}
+                    </div>
+                    {/* Disclaimer / Note : 1 ligne fixe */}
+                    <div className="h-[1.25rem] text-xs text-primary/80 italic flex items-center overflow-hidden shrink-0" title={card.disclaimer || card.note || ''}>
+                      {(card.disclaimer || card.note) && (
+                        <span className="truncate">{card.disclaimer || card.note}</span>
+                      )}
+                    </div>
+                    {card.ctaLabel && (
+                      <Link
+                        to={`${ROUTES.CONTACT}?reason=sueroterapia&language=${language}`}
+                        className="cta-btn mt-auto pt-4 w-full flex items-center justify-center gap-2 py-2.5 px-4 rounded-2xl text-sm font-medium leading-[1.2] bg-white/70 hover:bg-white/90 text-primary border border-white/80 hover:shadow-md transition-all shrink-0"
+                      >
+                        <span className="flex items-center gap-2 -translate-y-0.5">
+                          {card.ctaLabel}
+                          <NavArrowRight className="w-4 h-4 shrink-0" strokeWidth={2} />
+                        </span>
+                      </Link>
                     )}
                   </div>
-                  {card.cta && (
-                    <div className="mt-6">
-                      <CTABlock variant="requestConsultation" size="default" reason="sueroterapia" />
-                    </div>
-                  )}
                 </div>
               ))}
+            {moreCard?.title && (
+              <div
+                className="relative overflow-hidden rounded-[1.75rem] bg-gradient-to-b from-background to-stone-300/30 border border-white/60 shadow-lg hover:shadow-xl transition-all flex flex-col backdrop-blur-sm h-[440px]"
+              >
+                <div className="relative p-6 flex flex-col flex-1 min-h-0">
+                  <div className="h-[2.75rem] flex flex-col justify-center mb-1 overflow-hidden">
+                    <h3 className="text-xl font-bold text-primary leading-tight line-clamp-2" title={moreCard.title}>{moreCard.title}</h3>
+                  </div>
+                  <div className="h-[2.5rem] flex flex-col justify-start mb-3 overflow-hidden">
+                    <p className="text-sm text-secondary leading-snug line-clamp-2" title={moreCard.subtitle || ''}>
+                      {moreCard.subtitle || '\u00A0'}
+                    </p>
+                  </div>
+                  <div className="flex flex-wrap gap-2 mb-3 h-[4rem] overflow-hidden content-start items-start">
+                    {moreCard.tags?.map((tag, i) => (
+                      <span
+                        key={i}
+                        className="px-2.5 py-1 rounded-full text-xs font-medium bg-white/60 text-primary/90 border border-white/70 shrink-0"
+                      >
+                        {tag}
+                      </span>
+                    ))}
+                  </div>
+                  <div className="mb-2 h-[2.75rem] text-sm overflow-hidden line-clamp-2" title={moreCard.serums || ''}>
+                    <span className="font-semibold text-primary">{labels?.serums || 'Sérums'}: </span>
+                    <span className="text-primary/90">{moreCard.serums || ''}</span>
+                  </div>
+                  <div className="mb-2 h-[1.5rem] flex items-center overflow-hidden" />
+                  <div className="flex flex-wrap gap-2 gap-y-1 items-center text-sm mb-2 min-h-[1.75rem] overflow-hidden">
+                    {moreCard.duration && (
+                      <span className="px-2.5 py-1 rounded-full text-xs font-medium bg-primary/5 text-primary border border-primary/10 shrink-0">
+                        {labels?.duration || 'Durée'}: {moreCard.duration}
+                      </span>
+                    )}
+                    {moreCard.sessions && (
+                      <span className="px-2.5 py-1 rounded-full text-xs font-medium bg-secondary/10 text-primary border border-secondary/20 shrink-0">
+                        {labels?.sessions || 'Séances'}: {moreCard.sessions}
+                      </span>
+                    )}
+                  </div>
+                  <div className="h-[1.25rem] flex items-center overflow-hidden shrink-0" />
+                  {moreCard.ctaLabel && (
+                    <Link
+                      to={`${ROUTES.CONTACT}?reason=sueroterapia&language=${language}`}
+                      className="cta-btn mt-auto pt-4 w-full flex items-center justify-center gap-2 py-2.5 px-4 rounded-2xl text-sm font-medium leading-[1.2] bg-white/70 hover:bg-white/90 text-primary border border-white/80 hover:shadow-md transition-all shrink-0"
+                    >
+                      <span className="flex items-center gap-2 -translate-y-0.5">
+                        {moreCard.ctaLabel}
+                        <NavArrowRight className="w-4 h-4 shrink-0" strokeWidth={2} />
+                      </span>
+                    </Link>
+                  )}
+                </div>
+              </div>
+            )}
+          </div>
+        </div>
+      </section>
+
+      {/* Blocs éditoriaux : approche, indications, déroulement, différenciation */}
+      <section className="py-20 md:py-24">
+        <div className="max-w-6xl mx-auto px-6 md:px-12 lg:px-16">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 lg:gap-8">
+            <article className="p-6 md:p-8 bg-white rounded-2xl border border-gray-200 hover:border-primary/20 hover:shadow-lg transition-all">
+              <h2 className="text-xl md:text-2xl font-bold text-primary mb-4">
+                {t('sueroterapia.personalized.title')}
+              </h2>
+              <p className="text-text/80 leading-relaxed">
+                {t('sueroterapia.personalized.text')}
+              </p>
+            </article>
+
+            <article className="p-6 md:p-8 bg-white rounded-2xl border border-gray-200 hover:border-primary/20 hover:shadow-lg transition-all">
+              <h2 className="text-xl md:text-2xl font-bold text-primary mb-4">
+                {t('sueroterapia.indications.title')}
+              </h2>
+              <p className="text-text/80 mb-4 leading-relaxed">
+                {t('sueroterapia.indications.text')}
+              </p>
+              <ul className="space-y-2">
+                {Array.isArray(indicationsItems) &&
+                  indicationsItems.map((item, index) => (
+                    <li key={index} className="flex items-start gap-3">
+                      <NavArrowRight className="w-3.5 h-3.5 text-primary mt-1 shrink-0" strokeWidth={2} />
+                      <span className="text-text/80 text-sm">{item}</span>
+                    </li>
+                  ))}
+              </ul>
+            </article>
+
+            <article className="p-6 md:p-8 bg-white rounded-2xl border border-gray-200 hover:border-primary/20 hover:shadow-lg transition-all">
+              <h2 className="text-xl md:text-2xl font-bold text-primary mb-4">
+                {t('sueroterapia.process.title')}
+              </h2>
+              <p className="text-text/80 leading-relaxed">
+                {t('sueroterapia.process.text')}
+              </p>
+            </article>
+
+            <article className="p-6 md:p-8 bg-white rounded-2xl border border-gray-200 hover:border-primary/20 hover:shadow-lg transition-all">
+              <h2 className="text-xl md:text-2xl font-bold text-primary mb-4">
+                {t('sueroterapia.whyUs.title')}
+              </h2>
+              <ul className="space-y-2">
+                {Array.isArray(whyUsItems) &&
+                  whyUsItems.map((item, index) => (
+                    <li key={index} className="flex items-start gap-3">
+                      <NavArrowRight className="w-3.5 h-3.5 text-primary mt-1 shrink-0" strokeWidth={2} />
+                      <span className="text-text/80 text-sm">{item}</span>
+                    </li>
+                  ))}
+              </ul>
+            </article>
           </div>
         </div>
       </section>
