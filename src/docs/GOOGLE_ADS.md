@@ -23,11 +23,11 @@ Remplacer `G-XXXXXXXXXX` par votre ID de mesure Google Analytics 4 / Google Ads 
 ### Formulaire de contact
 
 - **ID du formulaire** : `contact-form` (attribut `id` sur le formulaire dans `src/pages/Contact.jsx`)
-- **Comportement** : après envoi réussi, redirection vers `/contact/merci`
+- **Comportement** : après envoi réussi, redirection vers `/contacto/gracias`
 
 ### Page de remerciement
 
-- **URL** : `/contact/merci`
+- **URL** : `/contacto/gracias`
 - **Usage** : configurer cette URL comme "Conversion page" dans Google Ads pour les conversions de formulaire de contact
 - **Alternative** : déclencher un événement `gtag('event', 'conversion', {...})` dans `handleSubmit` de Contact.jsx avant la redirection, ou sur le chargement de la page ContactMerci
 

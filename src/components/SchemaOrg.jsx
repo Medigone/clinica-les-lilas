@@ -2,13 +2,15 @@ import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { CONTACT } from '../routes';
 
+const SITE_URL = 'https://clinicaleslilas.com';
+
 const SchemaOrg = () => {
   const schema = {
     '@context': 'https://schema.org',
     '@type': 'MedicalClinic',
     name: 'Clínica Les Lilas',
     description: 'Clínica Les Lilas - Clinique privée de médecine intégrative à Alicante. Consultation personnalisée, hyperthermie oncologique, sueroterapia, médecine régénérative.',
-    url: typeof window !== 'undefined' ? window.location.origin : '',
+    url: SITE_URL,
     telephone: CONTACT.PHONE,
     email: CONTACT.EMAIL,
     address: {

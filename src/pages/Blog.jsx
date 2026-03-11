@@ -4,7 +4,7 @@ import { NavArrowRight } from 'iconoir-react';
 import { useLanguageStore } from '../store/languageStore';
 import PageHead from '../components/PageHead';
 import HeroBlock from '../components/HeroBlock';
-import { ROUTES } from '../routes';
+import { getBlogPath, ROUTES } from '../routes';
 import { getBlogPosts } from '../blog';
 
 const CATEGORY_MAP = {
@@ -87,7 +87,7 @@ const Blog = () => {
               {filteredPosts.map((post) => (
                 <Link
                   key={post.slug}
-                  to={`${ROUTES.BLOG}/${post.slug}`}
+                  to={getBlogPath(post.slug)}
                   className="group bg-white rounded-[1.75rem] border border-gray-200 overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300"
                 >
                   <div className="aspect-[16/9] overflow-hidden bg-primary/5">

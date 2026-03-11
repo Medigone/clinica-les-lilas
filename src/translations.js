@@ -1,3 +1,5 @@
+import { ROUTES } from './routes';
+
 // Centralized translations for Clínica Les Lilas
 // Structure: { fr: {...}, en: {...}, es: {...} }
 
@@ -138,10 +140,10 @@ export const translations = {
         title: 'Nos axes de prise en charge',
         text: "Nous proposons plusieurs axes thérapeutiques, chacun intégré dans une logique de soin globale. La consultation initiale permet d'orienter vers le parcours le plus adapté.",
         cards: [
-          { title: 'Hyperthermie oncologique', text: "Chaleur localisée utilisée en complément des traitements conventionnels, dans un cadre clinique rigoureux et après évaluation individuelle.", path: '/traitements/hyperthermie-oncologique', cta: 'Découvrir' },
-          { title: 'Sueroterapia / IV Therapy', text: "Protocoles de perfusion intraveineuse définis sur mesure, pour des objectifs de soutien, de récupération ou de bien-être médicalisé.", path: '/traitements/sueroterapia', cta: 'Découvrir' },
-          { title: 'Médecine régénérative', text: "Thérapies orientées vers la réparation et le soutien tissulaire, dans un cadre d'innovation clinique contrôlée.", path: '/traitements/medecine-regenerative', cta: 'Découvrir' },
-          { title: 'Soutien immunitaire', text: "Accompagnement médicalisé pour la prévention, la récupération et l'équilibre global, adapté à chaque profil.", path: '/traitements/soutien-immunitaire', cta: 'Découvrir' },
+          { title: 'Hyperthermie oncologique', text: "Chaleur localisée utilisée en complément des traitements conventionnels, dans un cadre clinique rigoureux et après évaluation individuelle.", path: ROUTES.HIPERTERMIA, cta: 'Découvrir' },
+          { title: 'Sueroterapia / IV Therapy', text: "Protocoles de perfusion intraveineuse définis sur mesure, pour des objectifs de soutien, de récupération ou de bien-être médicalisé.", path: ROUTES.SUEROTERAPIA, cta: 'Découvrir' },
+          { title: 'Médecine régénérative', text: "Thérapies orientées vers la réparation et le soutien tissulaire, dans un cadre d'innovation clinique contrôlée.", path: ROUTES.MEDECINE_REGENERATIVE, cta: 'Découvrir' },
+          { title: 'Soutien immunitaire', text: "Accompagnement médicalisé pour la prévention, la récupération et l'équilibre global, adapté à chaque profil.", path: ROUTES.SOUTIEN_IMMUNITAIRE, cta: 'Découvrir' },
         ],
       },
       whyUs: {
@@ -200,10 +202,10 @@ export const translations = {
         text: "Chaque axe thérapeutique proposé par Clínica Les Lilas s'inscrit dans une démarche médicale globale. Le choix d'un traitement découle toujours d'une évaluation préalable et d'un échange avec notre équipe.",
       },
       cards: [
-        { title: 'Hyperthermie oncologique', text: "Chaleur localisée utilisée en complément des traitements conventionnels, intégrée dans un parcours oncologique individualisé.", path: '/traitements/hyperthermie-oncologique' },
-        { title: 'Sueroterapia / IV Therapy', text: "Perfusions intraveineuses personnalisées pour le soutien, la récupération et le bien-être, dans un cadre médical rigoureux.", path: '/traitements/sueroterapia' },
-        { title: 'Médecine régénérative', text: "Thérapies innovantes orientées vers la réparation tissulaire et le soutien biologique, après évaluation individuelle.", path: '/traitements/medecine-regenerative' },
-        { title: 'Soutien immunitaire & bien-être médicalisé', text: "Accompagnement médical adapté pour la prévention, la récupération et l'équilibre global.", path: '/traitements/soutien-immunitaire' },
+        { title: 'Hyperthermie oncologique', text: "Chaleur localisée utilisée en complément des traitements conventionnels, intégrée dans un parcours oncologique individualisé.", path: ROUTES.HIPERTERMIA },
+        { title: 'Sueroterapia / IV Therapy', text: "Perfusions intraveineuses personnalisées pour le soutien, la récupération et le bien-être, dans un cadre médical rigoureux.", path: ROUTES.SUEROTERAPIA },
+        { title: 'Médecine régénérative', text: "Thérapies innovantes orientées vers la réparation tissulaire et le soutien biologique, après évaluation individuelle.", path: ROUTES.MEDECINE_REGENERATIVE },
+        { title: 'Soutien immunitaire & bien-être médicalisé', text: "Accompagnement médical adapté pour la prévention, la récupération et l'équilibre global.", path: ROUTES.SOUTIEN_IMMUNITAIRE },
       ],
     },
     hyperthermie: {
@@ -926,10 +928,10 @@ export const translations = {
         title: 'Our areas of care',
         text: "We offer several therapeutic areas, each integrated into a global care approach. The initial consultation helps direct you to the most suitable pathway.",
         cards: [
-          { title: 'Oncological hyperthermia', text: "Localized heat used to complement conventional treatments, in a rigorous clinical setting and after individual evaluation.", path: '/traitements/hyperthermie-oncologique', cta: 'Discover' },
-          { title: 'Sueroterapia / IV Therapy', text: "Tailored intravenous infusion protocols for support, recovery or medicalized wellness.", path: '/traitements/sueroterapia', cta: 'Discover' },
-          { title: 'Regenerative medicine', text: "Therapies focused on tissue repair and biological support, within a framework of controlled clinical innovation.", path: '/traitements/medecine-regenerative', cta: 'Discover' },
-          { title: 'Immune support', text: "Medicalized support for prevention, recovery and overall balance, adapted to each profile.", path: '/traitements/soutien-immunitaire', cta: 'Discover' },
+          { title: 'Oncological hyperthermia', text: "Localized heat used to complement conventional treatments, in a rigorous clinical setting and after individual evaluation.", path: ROUTES.HIPERTERMIA, cta: 'Discover' },
+          { title: 'Sueroterapia / IV Therapy', text: "Tailored intravenous infusion protocols for support, recovery or medicalized wellness.", path: ROUTES.SUEROTERAPIA, cta: 'Discover' },
+          { title: 'Regenerative medicine', text: "Therapies focused on tissue repair and biological support, within a framework of controlled clinical innovation.", path: ROUTES.MEDECINE_REGENERATIVE, cta: 'Discover' },
+          { title: 'Immune support', text: "Medicalized support for prevention, recovery and overall balance, adapted to each profile.", path: ROUTES.SOUTIEN_IMMUNITAIRE, cta: 'Discover' },
         ],
       },
       whyUs: {
@@ -988,10 +990,10 @@ export const translations = {
         text: "Each therapeutic area offered by Clínica Les Lilas is part of a comprehensive medical approach. Treatment choices always stem from a prior evaluation and a discussion with our team.",
       },
       cards: [
-        { title: 'Oncological hyperthermia', text: "Localized heat used to complement conventional treatments, integrated into an individualized oncological pathway.", path: '/traitements/hyperthermie-oncologique' },
-        { title: 'Sueroterapia / IV Therapy', text: "Personalized intravenous infusions for support, recovery and wellness, in a rigorous medical setting.", path: '/traitements/sueroterapia' },
-        { title: 'Regenerative medicine', text: "Innovative therapies focused on tissue repair and biological support, after individual evaluation.", path: '/traitements/medecine-regenerative' },
-        { title: 'Immune support & medicalized wellness', text: "Tailored medical support for prevention, recovery and overall balance.", path: '/traitements/soutien-immunitaire' },
+        { title: 'Oncological hyperthermia', text: "Localized heat used to complement conventional treatments, integrated into an individualized oncological pathway.", path: ROUTES.HIPERTERMIA },
+        { title: 'Sueroterapia / IV Therapy', text: "Personalized intravenous infusions for support, recovery and wellness, in a rigorous medical setting.", path: ROUTES.SUEROTERAPIA },
+        { title: 'Regenerative medicine', text: "Innovative therapies focused on tissue repair and biological support, after individual evaluation.", path: ROUTES.MEDECINE_REGENERATIVE },
+        { title: 'Immune support & medicalized wellness', text: "Tailored medical support for prevention, recovery and overall balance.", path: ROUTES.SOUTIEN_IMMUNITAIRE },
       ],
     },
     hyperthermie: {
@@ -1694,10 +1696,10 @@ export const translations = {
         title: 'Nuestros ejes de atención',
         text: "Ofrecemos varios ejes terapéuticos, cada uno integrado en una lógica de atención global. La consulta inicial permite orientar hacia el recorrido más adecuado.",
         cards: [
-          { title: 'Hipertermia oncológica', text: "Calor localizado utilizado como complemento a los tratamientos convencionales, en un marco clínico riguroso y tras evaluación individual.", path: '/traitements/hyperthermie-oncologique', cta: 'Descubrir' },
-          { title: 'Sueroterapia / IV Therapy', text: "Protocolos de perfusión intravenosa definidos a medida, para objetivos de soporte, recuperación o bienestar medicalizado.", path: '/traitements/sueroterapia', cta: 'Descubrir' },
-          { title: 'Medicina regenerativa', text: "Terapias orientadas a la reparación y el soporte tisular, en un marco de innovación clínica controlada.", path: '/traitements/medecine-regenerative', cta: 'Descubrir' },
-          { title: 'Soporte inmunológico', text: "Acompañamiento medicalizado para la prevención, la recuperación y el equilibrio global, adaptado a cada perfil.", path: '/traitements/soutien-immunitaire', cta: 'Descubrir' },
+          { title: 'Hipertermia oncológica', text: "Calor localizado utilizado como complemento a los tratamientos convencionales, en un marco clínico riguroso y tras evaluación individual.", path: ROUTES.HIPERTERMIA, cta: 'Descubrir' },
+          { title: 'Sueroterapia / IV Therapy', text: "Protocolos de perfusión intravenosa definidos a medida, para objetivos de soporte, recuperación o bienestar medicalizado.", path: ROUTES.SUEROTERAPIA, cta: 'Descubrir' },
+          { title: 'Medicina regenerativa', text: "Terapias orientadas a la reparación y el soporte tisular, en un marco de innovación clínica controlada.", path: ROUTES.MEDECINE_REGENERATIVE, cta: 'Descubrir' },
+          { title: 'Soporte inmunológico', text: "Acompañamiento medicalizado para la prevención, la recuperación y el equilibrio global, adaptado a cada perfil.", path: ROUTES.SOUTIEN_IMMUNITAIRE, cta: 'Descubrir' },
         ],
       },
       whyUs: {
@@ -1756,10 +1758,10 @@ export const translations = {
         text: "Cada eje terapéutico propuesto por Clínica Les Lilas forma parte de un enfoque médico global. La elección de un tratamiento siempre parte de una evaluación previa y un diálogo con nuestro equipo.",
       },
       cards: [
-        { title: 'Hipertermia oncológica', text: "Calor localizado como complemento a los tratamientos convencionales, integrado en un recorrido oncológico individualizado.", path: '/traitements/hyperthermie-oncologique' },
-        { title: 'Sueroterapia / IV Therapy', text: "Perfusiones intravenosas personalizadas para soporte, recuperación y bienestar, en un marco médico riguroso.", path: '/traitements/sueroterapia' },
-        { title: 'Medicina regenerativa', text: "Terapias innovadoras orientadas a la reparación tisular y el soporte biológico, tras evaluación individual.", path: '/traitements/medecine-regenerative' },
-        { title: 'Soporte inmunológico y bienestar medicalizado', text: "Acompañamiento médico adaptado para la prevención, la recuperación y el equilibrio global.", path: '/traitements/soutien-immunitaire' },
+        { title: 'Hipertermia oncológica', text: "Calor localizado como complemento a los tratamientos convencionales, integrado en un recorrido oncológico individualizado.", path: ROUTES.HIPERTERMIA },
+        { title: 'Sueroterapia / IV Therapy', text: "Perfusiones intravenosas personalizadas para soporte, recuperación y bienestar, en un marco médico riguroso.", path: ROUTES.SUEROTERAPIA },
+        { title: 'Medicina regenerativa', text: "Terapias innovadoras orientadas a la reparación tisular y el soporte biológico, tras evaluación individual.", path: ROUTES.MEDECINE_REGENERATIVE },
+        { title: 'Soporte inmunológico y bienestar medicalizado', text: "Acompañamiento médico adaptado para la prevención, la recuperación y el equilibrio global.", path: ROUTES.SOUTIEN_IMMUNITAIRE },
       ],
     },
     hyperthermie: {

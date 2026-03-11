@@ -14,6 +14,7 @@ const ContactMerci = () => {
         title={t('contactMerci.meta.title')}
         description={t('contactMerci.meta.description')}
         path={ROUTES.CONTACT_MERCI}
+        noindex
       />
 
       <HeroBlock

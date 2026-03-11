@@ -19,10 +19,10 @@ import CTABlock from '../components/CTABlock';
 import { ROUTES } from '../routes';
 
 const CARE_HERO_IMAGES = {
-  '/traitements/hyperthermie-oncologique': '/assets/about-bg.png',
-  '/traitements/sueroterapia': '/assets/iv_therapy_bg.png',
-  '/traitements/medecine-regenerative': '/assets/traitements_bg.png',
-  '/traitements/soutien-immunitaire': '/assets/soutien_immunitaire_bg.png',
+  [ROUTES.HIPERTERMIA]: '/assets/about-bg.png',
+  [ROUTES.SUEROTERAPIA]: '/assets/iv_therapy_bg.png',
+  [ROUTES.MEDECINE_REGENERATIVE]: '/assets/traitements_bg.png',
+  [ROUTES.SOUTIEN_IMMUNITAIRE]: '/assets/soutien_immunitaire_bg.png',
 };
 
 const VALUE_BLOCK_ICONS = [

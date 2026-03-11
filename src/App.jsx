@@ -18,7 +18,7 @@ import PolitiqueConfidentialite from './pages/PolitiqueConfidentialite';
 import Blog from './pages/Blog';
 import BlogPost from './pages/BlogPost';
 import NotFound from './pages/NotFound';
-import { ROUTES } from './routes';
+import { ALL_REDIRECTS, ROUTES, toRoutePath } from './routes';
 
 function App() {
   const { language } = useLanguageStore();
@@ -31,32 +31,27 @@ function App() {
           <Routes>
             <Route path="/" element={<Layout />}>
               <Route index element={<Home />} />
-              <Route path="notre-approche" element={<NotreApproche />} />
-              <Route path="traitements" element={<Traitements />} />
-              <Route path="traitements/hyperthermie-oncologique" element={<Hyperthermie />} />
-              <Route path="traitements/sueroterapia" element={<Sueroterapia />} />
-              <Route path="traitements/medecine-regenerative" element={<MedecineRegenerative />} />
-              <Route path="traitements/soutien-immunitaire" element={<SoutienImmunitaire />} />
-              <Route path="a-propos" element={<APropos />} />
-              <Route path="contact" element={<Contact />} />
-              <Route path="contact/merci" element={<ContactMerci />} />
-              <Route path="politique-confidentialite" element={<PolitiqueConfidentialite />} />
-              <Route path="blog" element={<Blog />} />
-              <Route path="blog/:slug" element={<BlogPost />} />
+              <Route path={toRoutePath(ROUTES.NOTRE_APPROCHE)} element={<NotreApproche />} />
+              <Route path={toRoutePath(ROUTES.TRAITEMENTS)} element={<Traitements />} />
+              <Route path={toRoutePath(ROUTES.HIPERTERMIA)} element={<Hyperthermie />} />
+              <Route path={toRoutePath(ROUTES.SUEROTERAPIA)} element={<Sueroterapia />} />
+              <Route path={toRoutePath(ROUTES.MEDECINE_REGENERATIVE)} element={<MedecineRegenerative />} />
+              <Route path={toRoutePath(ROUTES.SOUTIEN_IMMUNITAIRE)} element={<SoutienImmunitaire />} />
+              <Route path={toRoutePath(ROUTES.A_PROPOS)} element={<APropos />} />
+              <Route path={toRoutePath(ROUTES.CONTACT)} element={<Contact />} />
+              <Route path={toRoutePath(ROUTES.CONTACT_MERCI)} element={<ContactMerci />} />
+              <Route path={toRoutePath(ROUTES.POLITIQUE_CONFIDENTIALITE)} element={<PolitiqueConfidentialite />} />
+              <Route path={toRoutePath(ROUTES.BLOG)} element={<Blog />} />
+              <Route path={`${toRoutePath(ROUTES.BLOG)}/:slug`} element={<BlogPost />} />
               <Route path="*" element={<NotFound />} />
             </Route>
-            {/* Redirections des anciennes URLs */}
-            <Route path="/medicina-integrativa" element={<Navigate to={ROUTES.NOTRE_APPROCHE} replace />} />
-            <Route path="/hipertermia-oncologica" element={<Navigate to={ROUTES.HIPERTERMIA} replace />} />
-            <Route path="/sueroterapia" element={<Navigate to={ROUTES.SUEROTERAPIA} replace />} />
-            <Route path="/medicina-regenerativa" element={<Navigate to={ROUTES.MEDECINE_REGENERATIVE} replace />} />
-            <Route path="/soporte-inmunologico" element={<Navigate to={ROUTES.SOUTIEN_IMMUNITAIRE} replace />} />
-            <Route path="/sobre-nosotros" element={<Navigate to={ROUTES.A_PROPOS} replace />} />
-            <Route path="/contacto" element={<Navigate to={ROUTES.CONTACT} replace />} />
-            <Route path="/mentions-legales" element={<Navigate to={ROUTES.POLITIQUE_CONFIDENTIALITE} replace />} />
-            <Route path="/faq" element={<Navigate to={ROUTES.HOME} replace />} />
-            <Route path="/consulta-inicial" element={<Navigate to={ROUTES.CONTACT} replace />} />
-            <Route path="/tu-recorrido" element={<Navigate to={ROUTES.NOTRE_APPROCHE} replace />} />
+            {ALL_REDIRECTS.map((redirect) => (
+              <Route
+                key={redirect.from}
+                path={redirect.from}
+                element={<Navigate to={redirect.to} replace />}
+              />
+            ))}
           </Routes>
         </div>
       </BrowserRouter>

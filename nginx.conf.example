@@ -1,0 +1,39 @@
+server {
+  listen 80;
+  server_name clinicaleslilas.com www.clinicaleslilas.com;
+
+  root /var/www/clinicaleslilas/dist;
+  index index.html;
+
+  rewrite ^/notre-approche$ /medicina-integrativa permanent;
+  rewrite ^/traitements$ /tratamientos permanent;
+  rewrite ^/traitements/hyperthermie-oncologique$ /tratamientos/hipertermia-oncologica permanent;
+  rewrite ^/traitements/sueroterapia$ /tratamientos/sueroterapia permanent;
+  rewrite ^/traitements/medecine-regenerative$ /tratamientos/medicina-regenerativa permanent;
+  rewrite ^/traitements/soutien-immunitaire$ /tratamientos/soporte-inmunologico permanent;
+  rewrite ^/a-propos$ /sobre-nosotros permanent;
+  rewrite ^/contact$ /contacto permanent;
+  rewrite ^/contact/merci$ /contacto/gracias permanent;
+  rewrite ^/mentions-legales$ /aviso-legal permanent;
+  rewrite ^/politique-confidentialite$ /aviso-legal permanent;
+  rewrite ^/hipertermia-oncologica$ /tratamientos/hipertermia-oncologica permanent;
+  rewrite ^/sueroterapia$ /tratamientos/sueroterapia permanent;
+  rewrite ^/medicina-regenerativa$ /tratamientos/medicina-regenerativa permanent;
+  rewrite ^/soporte-inmunologico$ /tratamientos/soporte-inmunologico permanent;
+  rewrite ^/faq$ / permanent;
+  rewrite ^/consulta-inicial$ /contacto permanent;
+  rewrite ^/tu-recorrido$ /medicina-integrativa permanent;
+  rewrite ^/blog/hyperthermie-oncologique$ /blog/hipertermia-oncologica permanent;
+  rewrite ^/blog/sueroterapia-micronutriments$ /blog/sueroterapia-micronutrientes permanent;
+  rewrite ^/blog/medecine-regenerative-cellules$ /blog/medicina-regenerativa-reparacion-celular permanent;
+
+  location / {
+    try_files $uri $uri/ $uri.html =404;
+  }
+
+  error_page 404 /404.html;
+
+  location = /404.html {
+    internal;
+  }
+}

@@ -12,7 +12,9 @@ const NotFound = () => {
       <PageHead
         title={t('meta.notFound.title')}
         description={t('meta.notFound.description')}
-        path="/404"
+        path={null}
+        noindex
+        includeCanonical={false}
       />
       <section className="min-h-[60vh] flex flex-col items-center justify-center px-6 py-24 text-center">
         <p className="text-8xl md:text-9xl font-bold text-primary/20 mb-4 select-none">

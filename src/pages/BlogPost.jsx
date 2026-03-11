@@ -5,7 +5,8 @@ import { NavArrowRight, NavArrowLeft } from 'iconoir-react';
 import { useLanguageStore } from '../store/languageStore';
 import PageHead from '../components/PageHead';
 import CTABlock from '../components/CTABlock';
-import { ROUTES, CONTACT } from '../routes';
+import NotFound from './NotFound';
+import { CONTACT, getBlogPath, getCanonicalBlogSlug, ROUTES } from '../routes';
 import { getBlogPost, getBlogPosts } from '../blog';
 
 const SITE_URL = 'https://clinicaleslilas.com';
@@ -61,7 +62,8 @@ const BlogPost = () => {
   const [openFaq, setOpenFaq] = useState(null);
   const contentRef = useRef(null);
 
-  const post = getBlogPost(slug, language);
+  const canonicalSlug = getCanonicalBlogSlug(slug);
+  const post = getBlogPost(canonicalSlug, language);
   const allPosts = getBlogPosts(language);
 
   useEffect(() => {
@@ -69,13 +71,17 @@ const BlogPost = () => {
       const headings = contentRef.current.querySelectorAll('h2[id]');
       setToc(Array.from(headings).map((h) => ({ id: h.id, title: h.textContent })));
     }
-  }, [slug, language]);
+  }, [canonicalSlug, language]);
 
-  if (!post) return <Navigate to={ROUTES.BLOG} replace />;
+  if (slug && canonicalSlug !== slug) {
+    return <Navigate to={getBlogPath(canonicalSlug)} replace />;
+  }
+
+  if (!post) return <NotFound />;
 
   const { Component, title, description, date, image, faq, category, tags } = post;
   const relatedPosts = allPosts
-    .filter((p) => p.slug !== slug && p.category === category)
+    .filter((p) => p.slug !== canonicalSlug && p.category === category)
     .slice(0, 2);
 
   const formatDate = (dateStr) => {
@@ -106,7 +112,7 @@ const BlogPost = () => {
     },
     mainEntityOfPage: {
       '@type': 'WebPage',
-      '@id': `${SITE_URL}${ROUTES.BLOG}/${slug}`,
+      '@id': `${SITE_URL}${getBlogPath(canonicalSlug)}`,
     },
     keywords: tags?.join(', '),
   };
@@ -117,7 +123,7 @@ const BlogPost = () => {
     itemListElement: [
       { '@type': 'ListItem', position: 1, name: 'Clínica Les Lilas', item: SITE_URL },
       { '@type': 'ListItem', position: 2, name: 'Blog', item: `${SITE_URL}${ROUTES.BLOG}` },
-      { '@type': 'ListItem', position: 3, name: title, item: `${SITE_URL}${ROUTES.BLOG}/${slug}` },
+      { '@type': 'ListItem', position: 3, name: title, item: `${SITE_URL}${getBlogPath(canonicalSlug)}` },
     ],
   };
 
@@ -139,7 +145,7 @@ const BlogPost = () => {
       <PageHead
         title={`${title} | Clínica Les Lilas`}
         description={description}
-        path={`${ROUTES.BLOG}/${slug}`}
+        path={getBlogPath(canonicalSlug)}
         keywords={tags?.join(', ')}
       />
 
@@ -283,7 +289,7 @@ const BlogPost = () => {
               {relatedPosts.map((rp) => (
                 <Link
                   key={rp.slug}
-                  to={`${ROUTES.BLOG}/${rp.slug}`}
+                  to={getBlogPath(rp.slug)}
                   className="group bg-white rounded-[1.75rem] border border-gray-200 overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300"
                 >
                   <div className="aspect-[16/9] overflow-hidden bg-primary/5">

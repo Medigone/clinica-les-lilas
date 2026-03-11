@@ -1,0 +1,30 @@
+RewriteEngine On
+
+Redirect 301 /notre-approche /medicina-integrativa
+Redirect 301 /traitements /tratamientos
+Redirect 301 /traitements/hyperthermie-oncologique /tratamientos/hipertermia-oncologica
+Redirect 301 /traitements/sueroterapia /tratamientos/sueroterapia
+Redirect 301 /traitements/medecine-regenerative /tratamientos/medicina-regenerativa
+Redirect 301 /traitements/soutien-immunitaire /tratamientos/soporte-inmunologico
+Redirect 301 /a-propos /sobre-nosotros
+Redirect 301 /contact /contacto
+Redirect 301 /contact/merci /contacto/gracias
+Redirect 301 /mentions-legales /aviso-legal
+Redirect 301 /politique-confidentialite /aviso-legal
+Redirect 301 /hipertermia-oncologica /tratamientos/hipertermia-oncologica
+Redirect 301 /sueroterapia /tratamientos/sueroterapia
+Redirect 301 /medicina-regenerativa /tratamientos/medicina-regenerativa
+Redirect 301 /soporte-inmunologico /tratamientos/soporte-inmunologico
+Redirect 301 /faq /
+Redirect 301 /consulta-inicial /contacto
+Redirect 301 /tu-recorrido /medicina-integrativa
+Redirect 301 /blog/hyperthermie-oncologique /blog/hipertermia-oncologica
+Redirect 301 /blog/sueroterapia-micronutriments /blog/sueroterapia-micronutrientes
+Redirect 301 /blog/medecine-regenerative-cellules /blog/medicina-regenerativa-reparacion-celular
+
+RewriteCond %{REQUEST_FILENAME} -f [OR]
+RewriteCond %{REQUEST_FILENAME} -d
+RewriteRule ^ - [L]
+
+ErrorDocument 404 /404.html
+RewriteRule ^ /404.html [L,R=404]

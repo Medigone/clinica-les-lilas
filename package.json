@@ -5,8 +5,8 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "vite build",
-    "build:prerender": "PRERENDER=true vite build",
+    "build": "node scripts/generate-sitemap.mjs && vite build && node scripts/prerender.mjs",
+    "build:prerender": "npm run build",
     "preview": "vite preview"
   },
   "dependencies": {
