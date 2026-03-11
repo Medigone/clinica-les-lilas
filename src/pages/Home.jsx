@@ -106,6 +106,7 @@ const VALUE_BLOCK_ICONS = [
 const WHY_US_ICONS = [
   (props) => <Healthcare {...props} />,
   (props) => <Settings {...props} />,
+  (props) => <Healthcare {...props} />,
   (props) => <Globe {...props} />,
   (props) => <Building {...props} />,
   (props) => <ChatBubble {...props} />,
@@ -166,6 +167,7 @@ const Home = () => {
         imageSrc="/assets/bg_hero_2.png"
         h1={t('home.hero.h1')}
         text={t('home.hero.text')}
+        ctaNote={t('home.hero.ctaNote')}
       />
 
       <div>
@@ -274,7 +276,7 @@ const Home = () => {
           <p className="text-lg text-text/80 mb-8 leading-relaxed">
             {t('home.ctaConsultation.text')}
           </p>
-          <CTABlock variant="bookAppointment" size="large" />
+          <CTABlock variant="bookConsultationInitial" size="large" />
         </div>
       </section>
       </div>

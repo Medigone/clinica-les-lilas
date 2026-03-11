@@ -9,6 +9,7 @@ const CTABlock = ({ variant = 'requestConsultation', size = 'default', to, reaso
   const variantConfig = {
     requestConsultation: { ctaKey: 'cta.requestConsultation', path: ROUTES.CONTACT, isPrimary: true },
     bookAppointment: { ctaKey: 'cta.bookAppointment', path: ROUTES.CONTACT, isPrimary: true },
+    bookConsultationInitial: { ctaKey: 'cta.bookConsultationInitial', path: ROUTES.CONTACT, isPrimary: true },
     contactTeam: { ctaKey: 'cta.contactTeam', path: ROUTES.CONTACT, isPrimary: false },
     contactClinic: { ctaKey: 'cta.contactClinic', path: ROUTES.CONTACT, isPrimary: false },
     discoverApproach: { ctaKey: 'cta.discoverApproach', path: ROUTES.NOTRE_APPROCHE, isPrimary: false },

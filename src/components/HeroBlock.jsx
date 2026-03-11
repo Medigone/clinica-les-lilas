@@ -14,6 +14,7 @@ const HeroBlock = ({
   showCta = true,
   compact = false,
   ctaReason,
+  ctaNote,
 }) => {
   return (
     <section
@@ -45,6 +46,9 @@ const HeroBlock = ({
           {text}
         </p>
         {showCta && <CTABlock variant={ctaVariant} size="default" reason={ctaReason} />}
+        {showCta && ctaNote && (
+          <p className="mt-3 text-sm text-text/60 italic">{ctaNote}</p>
+        )}
       </div>
     </section>
   );

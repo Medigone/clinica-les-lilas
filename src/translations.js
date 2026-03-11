@@ -27,6 +27,7 @@ export const translations = {
       requestConsultation: 'Demander une première consultation',
       bookAppointment: 'Prendre rendez-vous',
       bookAppointmentShort: 'RDV',
+      bookConsultationInitial: 'Prendre un premier rendez-vous',
       contactTeam: 'Parler à notre équipe',
       contactClinic: 'Contacter la clinique',
       discoverApproach: 'Découvrir notre approche',
@@ -125,6 +126,7 @@ export const translations = {
         h1: 'Médecine intégrative et traitements personnalisés',
         subtitle: 'Clinique privée dédiée à votre santé globale',
         text: "Clínica Les Lilas associe expertise médicale, technologies innovantes et attention humaine pour vous accompagner dans un parcours de soin adapté à votre situation. Chaque prise en charge débute par une évaluation approfondie.",
+        ctaNote: "La consultation initiale est le point de départ de tout parcours thérapeutique dans notre clinique.",
       },
       valueProposition: {
         title: 'Un cadre médical exigeant au service du patient',
@@ -815,6 +817,7 @@ export const translations = {
       requestConsultation: 'Request a first consultation',
       bookAppointment: 'Book an appointment',
       bookAppointmentShort: 'Book',
+      bookConsultationInitial: 'Book initial consultation',
       contactTeam: 'Speak with our team',
       contactClinic: 'Contact the clinic',
       discoverApproach: 'Discover our approach',
@@ -913,6 +916,7 @@ export const translations = {
         h1: 'Integrative medicine and personalized treatments',
         subtitle: 'A private clinic dedicated to your overall health',
         text: "Clínica Les Lilas combines medical expertise, innovative technologies and human attention to guide you through a care pathway tailored to your situation. Every treatment plan begins with a thorough evaluation.",
+        ctaNote: "The initial consultation is the starting point of every therapeutic journey at our clinic.",
       },
       valueProposition: {
         title: 'A demanding medical framework at the service of the patient',
@@ -1582,6 +1586,7 @@ export const translations = {
       requestConsultation: 'Solicitar primera consulta',
       bookAppointment: 'Pedir cita',
       bookAppointmentShort: 'Cita',
+      bookConsultationInitial: 'Pedir consulta inicial',
       contactTeam: 'Hablar con nuestro equipo',
       contactClinic: 'Contactar la clínica',
       discoverApproach: 'Descubrir nuestro enfoque',
@@ -1681,7 +1686,8 @@ export const translations = {
       hero: {
         h1: 'Medicina integrativa y tratamientos personalizados en Alicante',
         subtitle: 'Clínica privada dedicada a su salud global',
-        text: "Clínica Les Lilas combina experiencia médica, tecnologías innovadoras y atención humana para acompañarle en un recorrido de cuidados adaptado a su situación. Ubicados en San Juan de Alicante, atendemos pacientes de toda la provincia y de otras regiones que buscan un enfoque médico integrativo riguroso. Cada plan de atención comienza con una evaluación exhaustiva.",
+        text: "Clínica Les Lilas combina experiencia médica, tecnologías innovadoras y atención humana para acompañarle en un recorrido de cuidados adaptado a su situación. Cada plan de atención comienza con una evaluación exhaustiva. Nuestra clínica está ubicada en San Juan de Alicante y atiende pacientes de toda la provincia.",
+        ctaNote: "La consulta inicial es el punto de partida de todo recorrido terapéutico en nuestra clínica.",
       },
       valueProposition: {
         title: 'Un marco médico exigente al servicio del paciente',
@@ -1697,8 +1703,8 @@ export const translations = {
         title: 'Nuestros ejes de atención',
         text: "Ofrecemos varios ejes terapéuticos, cada uno integrado en una lógica de atención global. La consulta inicial permite orientar hacia el recorrido más adecuado.",
         cards: [
-          { title: 'Hipertermia oncológica', subtitle: 'Único centro especializado en hipertermia oncológica en la provincia de Alicante.', text: "Calor localizado utilizado como complemento a los tratamientos convencionales, en un marco clínico riguroso y tras evaluación individual.", path: ROUTES.HIPERTERMIA, cta: 'Descubrir' },
-          { title: 'Sueroterapia / IV Therapy', text: "Protocolos de perfusión intravenosa definidos a medida, para objetivos de soporte, recuperación o bienestar medicalizado.", path: ROUTES.SUEROTERAPIA, cta: 'Descubrir' },
+          { title: 'Hipertermia oncológica', subtitle: 'Único centro especializado en hipertermia oncológica en la provincia de Alicante.', text: "La hipertermia oncológica se aplica en un marco clínico riguroso como complemento a los tratamientos convencionales, tras evaluación médica individual.", path: ROUTES.HIPERTERMIA, cta: 'Descubrir' },
+          { title: 'Sueroterapia / IV Therapy', text: "Sueroterapia intravenosa con protocolos definidos a medida: vitamina C IV, NAD+, glutatión y otros activos, para objetivos de soporte, recuperación o bienestar medicalizado en Alicante.", path: ROUTES.SUEROTERAPIA, cta: 'Descubrir' },
           { title: 'Medicina regenerativa', text: "Terapias orientadas a la reparación y el soporte tisular, en un marco de innovación clínica controlada.", path: ROUTES.MEDECINE_REGENERATIVE, cta: 'Descubrir' },
           { title: 'Soporte inmunológico', text: "Acompañamiento medicalizado para la prevención, la recuperación y el equilibrio global, adaptado a cada perfil.", path: ROUTES.SOUTIEN_IMMUNITAIRE, cta: 'Descubrir' },
         ],
@@ -1708,6 +1714,7 @@ export const translations = {
         items: [
           ['Un enfoque de ', { text: 'medicina integrativa', href: ROUTES.NOTRE_APPROCHE }, ' con evaluación médica completa antes de cualquier tratamiento'],
           ['Protocolos individualizados en ', { text: 'hipertermia oncológica', href: ROUTES.HIPERTERMIA }, ', ', { text: 'sueroterapia intravenosa', href: ROUTES.SUEROTERAPIA }, ' y otros tratamientos'],
+          'Especialistas en medicina integrativa oncológica y acompañamiento del paciente con cáncer',
           'Equipo médico multilingüe (francés, español, inglés)',
           'Entorno clínico privado, tranquilo y acogedor',
           'La consulta como verdadero punto de partida del recorrido de cuidados',
