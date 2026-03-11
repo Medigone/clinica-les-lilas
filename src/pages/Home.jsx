@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import { Helmet } from 'react-helmet-async';
 import {
   ArrowRight,
   Building,
@@ -17,6 +18,76 @@ import PageHead from '../components/PageHead';
 import HeroBlock from '../components/HeroBlock';
 import CTABlock from '../components/CTABlock';
 import { ROUTES } from '../routes';
+
+const SITE_URL = 'https://clinicaleslilas.com';
+
+const WEBSITE_SCHEMA = {
+  '@context': 'https://schema.org',
+  '@type': 'WebSite',
+  name: 'Clínica Les Lilas',
+  url: SITE_URL,
+  potentialAction: {
+    '@type': 'SearchAction',
+    target: {
+      '@type': 'EntryPoint',
+      urlTemplate: `${SITE_URL}/?s={search_term_string}`,
+    },
+    'query-input': 'required name=search_term_string',
+  },
+};
+
+const MEDICAL_ORG_SCHEMA = {
+  '@context': 'https://schema.org',
+  '@type': ['MedicalOrganization', 'LocalBusiness'],
+  name: 'Clínica Les Lilas',
+  alternateName: 'Clinica Les Lilas Alicante',
+  description:
+    'Clínica privada de medicina integrativa en San Juan de Alicante. Especializada en hipertermia oncológica electromodulada, sueroterapia intravenosa, medicina regenerativa y soporte inmunológico.',
+  url: SITE_URL,
+  logo: `${SITE_URL}/assets/Logo_clinica_les_lilas.svg`,
+  telephone: '+34614067537',
+  email: 'info@clinicaleslilas.com',
+  address: {
+    '@type': 'PostalAddress',
+    streetAddress: 'Avinguda de la Diagonal, 4',
+    addressLocality: "Sant Joan d'Alacant",
+    addressRegion: 'Alicante',
+    postalCode: '03550',
+    addressCountry: 'ES',
+  },
+  geo: {
+    '@type': 'GeoCoordinates',
+    latitude: '38.4015',
+    longitude: '-0.4307',
+  },
+  openingHoursSpecification: {
+    '@type': 'OpeningHoursSpecification',
+    dayOfWeek: ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday'],
+    opens: '09:00',
+    closes: '19:00',
+  },
+  hasMap:
+    "https://www.google.com/maps/search/?api=1&query=Avinguda+de+la+Diagonal+4+Sant+Joan+d%27Alacant",
+  medicalSpecialty: ['Oncology', 'IntegrativeMedicine'],
+  availableService: [
+    {
+      '@type': 'MedicalTherapy',
+      name: 'Hipertermia oncológica',
+      url: `${SITE_URL}${ROUTES.HIPERTERMIA}`,
+    },
+    {
+      '@type': 'MedicalTherapy',
+      name: 'Sueroterapia intravenosa',
+      url: `${SITE_URL}${ROUTES.SUEROTERAPIA}`,
+    },
+    {
+      '@type': 'MedicalTherapy',
+      name: 'Medicina regenerativa',
+      url: `${SITE_URL}${ROUTES.MEDECINE_REGENERATIVE}`,
+    },
+  ],
+  sameAs: ['https://www.instagram.com/clinicaleslilas/'],
+};
 
 const CARE_HERO_IMAGES = {
   [ROUTES.HIPERTERMIA]: '/assets/about-bg.png',
@@ -42,6 +113,26 @@ const WHY_US_ICONS = [
 
 const CARD_BG = 'bg-white';
 
+const renderWhyUsItem = (item) => {
+  if (typeof item === 'string') return item;
+  if (Array.isArray(item)) {
+    return item.map((part, i) =>
+      typeof part === 'string' ? (
+        part
+      ) : (
+        <Link
+          key={i}
+          to={part.href}
+          className="underline decoration-primary/40 underline-offset-2 hover:decoration-primary transition-colors"
+        >
+          {part.text}
+        </Link>
+      )
+    );
+  }
+  return item;
+};
+
 const Home = () => {
   const { t } = useLanguageStore();
   const valueBlocks = t('home.valueProposition.blocks', { returnObjects: true });
@@ -56,6 +147,20 @@ const Home = () => {
         path={ROUTES.HOME}
         keywords={t('meta.home.keywords')}
       />
+
+      <Helmet>
+        {/* hreflang — site monolingue côté URL, les 3 locales pointent vers la même racine */}
+        <link rel="alternate" hreflang="es" href={`${SITE_URL}/`} />
+        <link rel="alternate" hreflang="fr" href={`${SITE_URL}/`} />
+        <link rel="alternate" hreflang="en" href={`${SITE_URL}/`} />
+        <link rel="alternate" hreflang="x-default" href={`${SITE_URL}/`} />
+
+        {/* WebSite schema */}
+        <script type="application/ld+json">{JSON.stringify(WEBSITE_SCHEMA)}</script>
+
+        {/* MedicalOrganization + LocalBusiness schema */}
+        <script type="application/ld+json">{JSON.stringify(MEDICAL_ORG_SCHEMA)}</script>
+      </Helmet>
 
       <HeroBlock
         imageSrc="/assets/bg_hero_2.png"
@@ -122,6 +227,9 @@ const Home = () => {
                   </div>
                   <div className="p-8">
                     <h3 className="text-xl font-bold text-primary mb-2">{card.title}</h3>
+                    {card.subtitle && (
+                      <p className="text-sm text-primary/70 font-medium mb-2">{card.subtitle}</p>
+                    )}
                     <p className="text-text/70 mb-4">{card.text}</p>
                     <span className="text-primary font-medium inline-flex items-center gap-2">
                       {card.cta}
@@ -150,7 +258,7 @@ const Home = () => {
                     {WHY_US_ICONS[index] && WHY_US_ICONS[index]({ className: 'w-4 h-4' })}
                   </div>
                   <p className="text-base text-text/80 leading-relaxed">
-                    {item}
+                    {renderWhyUsItem(item)}
                   </p>
                 </div>
               ))}

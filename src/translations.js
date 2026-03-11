@@ -1611,8 +1611,9 @@ export const translations = {
     },
     meta: {
       home: {
-        title: 'Clínica Les Lilas | Medicina integrativa en Alicante',
-        description: 'Clínica privada de medicina integrativa en Alicante. Hipertermia oncológica, sueroterapia, medicina regenerativa. Consulta personalizada y acompañamiento médico.',
+        title: 'Clínica Les Lilas | Medicina Integrativa y Hipertermia Oncológica en Alicante',
+        description: 'Clínica privada de medicina integrativa en San Juan de Alicante. Especializados en hipertermia oncológica, sueroterapia intravenosa y protocolos personalizados. Evaluación médica exhaustiva antes de cualquier tratamiento.',
+        keywords: 'medicina integrativa Alicante, clínica medicina integrativa San Juan de Alicante, hipertermia oncológica Alicante, sueroterapia intravenosa Alicante, tratamientos complementarios cáncer Alicante',
       },
       notreApproche: {
         title: 'Nuestro enfoque en medicina integrativa | Clínica Les Lilas',
@@ -1678,9 +1679,9 @@ export const translations = {
     },
     home: {
       hero: {
-        h1: 'Medicina integrativa y tratamientos personalizados',
+        h1: 'Medicina integrativa y tratamientos personalizados en Alicante',
         subtitle: 'Clínica privada dedicada a su salud global',
-        text: "Clínica Les Lilas combina experiencia médica, tecnologías innovadoras y atención humana para acompañarle en un recorrido de cuidados adaptado a su situación. Cada plan de atención comienza con una evaluación exhaustiva.",
+        text: "Clínica Les Lilas combina experiencia médica, tecnologías innovadoras y atención humana para acompañarle en un recorrido de cuidados adaptado a su situación. Ubicados en San Juan de Alicante, atendemos pacientes de toda la provincia y de otras regiones que buscan un enfoque médico integrativo riguroso. Cada plan de atención comienza con una evaluación exhaustiva.",
       },
       valueProposition: {
         title: 'Un marco médico exigente al servicio del paciente',
@@ -1696,7 +1697,7 @@ export const translations = {
         title: 'Nuestros ejes de atención',
         text: "Ofrecemos varios ejes terapéuticos, cada uno integrado en una lógica de atención global. La consulta inicial permite orientar hacia el recorrido más adecuado.",
         cards: [
-          { title: 'Hipertermia oncológica', text: "Calor localizado utilizado como complemento a los tratamientos convencionales, en un marco clínico riguroso y tras evaluación individual.", path: ROUTES.HIPERTERMIA, cta: 'Descubrir' },
+          { title: 'Hipertermia oncológica', subtitle: 'Único centro especializado en hipertermia oncológica en la provincia de Alicante.', text: "Calor localizado utilizado como complemento a los tratamientos convencionales, en un marco clínico riguroso y tras evaluación individual.", path: ROUTES.HIPERTERMIA, cta: 'Descubrir' },
           { title: 'Sueroterapia / IV Therapy', text: "Protocolos de perfusión intravenosa definidos a medida, para objetivos de soporte, recuperación o bienestar medicalizado.", path: ROUTES.SUEROTERAPIA, cta: 'Descubrir' },
           { title: 'Medicina regenerativa', text: "Terapias orientadas a la reparación y el soporte tisular, en un marco de innovación clínica controlada.", path: ROUTES.MEDECINE_REGENERATIVE, cta: 'Descubrir' },
           { title: 'Soporte inmunológico', text: "Acompañamiento medicalizado para la prevención, la recuperación y el equilibrio global, adaptado a cada perfil.", path: ROUTES.SOUTIEN_IMMUNITAIRE, cta: 'Descubrir' },
@@ -1705,8 +1706,8 @@ export const translations = {
       whyUs: {
         title: 'Por qué elegir Clínica Les Lilas',
         items: [
-          'Evaluación médica completa antes de cualquier propuesta de tratamiento',
-          'Protocolos individualizados, nunca estandarizados',
+          ['Un enfoque de ', { text: 'medicina integrativa', href: ROUTES.NOTRE_APPROCHE }, ' con evaluación médica completa antes de cualquier tratamiento'],
+          ['Protocolos individualizados en ', { text: 'hipertermia oncológica', href: ROUTES.HIPERTERMIA }, ', ', { text: 'sueroterapia intravenosa', href: ROUTES.SUEROTERAPIA }, ' y otros tratamientos'],
           'Equipo médico multilingüe (francés, español, inglés)',
           'Entorno clínico privado, tranquilo y acogedor',
           'La consulta como verdadero punto de partida del recorrido de cuidados',
@@ -1776,7 +1777,7 @@ export const translations = {
       },
       ourApproach: {
         title: 'Nuestro enfoque integrativo',
-        text: "En Clínica Les Lilas, la hipertermia no se propone como un acto aislado. Se integra en un recorrido clínico más amplio, en coordinación con los tratamientos en curso del paciente y, cuando procede, en comunicación con el equipo oncológico. Nuestro papel consiste en valorar si este enfoque puede tener un lugar coherente dentro del plan terapéutico global, sin interferir con el tratamiento principal. Cada indicación se basa en un análisis médico riguroso, una información clara y una toma de decisiones prudente. Ninguna sesión se realiza sin una evaluación previa individualizada.",
+        text: "En Clínica Les Lilas, la hipertermia no se propone como un acto aislado. Se integra en un recorrido clínico más amplio, en coordinación con los tratamientos en curso del paciente y, cuando procede, en comunicación con el equipo oncológico. En nuestra clínica en San Juan de Alicante, único centro en la zona en ofrecer este tratamiento, nuestro papel consiste en valorar si este enfoque puede tener un lugar coherente dentro del plan terapéutico global, sin interferir con el tratamiento principal. Cada indicación se basa en un análisis médico riguroso, una información clara y una toma de decisiones prudente. Ninguna sesión se realiza sin una evaluación previa individualizada.",
       },
       forWho: {
         title: '¿En qué casos puede utilizarse?',
@@ -1823,6 +1824,8 @@ export const translations = {
       evidence: {
         title: 'Evidencia científica',
         text: "La hipertermia oncológica ha sido objeto de estudios clínicos publicados en revistas científicas internacionales. Las investigaciones han explorado su uso como tratamiento complementario en diferentes tipos de tumores, en combinación con radioterapia y quimioterapia. Los resultados disponibles no permiten extraer la misma conclusión para todos los pacientes ni para todas las situaciones, pero sí ayudan a definir mejor los contextos en los que este enfoque puede ser valorado. En nuestra práctica, la literatura científica sirve como base de orientación y siempre se complementa con el análisis médico individual y con la prudencia clínica necesaria.",
+        seorText: "La Sociedad Española de Oncología Radioterápica (SEOR) dispone de un grupo de trabajo específico sobre hipertermia oncológica y ha publicado guías de consenso que orientan su uso clínico en combinación con radioterapia y quimioterapia.",
+        eortcText: "Entre los estudios más relevantes, el ensayo clínico EORTC 62961 demostró que la combinación de hipertermia y quimioterapia mejoró la supervivencia a 5 años en sarcomas de tejido blando (62,7% frente al 51,3% del grupo control).",
         disclaimer: "La información contenida en esta página tiene carácter informativo. No constituye asesoramiento médico personalizado. Toda decisión terapéutica requiere una valoración médica individual.",
       },
       beforeTreatment: {

@@ -1,4 +1,6 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
+import { Helmet } from 'react-helmet-async';
 import { NavArrowRight } from 'iconoir-react';
 import { useLanguageStore } from '../store/languageStore';
 import PageHead from '../components/PageHead';
@@ -7,8 +9,10 @@ import CTABlock from '../components/CTABlock';
 import SchemaServiceOrg from '../components/SchemaServiceOrg';
 import { ROUTES } from '../routes';
 
+const SITE_URL = 'https://clinicaleslilas.com';
+
 const Hyperthermie = () => {
-  const { t } = useLanguageStore();
+  const { t, language } = useLanguageStore();
   const forWhoItems = t('hyperthermie.forWho.items', { returnObjects: true });
   const benefitsItems = t('hyperthermie.benefits.items', { returnObjects: true });
   const sessionSteps = t('hyperthermie.session.steps', { returnObjects: true });
@@ -16,8 +20,55 @@ const Hyperthermie = () => {
   const followUpItems = t('hyperthermie.followUp.items', { returnObjects: true });
   const faqItems = t('hyperthermie.faq.items', { returnObjects: true });
 
+  const faqSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'FAQPage',
+    mainEntity: Array.isArray(faqItems)
+      ? faqItems.map(item => ({
+          '@type': 'Question',
+          name: item.q,
+          acceptedAnswer: { '@type': 'Answer', text: item.a },
+        }))
+      : [],
+  };
+
+  const localBusinessSchema = {
+    '@context': 'https://schema.org',
+    '@type': ['MedicalClinic', 'LocalBusiness'],
+    name: 'Clínica Les Lilas',
+    description:
+      'Clínica privada de medicina integrativa en San Juan de Alicante especializada en hipertermia oncológica y sueroterapia intravenosa',
+    url: SITE_URL,
+    telephone: '+34614067537',
+    email: 'info@clinicaleslilas.com',
+    address: {
+      '@type': 'PostalAddress',
+      streetAddress: 'Avinguda de la Diagonal, 4',
+      addressLocality: "Sant Joan d'Alacant",
+      addressRegion: 'Alicante',
+      postalCode: '03550',
+      addressCountry: 'ES',
+    },
+    medicalSpecialty: 'Oncology',
+    availableService: {
+      '@type': 'MedicalTherapy',
+      name: 'Hipertermia oncológica',
+    },
+  };
+
   return (
     <>
+      <Helmet>
+        {/* FAQ structured data */}
+        <script type="application/ld+json">{JSON.stringify(faqSchema)}</script>
+        {/* LocalBusiness + MedicalClinic structured data */}
+        <script type="application/ld+json">{JSON.stringify(localBusinessSchema)}</script>
+        {/* hreflang for es / fr / en */}
+        <link rel="alternate" hrefLang="es" href={`${SITE_URL}/tratamientos/hipertermia-oncologica`} />
+        <link rel="alternate" hrefLang="fr" href={`${SITE_URL}/traitements/hyperthermie-oncologique`} />
+        <link rel="alternate" hrefLang="en" href={`${SITE_URL}/tratamientos/hipertermia-oncologica`} />
+        <link rel="alternate" hrefLang="x-default" href={`${SITE_URL}/tratamientos/hipertermia-oncologica`} />
+      </Helmet>
       <SchemaServiceOrg
         name={t('meta.hyperthermie.title')}
         description={t('meta.hyperthermie.description')}
@@ -35,7 +86,7 @@ const Hyperthermie = () => {
         h1={t('hyperthermie.hero.h1')}
         subtitle={t('hyperthermie.hero.subtitle')}
         text={t('hyperthermie.hero.text')}
-        ctaReason="hyperthermie"
+        ctaReason="hipertermia"
       />
 
       {/* Définition + Approche */}
@@ -45,7 +96,7 @@ const Hyperthermie = () => {
             <article className="p-6 md:p-8 bg-white rounded-2xl border border-gray-200 hover:border-primary/20 hover:shadow-lg transition-all overflow-hidden">
               <img
                 src="/assets/page_hypertermia.png"
-                alt="Séance d'hyperthermie oncologique en clinique"
+                alt="Sesión de hipertermia oncológica en clínica, San Juan de Alicante"
                 className="w-full h-auto rounded-xl object-cover shadow-md mb-6"
               />
               <h2 className="text-xl md:text-2xl font-bold text-primary mb-4">
@@ -141,6 +192,33 @@ const Hyperthermie = () => {
             <p className="text-text/80 leading-relaxed mb-4">
               {t('hyperthermie.evidence.text')}
             </p>
+            {language === 'es' && (
+              <>
+                <p className="text-text/80 leading-relaxed mb-3">
+                  {t('hyperthermie.evidence.seorText')}
+                </p>
+                <p className="text-text/80 leading-relaxed mb-4">
+                  {t('hyperthermie.evidence.eortcText')}
+                </p>
+                <p className="text-text/80 leading-relaxed mb-4">
+                  La hipertermia oncológica forma parte de nuestro programa de{' '}
+                  <Link
+                    to={ROUTES.NOTRE_APPROCHE}
+                    className="text-primary underline underline-offset-2 hover:text-primary/80 transition-colors"
+                  >
+                    medicina integrativa
+                  </Link>
+                  {' '}y puede complementarse con{' '}
+                  <Link
+                    to={ROUTES.SUEROTERAPIA}
+                    className="text-primary underline underline-offset-2 hover:text-primary/80 transition-colors"
+                  >
+                    sueroterapia intravenosa
+                  </Link>
+                  {' '}según el perfil clínico de cada paciente, dentro de un plan de atención individualizado.
+                </p>
+              </>
+            )}
             <p className="text-text/60 text-sm italic leading-relaxed border-t border-gray-100 pt-4">
               {t('hyperthermie.evidence.disclaimer')}
             </p>
@@ -222,7 +300,7 @@ const Hyperthermie = () => {
           <p className="text-lg text-text/80 leading-relaxed mb-8">
             {t('hyperthermie.seriousFramework.text')}
           </p>
-          <CTABlock variant="requestConsultation" size="large" reason="hyperthermie" />
+          <CTABlock variant="requestConsultation" size="large" reason="hipertermia" />
         </div>
       </section>
     </>
