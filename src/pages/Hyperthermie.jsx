@@ -10,6 +10,11 @@ import { ROUTES } from '../routes';
 const Hyperthermie = () => {
   const { t } = useLanguageStore();
   const forWhoItems = t('hyperthermie.forWho.items', { returnObjects: true });
+  const benefitsItems = t('hyperthermie.benefits.items', { returnObjects: true });
+  const sessionSteps = t('hyperthermie.session.steps', { returnObjects: true });
+  const beforeTreatmentItems = t('hyperthermie.beforeTreatment.items', { returnObjects: true });
+  const followUpItems = t('hyperthermie.followUp.items', { returnObjects: true });
+  const faqItems = t('hyperthermie.faq.items', { returnObjects: true });
 
   return (
     <>
@@ -33,6 +38,7 @@ const Hyperthermie = () => {
         ctaReason="hyperthermie"
       />
 
+      {/* Définition + Approche */}
       <section className="py-20 md:py-24">
         <div className="max-w-6xl mx-auto px-6 md:px-12 lg:px-16">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6 lg:gap-8">
@@ -52,6 +58,32 @@ const Hyperthermie = () => {
               <p className="text-text/80 leading-relaxed">
                 {t('hyperthermie.ourApproach.text')}
               </p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      {/* Séance (pleine largeur) + Cas d'utilisation + Bénéfices */}
+      <section className="py-16 md:py-20 bg-gray-50/60">
+        <div className="max-w-6xl mx-auto px-6 md:px-12 lg:px-16">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 lg:gap-8">
+
+            <article className="p-6 md:p-8 bg-white rounded-2xl border border-gray-200 hover:border-primary/20 hover:shadow-lg transition-all md:col-span-2">
+              <h2 className="text-xl md:text-2xl font-bold text-primary mb-3">
+                {t('hyperthermie.session.title')}
+              </h2>
+              <p className="text-text/80 leading-relaxed mb-4">
+                {t('hyperthermie.session.text')}
+              </p>
+              <ul className="grid grid-cols-1 sm:grid-cols-2 gap-x-8 gap-y-2">
+                {Array.isArray(sessionSteps) &&
+                  sessionSteps.map((step, index) => (
+                    <li key={index} className="flex items-start gap-3">
+                      <NavArrowRight className="w-3.5 h-3.5 text-primary mt-1 shrink-0" strokeWidth={2} />
+                      <span className="text-text/80 text-sm">{step}</span>
+                    </li>
+                  ))}
+              </ul>
             </article>
 
             <article className="p-6 md:p-8 bg-white rounded-2xl border border-gray-200 hover:border-primary/20 hover:shadow-lg transition-all">
@@ -74,16 +106,109 @@ const Hyperthermie = () => {
 
             <article className="p-6 md:p-8 bg-white rounded-2xl border border-gray-200 hover:border-primary/20 hover:shadow-lg transition-all">
               <h2 className="text-xl md:text-2xl font-bold text-primary mb-4">
-                {t('hyperthermie.consultationEssential.title')}
+                {t('hyperthermie.benefits.title')}
               </h2>
-              <p className="text-text/80 leading-relaxed">
-                {t('hyperthermie.consultationEssential.text')}
+              <p className="text-text/80 mb-4 leading-relaxed">
+                {t('hyperthermie.benefits.text')}
               </p>
+              <ul className="space-y-2">
+                {Array.isArray(benefitsItems) &&
+                  benefitsItems.map((item, index) => (
+                    <li key={index} className="flex items-start gap-3">
+                      <NavArrowRight className="w-3.5 h-3.5 text-primary mt-1 shrink-0" strokeWidth={2} />
+                      <span className="text-text/80 text-sm">{item}</span>
+                    </li>
+                  ))}
+              </ul>
+            </article>
+
+          </div>
+        </div>
+      </section>
+
+      {/* Evidencia científica */}
+      <section className="py-16 md:py-20">
+        <div className="max-w-4xl mx-auto px-6 md:px-12 lg:px-16">
+          <article className="p-6 md:p-8 bg-white rounded-2xl border border-gray-200 hover:border-primary/20 hover:shadow-lg transition-all">
+            <h2 className="text-xl md:text-2xl font-bold text-primary mb-4">
+              {t('hyperthermie.evidence.title')}
+            </h2>
+            <p className="text-text/80 leading-relaxed mb-4">
+              {t('hyperthermie.evidence.text')}
+            </p>
+            <p className="text-text/60 text-sm italic leading-relaxed border-t border-gray-100 pt-4">
+              {t('hyperthermie.evidence.disclaimer')}
+            </p>
+          </article>
+        </div>
+      </section>
+
+      {/* Préparation + suivi */}
+      <section className="py-16 md:py-20">
+        <div className="max-w-6xl mx-auto px-6 md:px-12 lg:px-16">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 lg:gap-8">
+            <article className="p-6 md:p-8 bg-white rounded-2xl border border-gray-200 hover:border-primary/20 hover:shadow-lg transition-all">
+              <h2 className="text-xl md:text-2xl font-bold text-primary mb-4">
+                {t('hyperthermie.beforeTreatment.title')}
+              </h2>
+              <p className="text-text/80 mb-4 leading-relaxed">
+                {t('hyperthermie.beforeTreatment.text')}
+              </p>
+              <ul className="space-y-2">
+                {Array.isArray(beforeTreatmentItems) &&
+                  beforeTreatmentItems.map((item, index) => (
+                    <li key={index} className="flex items-start gap-3">
+                      <NavArrowRight className="w-3.5 h-3.5 text-primary mt-1 shrink-0" strokeWidth={2} />
+                      <span className="text-text/80 text-sm">{item}</span>
+                    </li>
+                  ))}
+              </ul>
+            </article>
+
+            <article className="p-6 md:p-8 bg-white rounded-2xl border border-gray-200 hover:border-primary/20 hover:shadow-lg transition-all">
+              <h2 className="text-xl md:text-2xl font-bold text-primary mb-4">
+                {t('hyperthermie.followUp.title')}
+              </h2>
+              <p className="text-text/80 mb-4 leading-relaxed">
+                {t('hyperthermie.followUp.text')}
+              </p>
+              <ul className="space-y-2">
+                {Array.isArray(followUpItems) &&
+                  followUpItems.map((item, index) => (
+                    <li key={index} className="flex items-start gap-3">
+                      <NavArrowRight className="w-3.5 h-3.5 text-primary mt-1 shrink-0" strokeWidth={2} />
+                      <span className="text-text/80 text-sm">{item}</span>
+                    </li>
+                  ))}
+              </ul>
             </article>
           </div>
         </div>
       </section>
 
+      {/* FAQ */}
+      <section className="py-16 md:py-20 bg-gray-50/60">
+        <div className="max-w-4xl mx-auto px-6 md:px-12 lg:px-16">
+          <h2 className="text-2xl md:text-3xl font-bold text-primary mb-8">
+            {t('hyperthermie.faq.title')}
+          </h2>
+          <div className="space-y-4">
+            {Array.isArray(faqItems) &&
+              faqItems.map((item, index) => (
+                <article key={index} className="p-6 bg-white rounded-2xl border border-gray-200 hover:border-primary/20 hover:shadow-lg transition-all">
+                  <h3 className="text-base md:text-lg font-bold text-primary mb-2">
+                    {item.q}
+                  </h3>
+                  <p className="text-text/80 text-sm leading-relaxed">
+                    {item.a}
+                  </p>
+                </article>
+              ))}
+          </div>
+        </div>
+      </section>
+
+      {/* CTA final */}
       <section className="py-20">
         <div className="max-w-4xl mx-auto px-6 md:px-12 lg:px-16">
           <h2 className="text-2xl md:text-3xl font-bold text-primary mb-6">

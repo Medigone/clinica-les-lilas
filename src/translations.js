@@ -209,33 +209,122 @@ export const translations = {
     hyperthermie: {
       hero: {
         h1: 'Hyperthermie oncologique',
-        subtitle: 'Une technique complémentaire intégrée dans un parcours clinique global',
-        text: "L'hyperthermie oncologique est une technique médicale qui utilise la chaleur localisée pour compléter les traitements conventionnels en oncologie. Chez Clínica Les Lilas, elle s'inscrit dans une prise en charge intégrative rigoureuse, toujours précédée d'une évaluation individuelle.",
+        subtitle: 'Traitement complémentaire en médecine intégrative oncologique',
+        text: "L'hyperthermie oncologique est une technique médicale qui élève de façon contrôlée la température dans la zone tumorale. Chez Clínica Les Lilas, elle est utilisée comme approche complémentaire dans un parcours intégratif individualisé, toujours précédée d'une évaluation médicale approfondie. Cette page a pour objectif de vous aider à comprendre, avec des mots simples, en quoi consiste ce traitement, dans quels contextes il peut être envisagé et comment se déroule la prise en charge au sein de notre clinique.",
       },
       whatIs: {
         title: "Qu'est-ce que l'hyperthermie oncologique ?",
-        text: "L'hyperthermie oncologique consiste à appliquer une chaleur contrôlée (entre 40 et 43 °C) sur la zone tumorale. Cette technique, documentée dans la littérature médicale, est utilisée en complément de traitements comme la chimiothérapie ou la radiothérapie. L'objectif est de renforcer l'efficacité de ces traitements dans un cadre clinique surveillé.",
+        text: "L'hyperthermie oncologique consiste à élever de façon contrôlée la température de la zone tumorale, généralement entre 40 et 43\u00A0°C. Cette élévation thermique peut modifier le microenvironnement tumoral et augmenter la sensibilité des cellules tumorales à certains traitements conventionnels, comme la radiothérapie ou la chimiothérapie. Documentée dans la littérature médicale internationale, cette technique n'est pas envisagée comme un acte isolé, mais comme une option complémentaire au sein d'une prise en charge intégrative. Son indication dépend toujours du contexte clinique, du dossier médical du patient et des objectifs thérapeutiques définis avec l'équipe soignante.",
       },
       ourApproach: {
-        title: 'Comment nous intégrons l\'hyperthermie',
-        text: "Nous ne proposons pas l'hyperthermie comme un acte isolé. Elle est envisagée au sein d'un parcours clinique plus large, en coordination avec les traitements en cours du patient. Chaque indication repose sur une analyse médicale sérieuse et une évaluation préalable de la situation globale.",
+        title: 'Notre approche intégrative',
+        text: "Chez Clínica Les Lilas, l'hyperthermie n'est pas proposée comme un acte isolé. Elle s'intègre dans un parcours clinique plus large, en coordination avec les traitements en cours du patient et en lien avec l'équipe oncologique lorsque cela est pertinent. Notre rôle est d'évaluer si cette approche peut avoir une place cohérente dans la prise en charge globale, sans perturber le traitement principal. Chaque indication repose sur une analyse médicale rigoureuse, une information claire et un cadre de décision prudent. Aucune séance n'est réalisée sans évaluation préalable individualisée.",
       },
       forWho: {
-        title: 'Pour qui ?',
-        text: "L'hyperthermie peut être envisagée pour des patients en cours de traitement oncologique, en recherche d'un accompagnement complémentaire ou souhaitant explorer une approche intégrative. Chaque situation est évaluée individuellement.",
+        title: 'Dans quels cas peut-elle être utilisée ?',
+        text: "L'hyperthermie oncologique peut être envisagée comme approche complémentaire dans certains contextes oncologiques, toujours sous évaluation médicale individuelle.",
         items: [
           'Patients en traitement oncologique actif souhaitant un soutien complémentaire',
-          'Patients recherchant une approche intégrative coordonnée',
-          'Situations nécessitant une évaluation préalable approfondie',
+          'Patients souhaitant explorer une approche de médecine intégrative coordonnée',
+          'Profils avec historique médical évalué individuellement lors d\'une consultation préalable',
+          'Situations dans lesquelles la coordination avec le parcours en cours est possible',
+          'Patients ayant besoin d\'une information claire sur les bénéfices potentiels et les limites',
+          'Toujours en complément des traitements conventionnels, jamais en substitut',
         ],
       },
       consultationEssential: {
         title: 'Pourquoi la consultation préalable est indispensable',
-        text: "L'hyperthermie ne convient pas à toutes les situations. La première consultation permet d'analyser votre dossier médical, de comprendre votre parcours et de déterminer si cette approche peut s'intégrer de façon pertinente dans votre prise en charge.",
+        text: "L'hyperthermie ne convient pas à toutes les situations. La première consultation permet d'analyser votre dossier médical, de comprendre votre parcours thérapeutique et de déterminer si cette approche peut s'intégrer de façon pertinente dans votre prise en charge. Aucune séance n'est réalisée sans cette évaluation préalable.",
+      },
+      session: {
+        title: 'Comment se déroule une séance d\'hyperthermie ?',
+        text: "Chaque séance se déroule dans un environnement clinique calme et confortable, sous supervision médicale. Le processus est non invasif et conçu pour garantir le confort du patient. Avant de commencer, nous vérifions les informations utiles du jour, les éventuels symptômes récents et le ressenti général du patient. L'objectif est de proposer une expérience rassurante, structurée et adaptée au contexte clinique de chacun.",
+        steps: [
+          'Durée approximative de 60 à 90 minutes par séance',
+          'Le patient reste en position confortable pendant toute la séance',
+          'Sensation de chaleur progressive et contrôlée dans la zone traitée',
+          'Supervision médicale continue tout au long de la séance',
+          'Environnement clinique privé, calme et climatisé',
+          'Suivi personnalisé après chaque séance',
+          'Explications données avant, pendant et après la séance pour répondre aux questions',
+          'Adaptation du déroulement en fonction de la tolérance clinique et du confort ressenti',
+        ],
+      },
+      benefits: {
+        title: 'Bénéfices potentiels en médecine intégrative',
+        text: "Les observations suivantes concernent des bénéfices potentiels observés dans le cadre de la médecine intégrative. Ils ne constituent pas des résultats garantis et doivent toujours être interprétés en fonction de la situation médicale individuelle. L'intérêt de l'hyperthermie s'évalue dans un raisonnement clinique global, et non à partir d'une promesse générale applicable à tous les patients.",
+        items: [
+          'Peut contribuer au bien-être général du patient durant le traitement',
+          'Peut s\'inscrire dans une approche thérapeutique intégrative personnalisée',
+          'Peut soutenir la qualité de vie durant le parcours oncologique',
+          'Peut améliorer la tolérance à certains traitements, selon évaluation médicale',
+          'Peut participer à un accompagnement plus global, centré sur le patient et son confort',
+          'Peut être intégrée à un plan de soins construit de façon progressive et réévaluée dans le temps',
+        ],
+      },
+      evidence: {
+        title: 'Données scientifiques',
+        text: "L'hyperthermie oncologique a fait l'objet d'études cliniques publiées dans des revues scientifiques internationales. Les recherches ont exploré son utilisation comme traitement complémentaire dans différents types de tumeurs, en combinaison avec la radiothérapie et la chimiothérapie. Les résultats disponibles ne permettent pas de tirer la même conclusion pour tous les patients ni pour toutes les situations, mais ils contribuent à mieux définir les contextes dans lesquels cette approche peut être étudiée. Dans notre pratique, la littérature scientifique sert de base d'orientation, toujours complétée par l'analyse médicale individuelle et par la prudence clinique nécessaire.",
+        disclaimer: "Les informations contenues sur cette page ont un caractère informatif. Elles ne constituent pas un conseil médical personnalisé. Toute décision thérapeutique nécessite une évaluation médicale individuelle.",
+      },
+      beforeTreatment: {
+        title: 'Que prendre en compte avant de commencer',
+        text: "Avant d'envisager l'hyperthermie oncologique, il est essentiel d'analyser le diagnostic, le stade de la maladie, les traitements déjà reçus, les traitements en cours, l'état général du patient et ses objectifs. Cette étape permet d'identifier si l'approche peut être envisagée dans de bonnes conditions cliniques.",
+        items: [
+          'Analyse du dossier médical et des comptes rendus disponibles',
+          'Prise en compte des traitements déjà réalisés ou actuellement en cours',
+          'Évaluation de l\'état général, de la fatigue et de la tolérance globale',
+          'Clarification des objectifs du patient et des attentes réalistes',
+          'Vérification de l\'absence de contre-indications ou de situations nécessitant une prudence particulière',
+        ],
+      },
+      followUp: {
+        title: 'Accompagnement et suivi pendant le parcours',
+        text: "Le suivi ne se limite pas à la séance elle-même. Nous attachons une grande importance à l'écoute du patient, au recueil de ses sensations et à l'ajustement du parcours si nécessaire. Dans une logique de médecine intégrative, le traitement complémentaire doit rester cohérent avec l'évolution clinique, le confort du patient et les autres décisions thérapeutiques.",
+        items: [
+          'Réévaluation régulière de la tolérance et du ressenti du patient',
+          'Dialogue clinique continu sur les symptômes, la fatigue et la qualité de vie',
+          'Coordination du parcours lorsque d\'autres traitements sont en cours',
+          'Ajustement de la fréquence ou de l\'indication selon l\'évolution clinique',
+          'Information claire pour aider le patient à prendre des décisions éclairées',
+        ],
       },
       seriousFramework: {
-        title: 'Un cadre médical rigoureux',
-        text: "Les séances sont réalisées sous supervision médicale, dans un environnement clinique conçu pour le confort et la sécurité du patient. Nous accordons une importance particulière à l'information, à la transparence et au suivi tout au long du parcours.",
+        title: 'Demander une évaluation médicale personnalisée',
+        text: "Si vous souhaitez savoir si l'hyperthermie oncologique peut être adaptée à votre situation, la première étape est une consultation médicale individualisée. Notre équipe analysera votre historique, vos traitements actuels, votre état général et vos objectifs pour vous orienter de la façon la plus adaptée. Cette consultation permet aussi de répondre à vos questions, d'expliquer les limites de l'approche et de construire, si cela est pertinent, un parcours complémentaire cohérent et prudent.",
+      },
+      faq: {
+        title: 'Questions fréquentes sur l\'hyperthermie oncologique',
+        items: [
+          {
+            q: 'L\'hyperthermie remplace-t-elle la chimiothérapie ou la radiothérapie ?',
+            a: 'Non. L\'hyperthermie oncologique est un traitement complémentaire, pas un substitut aux traitements conventionnels. Elle est toujours envisagée en coordination avec l\'équipe oncologique et dans le cadre d\'une approche de médecine intégrative.',
+          },
+          {
+            q: 'L\'hyperthermie est-elle douloureuse ?',
+            a: 'Les séances sont conçues pour être confortables. Le patient ressent une chaleur progressive et contrôlée dans la zone traitée, sous supervision médicale continue. Il ne s\'agit pas d\'un geste douloureux.',
+          },
+          {
+            q: 'Combien de séances sont généralement recommandées ?',
+            a: 'Il n\'existe pas de protocole unique. Le nombre de séances est déterminé lors de la consultation médicale préalable, en fonction du profil du patient, de sa situation clinique et de ses objectifs thérapeutiques.',
+          },
+          {
+            q: 'Comment savoir si ce traitement est adapté à mon cas ?',
+            a: 'La seule façon de le déterminer est une consultation médicale individualisée. Notre équipe évaluera votre historique, vos traitements actuels et vos objectifs pour vous orienter de façon adaptée.',
+          },
+          {
+            q: 'Peut-elle être associée à d\'autres traitements ?',
+            a: 'Oui, dans certains contextes, l\'hyperthermie peut être envisagée en complément d\'autres traitements conventionnels. Cette association dépend toujours d\'une analyse médicale individualisée et de la cohérence du parcours thérapeutique.',
+          },
+          {
+            q: 'Faut-il préparer quelque chose avant la séance ?',
+            a: 'Les consignes peuvent varier selon la situation clinique. Lors de la consultation ou de la prise de rendez-vous, notre équipe vous indique les recommandations utiles pour venir dans de bonnes conditions et avec les documents nécessaires.',
+          },
+          {
+            q: 'Quand ce traitement est-il généralement envisagé ?',
+            a: 'Il peut être étudié dans certains contextes oncologiques comme approche complémentaire, notamment lorsqu\'une évaluation médicale conclut qu\'il peut s\'intégrer de manière cohérente au parcours en cours. Il n\'existe pas d\'indication automatique.',
+          },
+        ],
       },
     },
     sueroterapia: {
@@ -908,33 +997,122 @@ export const translations = {
     hyperthermie: {
       hero: {
         h1: 'Oncological hyperthermia',
-        subtitle: 'A complementary technique integrated into a comprehensive clinical pathway',
-        text: "Oncological hyperthermia is a medical technique that uses localized heat to complement conventional oncology treatments. At Clínica Les Lilas, it is part of a rigorous integrative approach, always preceded by an individual evaluation.",
+        subtitle: 'Complementary treatment in integrative oncology',
+        text: "Oncological hyperthermia is a medical technique that raises temperature in a controlled manner within the tumour area. At Clínica Les Lilas, it is used as a complementary approach within an individualised integrative pathway, always preceded by a thorough medical assessment. This page is designed to help patients understand, in clear terms, what this treatment involves, in which contexts it may be considered and how care is organised in our clinic.",
       },
       whatIs: {
         title: 'What is oncological hyperthermia?',
-        text: "Oncological hyperthermia involves applying controlled heat (between 40 and 43\u00A0°C) to the tumor area. This technique, documented in medical literature, is used alongside treatments such as chemotherapy or radiotherapy. The goal is to enhance the effectiveness of these treatments within a monitored clinical setting.",
+        text: "Oncological hyperthermia involves raising the temperature of the tumour area in a controlled manner, usually between 40 and 43\u00A0°C. This thermal increase may modify the tumour microenvironment and increase the sensitivity of tumour cells to certain conventional treatments, such as radiotherapy or chemotherapy. Documented in international medical literature, this technique is not considered a standalone intervention but a complementary option within an integrative care pathway. Its indication always depends on the patient's clinical context, medical history and therapeutic goals.",
       },
       ourApproach: {
-        title: 'How we integrate hyperthermia',
-        text: "We do not offer hyperthermia as a standalone procedure. It is considered within a broader clinical pathway, in coordination with the patient's ongoing treatments. Each indication is based on a thorough medical analysis and a prior evaluation of the overall situation.",
+        title: 'Our integrative approach',
+        text: "At Clínica Les Lilas, hyperthermia is not offered as a standalone procedure. It is integrated into a broader clinical pathway, in coordination with the patient's ongoing treatments and oncology team whenever appropriate. Our role is to assess whether this approach may have a coherent place within the overall care plan, without interfering with the main treatment strategy. Each indication is based on thorough medical analysis, clear information and cautious decision-making. No session takes place without a prior individualised evaluation.",
       },
       forWho: {
-        title: 'Who is it for?',
-        text: "Hyperthermia may be considered for patients undergoing oncological treatment, seeking complementary support or wishing to explore an integrative approach. Each situation is evaluated individually.",
+        title: 'In which cases can it be used?',
+        text: "Oncological hyperthermia may be considered as a complementary approach in certain oncological contexts, always subject to individual medical assessment.",
         items: [
           'Patients in active oncological treatment seeking complementary support',
-          'Patients looking for a coordinated integrative approach',
-          'Situations requiring thorough prior evaluation',
+          'Patients wishing to explore a coordinated integrative medicine approach',
+          'Profiles with medical history individually assessed during a prior consultation',
+          'Situations in which coordination with the current treatment pathway is possible',
+          'Patients who need clear information on potential benefits and limitations',
+          'Always complementary to conventional treatments, never as a substitute',
         ],
       },
       consultationEssential: {
         title: 'Why the initial consultation is essential',
-        text: "Hyperthermia is not suitable for every situation. The first consultation allows us to review your medical file, understand your journey and determine whether this approach can be meaningfully integrated into your care.",
+        text: "Hyperthermia is not suitable for every situation. The first consultation allows us to review your medical history, understand your treatment pathway and determine whether this approach can be meaningfully integrated into your care. No session takes place without this prior evaluation.",
+      },
+      session: {
+        title: 'What does a hyperthermia session involve?',
+        text: "Each session takes place in a calm and comfortable clinical environment, under medical supervision. The process is non-invasive and designed to ensure patient comfort throughout. Before starting, we review the relevant information for the day, any recent symptoms and the patient's general condition. The objective is to provide a reassuring, structured experience adapted to each clinical situation.",
+        steps: [
+          'Approximate duration of 60 to 90 minutes per session',
+          'The patient remains in a comfortable position throughout the process',
+          'Sensation of progressive, controlled warmth in the treated area',
+          'Continuous medical supervision throughout the entire session',
+          'Private, calm and air-conditioned clinical environment',
+          'Personalised follow-up after each session',
+          'Explanations are given before, during and after the session to answer questions',
+          'The course of the session can be adjusted according to tolerance and comfort',
+        ],
+      },
+      benefits: {
+        title: 'Potential benefits within integrative medicine',
+        text: "The following observations refer to potential benefits observed within an integrative medicine framework. They do not constitute guaranteed outcomes and must always be interpreted in light of the individual medical situation. The value of hyperthermia should be assessed within an overall clinical reasoning process rather than through general promises applicable to every patient.",
+        items: [
+          'May contribute to the patient\'s general wellbeing during treatment',
+          'May form part of a personalised, integrated therapeutic approach',
+          'May support quality of life throughout the oncological journey',
+          'May improve tolerance to certain treatments, subject to medical assessment',
+          'May contribute to a more global support strategy focused on the patient and comfort',
+          'May be integrated into a care plan that is progressively reassessed over time',
+        ],
+      },
+      evidence: {
+        title: 'Scientific evidence',
+        text: "Oncological hyperthermia has been the subject of clinical studies published in international scientific journals. Research has explored its use as a complementary treatment in various tumour types, in combination with radiotherapy and chemotherapy. The available results do not lead to the same conclusion for every patient or every situation, but they help define the contexts in which this approach may be considered. In our practice, the scientific literature serves as a basis for orientation and is always complemented by individual medical analysis and the caution required in clinical decision-making.",
+        disclaimer: "The information on this page is for informational purposes only. It does not constitute personalised medical advice. Any therapeutic decision requires an individual medical assessment.",
+      },
+      beforeTreatment: {
+        title: 'What to consider before starting',
+        text: "Before considering oncological hyperthermia, it is essential to review the diagnosis, the stage of disease, previous treatments, ongoing treatments, the patient's general condition and their expectations. This step helps determine whether the approach may be considered under appropriate clinical conditions.",
+        items: [
+          'Review of the medical file and available reports',
+          'Consideration of treatments already completed or currently ongoing',
+          'Assessment of general condition, fatigue and overall tolerance',
+          'Clarification of the patient\'s goals and realistic expectations',
+          'Verification that there are no contraindications or situations requiring particular caution',
+        ],
+      },
+      followUp: {
+        title: 'Support and follow-up throughout the process',
+        text: "Follow-up is not limited to the session itself. We place strong emphasis on listening to the patient, collecting feedback on sensations and adjusting the pathway when necessary. Within an integrative medicine framework, a complementary treatment should remain coherent with the clinical evolution, patient comfort and the other therapeutic decisions already in place.",
+        items: [
+          'Regular reassessment of tolerance and patient experience',
+          'Ongoing clinical dialogue about symptoms, fatigue and quality of life',
+          'Coordination of the pathway when other treatments are ongoing',
+          'Adjustment of frequency or indication according to clinical evolution',
+          'Clear information to help the patient make informed decisions',
+        ],
       },
       seriousFramework: {
-        title: 'A rigorous medical setting',
-        text: "Sessions are conducted under medical supervision, in a clinical environment designed for patient comfort and safety. We place great importance on information, transparency and follow-up throughout the process.",
+        title: 'Request a personalised medical assessment',
+        text: "If you would like to know whether oncological hyperthermia may be suitable for your situation, the first step is an individualised medical consultation. Our team will review your history, current treatments, general condition and objectives in order to advise you in the most appropriate way. This consultation is also the right moment to discuss questions, understand the limits of the approach and, if relevant, define a complementary pathway that is coherent and medically cautious.",
+      },
+      faq: {
+        title: 'Frequently asked questions about oncological hyperthermia',
+        items: [
+          {
+            q: 'Does hyperthermia replace chemotherapy or radiotherapy?',
+            a: 'No. Oncological hyperthermia is a complementary treatment, not a substitute for conventional treatments. It is always considered in coordination with the oncology team and within an integrative medicine approach.',
+          },
+          {
+            q: 'Is hyperthermia painful?',
+            a: 'Sessions are designed to be comfortable. The patient feels a progressive, controlled warmth in the treated area, under continuous medical supervision. It is not a painful procedure.',
+          },
+          {
+            q: 'How many sessions are typically recommended?',
+            a: 'There is no single protocol. The number of sessions is determined at the prior medical consultation, based on the patient\'s profile, clinical situation and therapeutic objectives.',
+          },
+          {
+            q: 'How do I know if this treatment is right for my case?',
+            a: 'The only way to determine this is through an individualised medical consultation. Our team will review your history, current treatments and objectives to advise you accordingly.',
+          },
+          {
+            q: 'Can it be combined with other treatments?',
+            a: 'Yes, in some contexts hyperthermia may be considered alongside conventional treatments. This possibility always depends on an individual medical review and on whether the overall treatment pathway remains coherent.',
+          },
+          {
+            q: 'Do I need to prepare anything before the session?',
+            a: 'Instructions may vary according to the clinical situation. During the consultation or booking process, our team will explain the practical recommendations and the documents that may be useful to bring.',
+          },
+          {
+            q: 'When is this treatment usually considered?',
+            a: 'It may be reviewed in some oncological contexts as a complementary approach when a medical assessment concludes that it can be integrated coherently into the current care pathway. There is no automatic indication.',
+          },
+        ],
       },
     },
     sueroterapia: {
@@ -1443,8 +1621,9 @@ export const translations = {
         description: 'Hipertermia oncológica, sueroterapia, medicina regenerativa, soporte inmunológico. Tratamientos médicos integrativos en un marco clínico riguroso.',
       },
       hyperthermie: {
-        title: 'Hipertermia oncológica | Clínica Les Lilas Alicante',
-        description: 'Hipertermia oncológica en un enfoque integrativo. Calor localizado como complemento a los tratamientos convencionales. Evaluación previa indispensable.',
+        title: 'Hipertermia oncológica en Alicante | Clínica Les Lilas',
+        description: 'Hipertermia oncológica en Alicante: tratamiento complementario en medicina integrativa oncológica. Enfoque individualizado, supervisión médica, sin compromiso. Clínica Les Lilas, Costa Blanca.',
+        keywords: 'hipertermia oncológica, hipertermia cáncer, medicina integrativa oncología, tratamiento hipertermia, hipertermia oncológica España, Alicante',
       },
       sueroterapia: {
         title: 'Sueroterapia / IV Therapy | Clínica Les Lilas Alicante',
@@ -1586,33 +1765,122 @@ export const translations = {
     hyperthermie: {
       hero: {
         h1: 'Hipertermia oncológica',
-        subtitle: 'Una técnica complementaria integrada en un recorrido clínico global',
-        text: "La hipertermia oncológica es una técnica médica que utiliza calor localizado para complementar los tratamientos convencionales en oncología. En Clínica Les Lilas, se integra en un enfoque integrativo riguroso, siempre precedido de una evaluación individual.",
+        subtitle: 'Tratamiento complementario en medicina integrativa oncológica',
+        text: "La hipertermia oncológica es una técnica médica que eleva de forma controlada la temperatura en la zona tumoral. En Clínica Les Lilas, se utiliza como enfoque complementario dentro de un recorrido integrativo individualizado, siempre precedida de una valoración médica exhaustiva. Esta página está pensada para ayudarle a comprender de forma clara en qué consiste el tratamiento, en qué contextos puede valorarse y cómo se organiza la atención dentro de nuestra clínica.",
       },
       whatIs: {
         title: '¿Qué es la hipertermia oncológica?',
-        text: "La hipertermia oncológica consiste en aplicar calor controlado (entre 40 y 43\u00A0°C) sobre la zona tumoral. Esta técnica, documentada en la literatura médica, se utiliza como complemento a tratamientos como la quimioterapia o la radioterapia. El objetivo es reforzar la eficacia de estos tratamientos en un entorno clínico controlado.",
+        text: "La hipertermia oncológica consiste en elevar de forma controlada la temperatura de la zona tumoral, habitualmente entre 40 y 43\u00A0°C. Este aumento térmico puede modificar el microentorno tumoral y aumentar la sensibilidad de las células tumorales a determinados tratamientos convencionales, como la radioterapia o la quimioterapia. Documentada en la literatura médica internacional, esta técnica no se plantea como un acto aislado, sino como una opción complementaria dentro de un recorrido asistencial integrativo. Su indicación depende siempre del contexto clínico, del historial del paciente y de los objetivos terapéuticos definidos junto al equipo médico.",
       },
       ourApproach: {
-        title: 'Cómo integramos la hipertermia',
-        text: "No ofrecemos la hipertermia como un acto aislado. Se contempla dentro de un recorrido clínico más amplio, en coordinación con los tratamientos en curso del paciente. Cada indicación se basa en un análisis médico riguroso y una evaluación previa de la situación global.",
+        title: 'Nuestro enfoque integrativo',
+        text: "En Clínica Les Lilas, la hipertermia no se propone como un acto aislado. Se integra en un recorrido clínico más amplio, en coordinación con los tratamientos en curso del paciente y, cuando procede, en comunicación con el equipo oncológico. Nuestro papel consiste en valorar si este enfoque puede tener un lugar coherente dentro del plan terapéutico global, sin interferir con el tratamiento principal. Cada indicación se basa en un análisis médico riguroso, una información clara y una toma de decisiones prudente. Ninguna sesión se realiza sin una evaluación previa individualizada.",
       },
       forWho: {
-        title: '¿Para quién?',
-        text: "La hipertermia puede contemplarse para pacientes en tratamiento oncológico, en busca de un acompañamiento complementario o que deseen explorar un enfoque integrativo. Cada situación se evalúa individualmente.",
+        title: '¿En qué casos puede utilizarse?',
+        text: "La hipertermia oncológica puede valorarse como enfoque complementario en determinados contextos oncológicos, siempre bajo evaluación médica individual.",
         items: [
           'Pacientes en tratamiento oncológico activo que buscan un soporte complementario',
-          'Pacientes que buscan un enfoque integrativo coordinado',
-          'Situaciones que requieren una evaluación previa exhaustiva',
+          'Pacientes que desean explorar un enfoque de medicina integrativa coordinado',
+          'Perfiles con historial médico evaluado individualmente en consulta previa',
+          'Situaciones en las que es posible coordinar el enfoque con el recorrido terapéutico en curso',
+          'Pacientes que necesitan información clara sobre beneficios potenciales y limitaciones',
+          'Siempre en complemento a los tratamientos convencionales, nunca como sustituto',
         ],
       },
       consultationEssential: {
         title: 'Por qué la consulta previa es indispensable',
-        text: "La hipertermia no es adecuada para todas las situaciones. La primera consulta permite analizar su historial médico, comprender su recorrido y determinar si este enfoque puede integrarse de forma pertinente en su atención.",
+        text: "La hipertermia no es adecuada para todas las situaciones. La primera consulta permite analizar su historial médico, comprender su recorrido terapéutico y determinar si este enfoque puede integrarse de forma pertinente en su atención. Ninguna sesión se realiza sin esta evaluación previa.",
+      },
+      session: {
+        title: '¿Cómo es una sesión de hipertermia?',
+        text: "Cada sesión se desarrolla en un entorno clínico tranquilo y confortable, bajo supervisión médica. El proceso es no invasivo y está diseñado para garantizar la comodidad del paciente. Antes de comenzar, revisamos la información clínica útil del día, los síntomas recientes y el estado general del paciente. El objetivo es ofrecer una experiencia estructurada, comprensible y tranquilizadora, adaptada a cada situación clínica.",
+        steps: [
+          'Duración aproximada de 60 a 90 minutos por sesión',
+          'El paciente permanece en posición cómoda durante todo el proceso',
+          'Sensación de calor progresivo y controlado en la zona tratada',
+          'Supervisión médica continua durante toda la sesión',
+          'Entorno clínico privado, tranquilo y climatizado',
+          'Seguimiento personalizado tras cada sesión',
+          'Información clara antes, durante y después de la sesión para resolver dudas',
+          'Ajuste del desarrollo según la tolerancia clínica y la comodidad del paciente',
+        ],
+      },
+      benefits: {
+        title: 'Beneficios potenciales en medicina integrativa',
+        text: "Las siguientes observaciones se refieren a posibles beneficios observados en el marco de la medicina integrativa. No constituyen resultados garantizados y siempre deben interpretarse en función de la situación médica individual. El interés de la hipertermia se valora dentro de un razonamiento clínico global, y no a partir de promesas generales aplicables a todos los pacientes.",
+        items: [
+          'Puede contribuir al bienestar general del paciente durante el tratamiento',
+          'Puede formar parte de un enfoque terapéutico integral personalizado',
+          'Puede apoyar la calidad de vida durante el recorrido oncológico',
+          'Puede mejorar la tolerancia a ciertos tratamientos, según valoración médica',
+          'Puede participar en una estrategia de acompañamiento más global centrada en la persona',
+          'Puede integrarse en un plan de atención que se reevalúa progresivamente con el tiempo',
+        ],
+      },
+      evidence: {
+        title: 'Evidencia científica',
+        text: "La hipertermia oncológica ha sido objeto de estudios clínicos publicados en revistas científicas internacionales. Las investigaciones han explorado su uso como tratamiento complementario en diferentes tipos de tumores, en combinación con radioterapia y quimioterapia. Los resultados disponibles no permiten extraer la misma conclusión para todos los pacientes ni para todas las situaciones, pero sí ayudan a definir mejor los contextos en los que este enfoque puede ser valorado. En nuestra práctica, la literatura científica sirve como base de orientación y siempre se complementa con el análisis médico individual y con la prudencia clínica necesaria.",
+        disclaimer: "La información contenida en esta página tiene carácter informativo. No constituye asesoramiento médico personalizado. Toda decisión terapéutica requiere una valoración médica individual.",
+      },
+      beforeTreatment: {
+        title: 'Qué tener en cuenta antes de iniciar el tratamiento',
+        text: "Antes de valorar la hipertermia oncológica, es fundamental revisar el diagnóstico, el estadio de la enfermedad, los tratamientos ya realizados, los tratamientos en curso, el estado general del paciente y sus expectativas. Esta fase permite determinar si el enfoque puede contemplarse en condiciones clínicas adecuadas.",
+        items: [
+          'Revisión del historial médico y de los informes disponibles',
+          'Análisis de los tratamientos ya realizados o actualmente en curso',
+          'Valoración del estado general, la fatiga y la tolerancia global',
+          'Clarificación de los objetivos del paciente y de las expectativas realistas',
+          'Comprobación de que no existan contraindicaciones o situaciones que requieran especial prudencia',
+        ],
+      },
+      followUp: {
+        title: 'Acompañamiento y seguimiento durante el proceso',
+        text: "El seguimiento no se limita a la sesión en sí. Damos mucha importancia a la escucha del paciente, a la recogida de sensaciones y a la adaptación del recorrido cuando es necesario. Dentro de una lógica de medicina integrativa, el tratamiento complementario debe mantenerse coherente con la evolución clínica, el confort del paciente y el resto de decisiones terapéuticas ya establecidas.",
+        items: [
+          'Reevaluación periódica de la tolerancia y de la experiencia del paciente',
+          'Diálogo clínico continuado sobre síntomas, fatiga y calidad de vida',
+          'Coordinación del recorrido cuando existen otros tratamientos en marcha',
+          'Ajuste de la frecuencia o de la indicación según la evolución clínica',
+          'Información clara para ayudar al paciente a tomar decisiones informadas',
+        ],
       },
       seriousFramework: {
-        title: 'Un marco médico riguroso',
-        text: "Las sesiones se realizan bajo supervisión médica, en un entorno clínico diseñado para la comodidad y seguridad del paciente. Damos especial importancia a la información, la transparencia y el seguimiento a lo largo de todo el proceso.",
+        title: 'Solicitar una valoración médica personalizada',
+        text: "Si desea saber si la hipertermia oncológica puede ser adecuada para su situación, el primer paso es una consulta médica individualizada. Nuestro equipo analizará su historial, sus tratamientos actuales, su estado general y sus objetivos para orientarle de la forma más adecuada. Esta consulta también permite resolver dudas, comprender los límites del enfoque y definir, si procede, un recorrido complementario coherente y médicamente prudente.",
+      },
+      faq: {
+        title: 'Preguntas frecuentes sobre la hipertermia oncológica',
+        items: [
+          {
+            q: '¿La hipertermia sustituye a la quimioterapia o la radioterapia?',
+            a: 'No. La hipertermia oncológica es un tratamiento complementario, no un sustituto de los tratamientos convencionales. Se contempla siempre en coordinación con el equipo oncológico y dentro de un enfoque de medicina integrativa.',
+          },
+          {
+            q: '¿La hipertermia duele?',
+            a: 'Las sesiones están diseñadas para ser cómodas. El paciente siente un calor progresivo y controlado en la zona tratada, bajo supervisión médica continua. No se trata de un procedimiento doloroso.',
+          },
+          {
+            q: '¿Cuántas sesiones suelen recomendarse?',
+            a: 'No existe un protocolo único. El número de sesiones se determina en la consulta médica previa, en función del perfil del paciente, su situación clínica y sus objetivos terapéuticos.',
+          },
+          {
+            q: '¿Cómo saber si este tratamiento es adecuado para mi caso?',
+            a: 'La única forma de determinarlo es mediante una consulta médica individualizada. Nuestro equipo evaluará su historial, sus tratamientos actuales y sus objetivos para orientarle de la forma más adecuada.',
+          },
+          {
+            q: '¿Puede combinarse con otros tratamientos?',
+            a: 'Sí, en algunos contextos la hipertermia puede valorarse junto a tratamientos convencionales. Esta posibilidad depende siempre de una revisión médica individualizada y de que el recorrido terapéutico mantenga una coherencia clínica.',
+          },
+          {
+            q: '¿Debo preparar algo antes de la sesión?',
+            a: 'Las indicaciones pueden variar según la situación clínica. Durante la consulta o al organizar la cita, nuestro equipo le explicará las recomendaciones prácticas y la documentación que puede ser útil aportar.',
+          },
+          {
+            q: '¿Cuándo suele valorarse este tratamiento?',
+            a: 'Puede estudiarse en algunos contextos oncológicos como enfoque complementario cuando una valoración médica concluye que puede integrarse de forma coherente en el recorrido asistencial en curso. No existe una indicación automática.',
+          },
+        ],
       },
     },
     sueroterapia: {
