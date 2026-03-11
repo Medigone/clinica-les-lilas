@@ -41,8 +41,13 @@ const Hyperthermie = () => {
       {/* Définition + Approche */}
       <section className="py-20 md:py-24">
         <div className="max-w-6xl mx-auto px-6 md:px-12 lg:px-16">
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 lg:gap-8">
-            <article className="p-6 md:p-8 bg-white rounded-2xl border border-gray-200 hover:border-primary/20 hover:shadow-lg transition-all">
+          <div className="flex flex-col gap-6 lg:gap-8">
+            <article className="p-6 md:p-8 bg-white rounded-2xl border border-gray-200 hover:border-primary/20 hover:shadow-lg transition-all overflow-hidden">
+              <img
+                src="/assets/page_hypertermia.png"
+                alt="Séance d'hyperthermie oncologique en clinique"
+                className="w-full h-auto rounded-xl object-cover shadow-md mb-6"
+              />
               <h2 className="text-xl md:text-2xl font-bold text-primary mb-4">
                 {t('hyperthermie.whatIs.title')}
               </h2>
