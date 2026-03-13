@@ -218,7 +218,7 @@ export const translations = {
       },
       whatIs: {
         title: "Qu'est-ce que l'hyperthermie oncologique ?",
-        text: "L'hyperthermie oncologique consiste à élever de façon contrôlée la température de la zone tumorale, généralement entre 40 et 43\u00A0°C. Cette élévation thermique peut modifier le microenvironnement tumoral et augmenter la sensibilité des cellules tumorales à certains traitements conventionnels, comme la radiothérapie ou la chimiothérapie. Documentée dans la littérature médicale internationale, cette technique n'est pas envisagée comme un acte isolé, mais comme une option complémentaire au sein d'une prise en charge intégrative. Son indication dépend toujours du contexte clinique, du dossier médical du patient et des objectifs thérapeutiques définis avec l'équipe soignante.",
+        text: "L'hyperthermie oncologique consiste à élever de façon contrôlée la température de la zone tumorale, généralement entre 39 et 43\u00A0°C. Cette élévation thermique peut modifier le microenvironnement tumoral et augmenter la sensibilité des cellules tumorales à certains traitements conventionnels, comme la radiothérapie ou la chimiothérapie. Documentée dans la littérature médicale internationale, cette technique n'est pas envisagée comme un acte isolé, mais comme une option complémentaire au sein d'une prise en charge intégrative. Son indication dépend toujours du contexte clinique, du dossier médical du patient et des objectifs thérapeutiques définis avec l'équipe soignante.",
       },
       ourApproach: {
         title: 'Notre approche intégrative',
@@ -1008,7 +1008,7 @@ export const translations = {
       },
       whatIs: {
         title: 'What is oncological hyperthermia?',
-        text: "Oncological hyperthermia involves raising the temperature of the tumour area in a controlled manner, usually between 40 and 43\u00A0°C. This thermal increase may modify the tumour microenvironment and increase the sensitivity of tumour cells to certain conventional treatments, such as radiotherapy or chemotherapy. Documented in international medical literature, this technique is not considered a standalone intervention but a complementary option within an integrative care pathway. Its indication always depends on the patient's clinical context, medical history and therapeutic goals.",
+        text: "Oncological hyperthermia involves raising the temperature of the tumour area in a controlled manner, usually between 39 and 43\u00A0°C. This thermal increase may modify the tumour microenvironment and increase the sensitivity of tumour cells to certain conventional treatments, such as radiotherapy or chemotherapy. Documented in international medical literature, this technique is not considered a standalone intervention but a complementary option within an integrative care pathway. Its indication always depends on the patient's clinical context, medical history and therapeutic goals.",
       },
       ourApproach: {
         title: 'Our integrative approach',
@@ -1780,7 +1780,7 @@ export const translations = {
       },
       whatIs: {
         title: '¿Qué es la hipertermia oncológica?',
-        text: "La hipertermia oncológica consiste en elevar de forma controlada la temperatura de la zona tumoral, habitualmente entre 40 y 43\u00A0°C. Este aumento térmico puede modificar el microentorno tumoral y aumentar la sensibilidad de las células tumorales a determinados tratamientos convencionales, como la radioterapia o la quimioterapia. Documentada en la literatura médica internacional, esta técnica no se plantea como un acto aislado, sino como una opción complementaria dentro de un recorrido asistencial integrativo. Su indicación depende siempre del contexto clínico, del historial del paciente y de los objetivos terapéuticos definidos junto al equipo médico.",
+        text: "La hipertermia oncológica consiste en elevar de forma controlada la temperatura de la zona tumoral, habitualmente entre 39 y 43\u00A0°C. Este aumento térmico puede modificar el microentorno tumoral y aumentar la sensibilidad de las células tumorales a determinados tratamientos convencionales, como la radioterapia o la quimioterapia. Documentada en la literatura médica internacional, esta técnica no se plantea como un acto aislado, sino como una opción complementaria dentro de un recorrido asistencial integrativo. Su indicación depende siempre del contexto clínico, del historial del paciente y de los objetivos terapéuticos definidos junto al equipo médico.",
       },
       ourApproach: {
         title: 'Nuestro enfoque integrativo',
