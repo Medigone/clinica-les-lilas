@@ -8,7 +8,7 @@ import { ROUTES } from '../routes';
 
 const CARE_HERO_IMAGES = {
   [ROUTES.HIPERTERMIA]: '/assets/about-bg.png',
-  [ROUTES.ONCOLOGIA]: '/assets/about-bg.png',
+  [ROUTES.ONCOLOGIA]: '/assets/blog_suero_1.png',
   [ROUTES.BIENESTAR]: '/assets/iv_therapy_bg.png',
 };
 
