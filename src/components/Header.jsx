@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { useLanguageStore } from '../store/languageStore';
 import LanguageSelector from './LanguageSelector';
+import WhatsAppButton from './WhatsAppButton';
 import { ROUTES } from '../routes';
 
 const Header = () => {
@@ -20,7 +21,8 @@ const Header = () => {
 
   const treatmentItems = [
     { key: 'hyperthermie', path: ROUTES.HIPERTERMIA },
-    { key: 'sueroterapia', path: ROUTES.SUEROTERAPIA },
+    { key: 'oncologia', path: ROUTES.ONCOLOGIA },
+    { key: 'bienestar', path: ROUTES.BIENESTAR },
   ];
 
   const isActive = (path) => location.pathname === path;
@@ -111,22 +113,28 @@ const Header = () => {
             {t('navigation.contact')}
           </Link>
           <LanguageSelector />
-          <Link
-            to={contactPath}
-            className="px-4 py-2 rounded-xl font-medium text-sm text-white bg-primary hover:bg-primary/90 hover:shadow-lg transition-all whitespace-nowrap shrink-0"
-          >
-            {t('cta.bookAppointment')}
-          </Link>
+          <div className="flex gap-2 shrink-0 [&>a]:flex-1 [&>a]:min-w-[110px] [&>a]:justify-center">
+            <Link
+              to={contactPath}
+              className="flex items-center justify-center px-3 py-1.5 rounded-lg font-medium text-xs text-white bg-primary hover:bg-primary/90 hover:shadow-lg transition-all whitespace-nowrap"
+            >
+              {t('cta.bookAppointment')}
+            </Link>
+            <WhatsAppButton shortLabel className="!px-3 !py-1.5 !rounded-lg !text-xs [&>svg]:!w-4 [&>svg]:!h-4 hover:!shadow-lg transition-all" />
+          </div>
         </div>
 
         {/* Mobile Menu Button */}
         <div className="xl:hidden flex items-center gap-4">
-          <Link
-            to={contactPath}
-            className="hidden sm:inline-flex px-3 py-1.5 rounded-lg font-medium text-sm text-white bg-primary"
-          >
-            {t('cta.bookAppointment')}
-          </Link>
+          <div className="hidden sm:flex gap-2 [&>a]:flex-1 [&>a]:min-w-[110px] [&>a]:justify-center">
+            <Link
+              to={contactPath}
+              className="flex items-center justify-center px-2.5 py-1 rounded-lg font-medium text-xs text-white bg-primary"
+            >
+              {t('cta.bookAppointment')}
+            </Link>
+            <WhatsAppButton shortLabel className="!px-2.5 !py-1 !rounded-lg !text-xs [&>svg]:!w-4 [&>svg]:!h-4" />
+          </div>
           <button
             onClick={() => setIsMenuOpen(!isMenuOpen)}
             className="flex flex-col gap-1.5 p-2"
@@ -232,13 +240,16 @@ const Header = () => {
               <div className="pt-4 mt-4 border-t border-primary/10">
                 <LanguageSelector inMenu onLanguageSelected={() => setIsMenuOpen(false)} />
               </div>
-              <Link
-                to={contactPath}
-                onClick={() => setIsMenuOpen(false)}
-                className="block mt-4 py-2.5 text-center text-white font-medium text-sm bg-primary rounded-xl"
-              >
-                {t('cta.bookAppointment')}
-              </Link>
+              <div className="mt-4 flex gap-2">
+                <Link
+                  to={contactPath}
+                  onClick={() => setIsMenuOpen(false)}
+                  className="flex flex-1 items-center justify-center py-2 text-white font-medium text-xs bg-primary rounded-lg"
+                >
+                  {t('cta.bookAppointment')}
+                </Link>
+                <WhatsAppButton shortLabel onClick={() => setIsMenuOpen(false)} className="!flex-1 !py-2 !rounded-lg !min-w-0 !text-xs [&>svg]:!w-4 [&>svg]:!h-4" />
+              </div>
             </div>
           </div>
         </>

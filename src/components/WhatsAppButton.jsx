@@ -2,7 +2,7 @@ import React from 'react';
 import { useLanguageStore } from '../store/languageStore';
 import { CONTACT } from '../routes';
 
-const WhatsAppButton = ({ floating = false, shortLabel = false, iconOnly = false, className = '' }) => {
+const WhatsAppButton = ({ floating = false, shortLabel = false, iconOnly = false, className = '', onClick }) => {
   const { t } = useLanguageStore();
   const message = encodeURIComponent(t('whatsapp.defaultMessage'));
   const href = `https://wa.me/${CONTACT.WHATSAPP.replace(/\+/g, '')}?text=${message}`;
@@ -28,6 +28,7 @@ const WhatsAppButton = ({ floating = false, shortLabel = false, iconOnly = false
       href={href}
       target="_blank"
       rel="noopener noreferrer"
+      onClick={onClick}
       className={`inline-flex items-center justify-center gap-1.5 px-3 py-1.5 rounded-lg text-sm font-medium text-white bg-[#25D366] hover:bg-[#20BD5A] transition-colors ${className}`}
       aria-label={t('whatsapp.ariaLabel')}
     >

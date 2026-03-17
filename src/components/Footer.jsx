@@ -20,7 +20,7 @@ const Footer = () => {
     { key: 'home', path: ROUTES.HOME },
     { key: 'notreApproche', path: ROUTES.NOTRE_APPROCHE },
     { key: 'hyperthermie', path: ROUTES.HIPERTERMIA },
-    { key: 'sueroterapia', path: ROUTES.SUEROTERAPIA },
+    { key: 'bienestar', path: ROUTES.BIENESTAR },
     { key: 'aPropos', path: ROUTES.A_PROPOS },
     { key: 'contact', path: ROUTES.CONTACT },
     { key: 'mentionsLegales', path: ROUTES.POLITIQUE_CONFIDENTIALITE },

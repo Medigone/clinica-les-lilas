@@ -210,7 +210,7 @@ const Hyperthermie = () => {
                   </Link>
                   {' '}y puede complementarse con{' '}
                   <Link
-                    to={ROUTES.SUEROTERAPIA}
+                    to={ROUTES.BIENESTAR}
                     className="text-primary underline underline-offset-2 hover:text-primary/80 transition-colors"
                   >
                     sueroterapia intravenosa

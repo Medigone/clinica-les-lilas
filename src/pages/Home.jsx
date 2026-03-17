@@ -77,8 +77,8 @@ const MEDICAL_ORG_SCHEMA = {
     },
     {
       '@type': 'MedicalTherapy',
-      name: 'Sueroterapia intravenosa',
-      url: `${SITE_URL}${ROUTES.SUEROTERAPIA}`,
+      name: 'Bienestar y prevención',
+      url: `${SITE_URL}${ROUTES.BIENESTAR}`,
     },
   ],
   sameAs: ['https://www.instagram.com/clinicaleslilas/'],
@@ -86,7 +86,7 @@ const MEDICAL_ORG_SCHEMA = {
 
 const CARE_HERO_IMAGES = {
   [ROUTES.HIPERTERMIA]: '/assets/about-bg.png',
-  [ROUTES.SUEROTERAPIA]: '/assets/iv_therapy_bg.png',
+  [ROUTES.BIENESTAR]: '/assets/iv_therapy_bg.png',
 };
 
 const VALUE_BLOCK_ICONS = [

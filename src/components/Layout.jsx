@@ -2,7 +2,6 @@ import React from 'react';
 import { Outlet } from 'react-router-dom';
 import Header from './Header';
 import Footer from './Footer';
-import WhatsAppButton from './WhatsAppButton';
 import StickyContactBar from './StickyContactBar';
 import SchemaOrg from './SchemaOrg';
 
@@ -21,7 +20,6 @@ const Layout = () => {
         <Outlet />
       </main>
       <Footer />
-      <WhatsAppButton floating />
       <StickyContactBar />
     </div>
   );
