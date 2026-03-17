@@ -9,8 +9,6 @@ import NotreApproche from './pages/NotreApproche';
 import Traitements from './pages/Traitements';
 import Hyperthermie from './pages/Hyperthermie';
 import Sueroterapia from './pages/Sueroterapia';
-import MedecineRegenerative from './pages/MedecineRegenerative';
-import SoutienImmunitaire from './pages/SoutienImmunitaire';
 import APropos from './pages/APropos';
 import Contact from './pages/Contact';
 import ContactMerci from './pages/ContactMerci';
@@ -35,8 +33,6 @@ function App() {
               <Route path={toRoutePath(ROUTES.TRAITEMENTS)} element={<Traitements />} />
               <Route path={toRoutePath(ROUTES.HIPERTERMIA)} element={<Hyperthermie />} />
               <Route path={toRoutePath(ROUTES.SUEROTERAPIA)} element={<Sueroterapia />} />
-              <Route path={toRoutePath(ROUTES.MEDECINE_REGENERATIVE)} element={<MedecineRegenerative />} />
-              <Route path={toRoutePath(ROUTES.SOUTIEN_IMMUNITAIRE)} element={<SoutienImmunitaire />} />
               <Route path={toRoutePath(ROUTES.A_PROPOS)} element={<APropos />} />
               <Route path={toRoutePath(ROUTES.CONTACT)} element={<Contact />} />
               <Route path={toRoutePath(ROUTES.CONTACT_MERCI)} element={<ContactMerci />} />

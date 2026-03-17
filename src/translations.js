@@ -12,8 +12,6 @@ export const translations = {
       traitements: 'Traitements',
       hyperthermie: 'Hyperthermie oncologique',
       sueroterapia: 'Sueroterapia / IV Therapy',
-      medecineRegenerative: 'Médecine régénérative',
-      soutienImmunitaire: 'Soutien immunitaire & bien-être médicalisé',
       aPropos: 'À propos',
       contact: 'Contact',
       blog: 'Blog',
@@ -66,7 +64,7 @@ export const translations = {
       },
       traitements: {
         title: 'Nos traitements | Clínica Les Lilas',
-        description: 'Hyperthermie oncologique, sueroterapia, médecine régénérative, soutien immunitaire. Traitements médicaux intégratifs dans un cadre clinique rigoureux.',
+        description: 'Hyperthermie oncologique et sueroterapia. Traitements médicaux intégratifs dans un cadre clinique rigoureux.',
       },
       hyperthermie: {
         title: 'Hyperthermie oncologique | Clínica Les Lilas Alicante',
@@ -75,14 +73,6 @@ export const translations = {
       sueroterapia: {
         title: 'Sueroterapia / IV Therapy | Clínica Les Lilas Alicante',
         description: 'Thérapies intraveineuses dans un cadre médical rigoureux. Protocoles personnalisés pour fatigue, récupération, soutien immunitaire. Évaluation médicale préalable.',
-      },
-      medecineRegenerative: {
-        title: 'Médecine régénérative | Clínica Les Lilas',
-        description: 'Médecine régénérative dans un cadre clinique structuré. Thérapies orientées réparation tissulaire et soutien biologique. Évaluation individualisée.',
-      },
-      soutienImmunitaire: {
-        title: 'Soutien immunitaire & bien-être médicalisé | Clínica Les Lilas',
-        description: 'Soutien immunitaire et bien-être médicalisé. Accompagnement médical pour fatigue, récupération, prévention. Clinique privée à Alicante.',
       },
       aPropos: {
         title: 'À propos | Clínica Les Lilas',
@@ -102,7 +92,7 @@ export const translations = {
       },
       blog: {
         title: 'Blog | Clínica Les Lilas — Médecine intégrative',
-        description: 'Articles sur la médecine intégrative, l\'hyperthermie oncologique, la sueroterapia et la médecine régénérative. Informations médicales fiables par Clínica Les Lilas.',
+        description: 'Articles sur la médecine intégrative, l\'hyperthermie oncologique et la sueroterapia. Informations médicales fiables par Clínica Les Lilas.',
         keywords: 'blog médecine intégrative, hyperthermie oncologique, sueroterapia, médecine régénérative, clinique Alicante',
       },
     },
@@ -144,8 +134,6 @@ export const translations = {
         cards: [
           { title: 'Hyperthermie oncologique', text: "Chaleur localisée utilisée en complément des traitements conventionnels, dans un cadre clinique rigoureux et après évaluation individuelle.", path: ROUTES.HIPERTERMIA, cta: 'Découvrir' },
           { title: 'Sueroterapia / IV Therapy', text: "Protocoles de perfusion intraveineuse définis sur mesure, pour des objectifs de soutien, de récupération ou de bien-être médicalisé.", path: ROUTES.SUEROTERAPIA, cta: 'Découvrir' },
-          { title: 'Médecine régénérative', text: "Thérapies orientées vers la réparation et le soutien tissulaire, dans un cadre d'innovation clinique contrôlée.", path: ROUTES.MEDECINE_REGENERATIVE, cta: 'Découvrir' },
-          { title: 'Soutien immunitaire', text: "Accompagnement médicalisé pour la prévention, la récupération et l'équilibre global, adapté à chaque profil.", path: ROUTES.SOUTIEN_IMMUNITAIRE, cta: 'Découvrir' },
         ],
       },
       whyUs: {
@@ -206,8 +194,6 @@ export const translations = {
       cards: [
         { title: 'Hyperthermie oncologique', text: "Chaleur localisée utilisée en complément des traitements conventionnels, intégrée dans un parcours oncologique individualisé.", path: ROUTES.HIPERTERMIA },
         { title: 'Sueroterapia / IV Therapy', text: "Perfusions intraveineuses personnalisées pour le soutien, la récupération et le bien-être, dans un cadre médical rigoureux.", path: ROUTES.SUEROTERAPIA },
-        { title: 'Médecine régénérative', text: "Thérapies innovantes orientées vers la réparation tissulaire et le soutien biologique, après évaluation individuelle.", path: ROUTES.MEDECINE_REGENERATIVE },
-        { title: 'Soutien immunitaire & bien-être médicalisé', text: "Accompagnement médical adapté pour la prévention, la récupération et l'équilibre global.", path: ROUTES.SOUTIEN_IMMUNITAIRE },
       ],
     },
     hyperthermie: {
@@ -520,84 +506,6 @@ export const translations = {
         ],
       },
     },
-    medecineRegenerative: {
-      hero: {
-        h1: 'Médecine régénérative',
-        subtitle: 'Innovation clinique au service de la réparation et du soutien biologique',
-        text: "La médecine régénérative chez Clínica Les Lilas s'inscrit dans une démarche d'innovation contrôlée. Nous explorons des approches orientées vers la réparation tissulaire et le soutien biologique, toujours dans un cadre clinique structuré.",
-      },
-      cards: [
-        {
-          title: 'Une innovation encadrée',
-          text: "Les thérapies régénératives englobent des approches variées : soutien par facteurs de croissance, thérapies cellulaires ciblées, protocoles de stimulation biologique. Chaque approche est proposée après évaluation, dans le respect des connaissances médicales actuelles et des limites identifiées.",
-        },
-        {
-          title: 'Un cadre clinique rigoureux',
-          text: "Nous ne proposons pas la médecine régénérative comme une solution miracle. Chaque indication repose sur une évaluation attentive, un dialogue avec le patient et une analyse réaliste des bénéfices potentiels. Le suivi fait partie intégrante de la prise en charge.",
-        },
-        {
-          title: "L'innovation au service du patient",
-          text: "L'innovation n'a de valeur que si elle est mise au service du patient, dans un cadre transparent et médicalement supervisé. Nous accompagnons chaque patient avec honnêteté sur les possibilités et les limites des approches proposées.",
-        },
-        {
-          title: 'Commencer par une consultation',
-          text: "La première consultation permet d'évaluer votre situation, de discuter des approches envisageables et de définir un plan adapté. C'est une étape indispensable avant toute orientation thérapeutique.",
-          cta: true,
-        },
-      ],
-      firstConsultation: {
-        title: 'Commencer par une consultation',
-        text: "La première consultation permet d'évaluer votre situation, de discuter des approches envisageables et de définir un plan adapté. C'est une étape indispensable avant toute orientation thérapeutique.",
-      },
-    },
-    soutienImmunitaire: {
-      hero: {
-        h1: 'Soutien immunitaire & bien-être médicalisé',
-        subtitle: 'Un accompagnement médical pour la prévention, la récupération et l\'équilibre',
-        text: "Ce que nous appelons bien-être médicalisé n'a rien d'un concept marketing. Il s'agit d'un accompagnement médical structuré, destiné aux personnes qui souhaitent prendre soin de leur santé de façon active, encadrée et personnalisée.",
-      },
-      cards: [
-        {
-          title: 'Un accompagnement médical, pas une offre bien-être générique',
-          text: "Nous ne proposons pas de solutions standard. L'accompagnement commence par une évaluation de votre situation : antécédents, mode de vie, objectifs de santé, contexte médical. Ce bilan oriente le choix des approches et le rythme du suivi.",
-        },
-        {
-          title: 'Pour qui ?',
-          text: "Cet accompagnement peut convenir à des profils très différents :",
-          items: [
-            'Fatigue persistante ou chronique sans cause identifiée',
-            'Récupération après une maladie, un traitement ou une période difficile',
-            'Stress prolongé et déséquilibre général',
-            'Prévention active et optimisation de la santé',
-            'Recherche d\'un suivi global dans un cadre médical sérieux',
-          ],
-        },
-        {
-          title: 'Un cadre conçu pour vous accompagner',
-          text: "Chaque patient est accueilli dans un environnement calme, professionnel et respectueux. L'objectif est de construire un parcours qui a du sens, en prenant le temps nécessaire pour comprendre et adapter les réponses proposées.",
-          cta: 'contactClinic',
-        },
-      ],
-      medicalApproach: {
-        title: 'Un accompagnement médical, pas une offre bien-être générique',
-        text: "Nous ne proposons pas de solutions standard. L'accompagnement commence par une évaluation de votre situation : antécédents, mode de vie, objectifs de santé, contexte médical. Ce bilan oriente le choix des approches et le rythme du suivi.",
-      },
-      forWho: {
-        title: 'Pour qui ?',
-        text: "Cet accompagnement peut convenir à des profils très différents :",
-        items: [
-          'Fatigue persistante ou chronique sans cause identifiée',
-          'Récupération après une maladie, un traitement ou une période difficile',
-          'Stress prolongé et déséquilibre général',
-          'Prévention active et optimisation de la santé',
-          'Recherche d\'un suivi global dans un cadre médical sérieux',
-        ],
-      },
-      reassuringFramework: {
-        title: 'Un cadre conçu pour vous accompagner',
-        text: "Chaque patient est accueilli dans un environnement calme, professionnel et respectueux. L'objectif est de construire un parcours qui a du sens, en prenant le temps nécessaire pour comprendre et adapter les réponses proposées.",
-      },
-    },
     aPropos: {
       hero: {
         h1: 'À propos de Clínica Les Lilas',
@@ -802,8 +710,6 @@ export const translations = {
       traitements: 'Treatments',
       hyperthermie: 'Oncological hyperthermia',
       sueroterapia: 'Sueroterapia / IV Therapy',
-      medecineRegenerative: 'Regenerative medicine',
-      soutienImmunitaire: 'Immune support & medicalized wellness',
       aPropos: 'About',
       contact: 'Contact',
       blog: 'Blog',
@@ -856,7 +762,7 @@ export const translations = {
       },
       traitements: {
         title: 'Our Treatments | Clínica Les Lilas',
-        description: 'Oncological hyperthermia, IV therapy, regenerative medicine, immune support. Integrative medical treatments in a rigorous clinical setting.',
+        description: 'Oncological hyperthermia and IV therapy. Integrative medical treatments in a rigorous clinical setting.',
       },
       hyperthermie: {
         title: 'Oncological Hyperthermia | Clínica Les Lilas Alicante',
@@ -865,14 +771,6 @@ export const translations = {
       sueroterapia: {
         title: 'Sueroterapia / IV Therapy | Clínica Les Lilas Alicante',
         description: 'Intravenous therapies in a rigorous medical setting. Personalized protocols for fatigue, recovery, immune support. Prior medical evaluation.',
-      },
-      medecineRegenerative: {
-        title: 'Regenerative Medicine | Clínica Les Lilas',
-        description: 'Regenerative medicine in a structured clinical setting. Therapies focused on tissue repair and biological support. Individualized evaluation.',
-      },
-      soutienImmunitaire: {
-        title: 'Immune Support & Medicalized Wellness | Clínica Les Lilas',
-        description: 'Immune support and medicalized wellness. Medical care for fatigue, recovery, prevention. Private clinic in Alicante.',
       },
       aPropos: {
         title: 'About | Clínica Les Lilas',
@@ -892,8 +790,8 @@ export const translations = {
       },
       blog: {
         title: 'Blog | Clínica Les Lilas — Integrative Medicine',
-        description: 'Articles on integrative medicine, oncological hyperthermia, sueroterapia and regenerative medicine. Reliable medical information by Clínica Les Lilas.',
-        keywords: 'integrative medicine blog, oncological hyperthermia, sueroterapia, regenerative medicine, Alicante clinic',
+        description: 'Articles on integrative medicine, oncological hyperthermia and sueroterapia. Reliable medical information by Clínica Les Lilas.',
+        keywords: 'integrative medicine blog, oncological hyperthermia, sueroterapia, Alicante clinic',
       },
     },
     blog: {
@@ -934,8 +832,6 @@ export const translations = {
         cards: [
           { title: 'Oncological hyperthermia', text: "Localized heat used to complement conventional treatments, in a rigorous clinical setting and after individual evaluation.", path: ROUTES.HIPERTERMIA, cta: 'Discover' },
           { title: 'Sueroterapia / IV Therapy', text: "Tailored intravenous infusion protocols for support, recovery or medicalized wellness.", path: ROUTES.SUEROTERAPIA, cta: 'Discover' },
-          { title: 'Regenerative medicine', text: "Therapies focused on tissue repair and biological support, within a framework of controlled clinical innovation.", path: ROUTES.MEDECINE_REGENERATIVE, cta: 'Discover' },
-          { title: 'Immune support', text: "Medicalized support for prevention, recovery and overall balance, adapted to each profile.", path: ROUTES.SOUTIEN_IMMUNITAIRE, cta: 'Discover' },
         ],
       },
       whyUs: {
@@ -996,8 +892,6 @@ export const translations = {
       cards: [
         { title: 'Oncological hyperthermia', text: "Localized heat used to complement conventional treatments, integrated into an individualized oncological pathway.", path: ROUTES.HIPERTERMIA },
         { title: 'Sueroterapia / IV Therapy', text: "Personalized intravenous infusions for support, recovery and wellness, in a rigorous medical setting.", path: ROUTES.SUEROTERAPIA },
-        { title: 'Regenerative medicine', text: "Innovative therapies focused on tissue repair and biological support, after individual evaluation.", path: ROUTES.MEDECINE_REGENERATIVE },
-        { title: 'Immune support & medicalized wellness', text: "Tailored medical support for prevention, recovery and overall balance.", path: ROUTES.SOUTIEN_IMMUNITAIRE },
       ],
     },
     hyperthermie: {
@@ -1310,84 +1204,6 @@ export const translations = {
         ],
       },
     },
-    medecineRegenerative: {
-      hero: {
-        h1: 'Regenerative medicine',
-        subtitle: 'Clinical innovation for repair and biological support',
-        text: "Regenerative medicine at Clínica Les Lilas is part of a controlled innovation approach. We explore therapies focused on tissue repair and biological support, always within a structured clinical framework.",
-      },
-      cards: [
-        {
-          title: 'Guided innovation',
-          text: "Regenerative therapies encompass various approaches: growth factor support, targeted cell therapies, biological stimulation protocols. Each approach is offered after evaluation, respecting current medical knowledge and identified limitations.",
-        },
-        {
-          title: 'A rigorous clinical setting',
-          text: "We do not present regenerative medicine as a miracle solution. Each indication is based on careful evaluation, dialogue with the patient and a realistic analysis of potential benefits. Follow-up is an integral part of the care.",
-        },
-        {
-          title: 'Innovation at the service of the patient',
-          text: "Innovation only has value when it serves the patient, within a transparent and medically supervised framework. We support each patient with honesty about the possibilities and limitations of the proposed approaches.",
-        },
-        {
-          title: 'Start with a consultation',
-          text: "The first consultation allows us to evaluate your situation, discuss possible approaches and define a suitable plan. It is an essential step before any therapeutic direction.",
-          cta: true,
-        },
-      ],
-      firstConsultation: {
-        title: 'Start with a consultation',
-        text: "The first consultation allows us to evaluate your situation, discuss possible approaches and define a suitable plan. It is an essential step before any therapeutic direction.",
-      },
-    },
-    soutienImmunitaire: {
-      hero: {
-        h1: 'Immune support & medicalized wellness',
-        subtitle: 'Medical care for prevention, recovery and balance',
-        text: "What we call medicalized wellness is not a marketing concept. It is a structured medical approach for people who want to take care of their health actively, supervised and personalized.",
-      },
-      cards: [
-        {
-          title: 'Medical support, not generic wellness',
-          text: "We don't offer standard solutions. Care begins with an evaluation of your situation: medical history, lifestyle, health goals, medical context. This assessment guides the choice of approaches and the pace of follow-up.",
-        },
-        {
-          title: 'Who is it for?',
-          text: "This care can be suitable for very different profiles:",
-          items: [
-            'Persistent or chronic fatigue without identified cause',
-            'Recovery after illness, treatment or a difficult period',
-            'Prolonged stress and general imbalance',
-            'Active prevention and health optimization',
-            'Seeking comprehensive care in a serious medical setting',
-          ],
-        },
-        {
-          title: 'A setting designed to support you',
-          text: "Each patient is welcomed in a calm, professional and respectful environment. The goal is to build a pathway that makes sense, taking the necessary time to understand and adapt the proposed responses.",
-          cta: 'contactClinic',
-        },
-      ],
-      medicalApproach: {
-        title: 'Medical support, not generic wellness',
-        text: "We don't offer standard solutions. Care begins with an evaluation of your situation: medical history, lifestyle, health goals, medical context. This assessment guides the choice of approaches and the pace of follow-up.",
-      },
-      forWho: {
-        title: 'Who is it for?',
-        text: "This care can be suitable for very different profiles:",
-        items: [
-          'Persistent or chronic fatigue without identified cause',
-          'Recovery after illness, treatment or a difficult period',
-          'Prolonged stress and general imbalance',
-          'Active prevention and health optimization',
-          'Seeking comprehensive care in a serious medical setting',
-        ],
-      },
-      reassuringFramework: {
-        title: 'A setting designed to support you',
-        text: "Each patient is welcomed in a calm, professional and respectful environment. The goal is to build a pathway that makes sense, taking the necessary time to understand and adapt the proposed responses.",
-      },
-    },
     aPropos: {
       hero: {
         h1: 'About Clínica Les Lilas',
@@ -1571,8 +1387,6 @@ export const translations = {
       traitements: 'Tratamientos',
       hyperthermie: 'Hipertermia oncológica',
       sueroterapia: 'Sueroterapia / IV Therapy',
-      medecineRegenerative: 'Medicina regenerativa',
-      soutienImmunitaire: 'Soporte inmunológico y bienestar medicalizado',
       aPropos: 'Sobre nosotros',
       contact: 'Contacto',
       blog: 'Blog',
@@ -1626,7 +1440,7 @@ export const translations = {
       },
       traitements: {
         title: 'Nuestros tratamientos | Clínica Les Lilas',
-        description: 'Hipertermia oncológica, sueroterapia, medicina regenerativa, soporte inmunológico. Tratamientos médicos integrativos en un marco clínico riguroso.',
+        description: 'Hipertermia oncológica y sueroterapia. Tratamientos médicos integrativos en un marco clínico riguroso.',
       },
       hyperthermie: {
         title: 'Hipertermia oncológica en Alicante | Clínica Les Lilas',
@@ -1636,14 +1450,6 @@ export const translations = {
       sueroterapia: {
         title: 'Sueroterapia / IV Therapy | Clínica Les Lilas Alicante',
         description: 'Terapias intravenosas en un marco médico riguroso. Protocolos personalizados para fatiga, recuperación, soporte inmunológico. Evaluación médica previa.',
-      },
-      medecineRegenerative: {
-        title: 'Medicina regenerativa | Clínica Les Lilas',
-        description: 'Medicina regenerativa en un marco clínico estructurado. Terapias orientadas a la reparación tisular y el soporte biológico. Evaluación individualizada.',
-      },
-      soutienImmunitaire: {
-        title: 'Soporte inmunológico y bienestar medicalizado | Clínica Les Lilas',
-        description: 'Soporte inmunológico y bienestar medicalizado. Acompañamiento médico para fatiga, recuperación, prevención. Clínica privada en Alicante.',
       },
       aPropos: {
         title: 'Sobre nosotros | Clínica Les Lilas',
@@ -1663,8 +1469,8 @@ export const translations = {
       },
       blog: {
         title: 'Blog | Clínica Les Lilas — Medicina integrativa',
-        description: 'Artículos sobre medicina integrativa, hipertermia oncológica, sueroterapia y medicina regenerativa. Información médica fiable por Clínica Les Lilas.',
-        keywords: 'blog medicina integrativa, hipertermia oncológica, sueroterapia, medicina regenerativa, clínica Alicante',
+        description: 'Artículos sobre medicina integrativa, hipertermia oncológica y sueroterapia. Información médica fiable por Clínica Les Lilas.',
+        keywords: 'blog medicina integrativa, hipertermia oncológica, sueroterapia, clínica Alicante',
       },
     },
     blog: {
@@ -1705,8 +1511,6 @@ export const translations = {
         cards: [
           { title: 'Hipertermia oncológica', subtitle: 'Único centro especializado en hipertermia oncológica en la provincia de Alicante.', text: "La hipertermia oncológica se aplica en un marco clínico riguroso como complemento a los tratamientos convencionales, tras evaluación médica individual.", path: ROUTES.HIPERTERMIA, cta: 'Descubrir' },
           { title: 'Sueroterapia / IV Therapy', text: "Sueroterapia intravenosa con protocolos definidos a medida: vitamina C IV, NAD+, glutatión y otros activos, para objetivos de soporte, recuperación o bienestar medicalizado en Alicante.", path: ROUTES.SUEROTERAPIA, cta: 'Descubrir' },
-          { title: 'Medicina regenerativa', text: "Terapias orientadas a la reparación y el soporte tisular, en un marco de innovación clínica controlada.", path: ROUTES.MEDECINE_REGENERATIVE, cta: 'Descubrir' },
-          { title: 'Soporte inmunológico', text: "Acompañamiento medicalizado para la prevención, la recuperación y el equilibrio global, adaptado a cada perfil.", path: ROUTES.SOUTIEN_IMMUNITAIRE, cta: 'Descubrir' },
         ],
       },
       whyUs: {
@@ -1768,8 +1572,6 @@ export const translations = {
       cards: [
         { title: 'Hipertermia oncológica', text: "Calor localizado como complemento a los tratamientos convencionales, integrado en un recorrido oncológico individualizado.", path: ROUTES.HIPERTERMIA },
         { title: 'Sueroterapia / IV Therapy', text: "Perfusiones intravenosas personalizadas para soporte, recuperación y bienestar, en un marco médico riguroso.", path: ROUTES.SUEROTERAPIA },
-        { title: 'Medicina regenerativa', text: "Terapias innovadoras orientadas a la reparación tisular y el soporte biológico, tras evaluación individual.", path: ROUTES.MEDECINE_REGENERATIVE },
-        { title: 'Soporte inmunológico y bienestar medicalizado', text: "Acompañamiento médico adaptado para la prevención, la recuperación y el equilibrio global.", path: ROUTES.SOUTIEN_IMMUNITAIRE },
       ],
     },
     hyperthermie: {
@@ -2082,84 +1884,6 @@ export const translations = {
             ],
           },
         ],
-      },
-    },
-    medecineRegenerative: {
-      hero: {
-        h1: 'Medicina regenerativa',
-        subtitle: 'Innovación clínica al servicio de la reparación y el soporte biológico',
-        text: "La medicina regenerativa en Clínica Les Lilas se inscribe en un enfoque de innovación controlada. Exploramos terapias orientadas a la reparación tisular y el soporte biológico, siempre dentro de un marco clínico estructurado.",
-      },
-      cards: [
-        {
-          title: 'Innovación guiada',
-          text: "Las terapias regenerativas engloban enfoques variados: soporte por factores de crecimiento, terapias celulares dirigidas, protocolos de estimulación biológica. Cada enfoque se propone tras evaluación, respetando los conocimientos médicos actuales y las limitaciones identificadas.",
-        },
-        {
-          title: 'Un marco clínico riguroso',
-          text: "No presentamos la medicina regenerativa como una solución milagrosa. Cada indicación se basa en una evaluación cuidadosa, un diálogo con el paciente y un análisis realista de los beneficios potenciales. El seguimiento es parte integral de la atención.",
-        },
-        {
-          title: 'La innovación al servicio del paciente',
-          text: "La innovación solo tiene valor cuando está al servicio del paciente, en un marco transparente y médicamente supervisado. Acompañamos a cada paciente con honestidad sobre las posibilidades y limitaciones de los enfoques propuestos.",
-        },
-        {
-          title: 'Comenzar con una consulta',
-          text: "La primera consulta permite evaluar su situación, discutir los enfoques posibles y definir un plan adaptado. Es un paso indispensable antes de cualquier orientación terapéutica.",
-          cta: true,
-        },
-      ],
-      firstConsultation: {
-        title: 'Comenzar con una consulta',
-        text: "La primera consulta permite evaluar su situación, discutir los enfoques posibles y definir un plan adaptado. Es un paso indispensable antes de cualquier orientación terapéutica.",
-      },
-    },
-    soutienImmunitaire: {
-      hero: {
-        h1: 'Soporte inmunológico y bienestar medicalizado',
-        subtitle: 'Atención médica para la prevención, la recuperación y el equilibrio',
-        text: "Lo que llamamos bienestar medicalizado no es un concepto de marketing. Se trata de un acompañamiento médico estructurado, destinado a personas que desean cuidar su salud de forma activa, supervisada y personalizada.",
-      },
-      cards: [
-        {
-          title: 'Acompañamiento médico, no una oferta de bienestar genérica',
-          text: "No ofrecemos soluciones estándar. El acompañamiento comienza con una evaluación de su situación: antecedentes, estilo de vida, objetivos de salud, contexto médico. Esta valoración orienta la elección de los enfoques y el ritmo del seguimiento.",
-        },
-        {
-          title: '¿Para quién?',
-          text: "Este acompañamiento puede adaptarse a perfiles muy diferentes:",
-          items: [
-            'Fatiga persistente o crónica sin causa identificada',
-            'Recuperación tras enfermedad, tratamiento o un periodo difícil',
-            'Estrés prolongado y desequilibrio general',
-            'Prevención activa y optimización de la salud',
-            'Búsqueda de un seguimiento global en un marco médico serio',
-          ],
-        },
-        {
-          title: 'Un espacio pensado para acompañarle',
-          text: "Cada paciente es recibido en un entorno tranquilo, profesional y respetuoso. El objetivo es construir un recorrido que tenga sentido, tomando el tiempo necesario para comprender y adaptar las respuestas propuestas.",
-          cta: 'contactClinic',
-        },
-      ],
-      medicalApproach: {
-        title: 'Acompañamiento médico, no una oferta de bienestar genérica',
-        text: "No ofrecemos soluciones estándar. El acompañamiento comienza con una evaluación de su situación: antecedentes, estilo de vida, objetivos de salud, contexto médico. Esta valoración orienta la elección de los enfoques y el ritmo del seguimiento.",
-      },
-      forWho: {
-        title: '¿Para quién?',
-        text: "Este acompañamiento puede adaptarse a perfiles muy diferentes:",
-        items: [
-          'Fatiga persistente o crónica sin causa identificada',
-          'Recuperación tras enfermedad, tratamiento o un periodo difícil',
-          'Estrés prolongado y desequilibrio general',
-          'Prevención activa y optimización de la salud',
-          'Búsqueda de un seguimiento global en un marco médico serio',
-        ],
-      },
-      reassuringFramework: {
-        title: 'Un espacio pensado para acompañarle',
-        text: "Cada paciente es recibido en un entorno tranquilo, profesional y respetuoso. El objetivo es construir un recorrido que tenga sentido, tomando el tiempo necesario para comprender y adaptar las respuestas propuestas.",
       },
     },
     aPropos: {

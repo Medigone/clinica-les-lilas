@@ -9,8 +9,8 @@ server {
   rewrite ^/traitements$ /tratamientos permanent;
   rewrite ^/traitements/hyperthermie-oncologique$ /tratamientos/hipertermia-oncologica permanent;
   rewrite ^/traitements/sueroterapia$ /tratamientos/sueroterapia permanent;
-  rewrite ^/traitements/medecine-regenerative$ /tratamientos/medicina-regenerativa permanent;
-  rewrite ^/traitements/soutien-immunitaire$ /tratamientos/soporte-inmunologico permanent;
+  rewrite ^/traitements/medecine-regenerative$ /tratamientos permanent;
+  rewrite ^/traitements/soutien-immunitaire$ /tratamientos permanent;
   rewrite ^/a-propos$ /sobre-nosotros permanent;
   rewrite ^/contact$ /contacto permanent;
   rewrite ^/contact/merci$ /contacto/gracias permanent;
@@ -18,8 +18,8 @@ server {
   rewrite ^/politique-confidentialite$ /aviso-legal permanent;
   rewrite ^/hipertermia-oncologica$ /tratamientos/hipertermia-oncologica permanent;
   rewrite ^/sueroterapia$ /tratamientos/sueroterapia permanent;
-  rewrite ^/medicina-regenerativa$ /tratamientos/medicina-regenerativa permanent;
-  rewrite ^/soporte-inmunologico$ /tratamientos/soporte-inmunologico permanent;
+  rewrite ^/medicina-regenerativa$ /tratamientos permanent;
+  rewrite ^/soporte-inmunologico$ /tratamientos permanent;
   rewrite ^/faq$ / permanent;
   rewrite ^/consulta-inicial$ /contacto permanent;
   rewrite ^/tu-recorrido$ /medicina-integrativa permanent;

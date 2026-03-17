@@ -21,8 +21,6 @@ const Header = () => {
   const treatmentItems = [
     { key: 'hyperthermie', path: ROUTES.HIPERTERMIA },
     { key: 'sueroterapia', path: ROUTES.SUEROTERAPIA },
-    { key: 'medecineRegenerative', path: ROUTES.MEDECINE_REGENERATIVE },
-    { key: 'soutienImmunitaire', path: ROUTES.SOUTIEN_IMMUNITAIRE },
   ];
 
   const isActive = (path) => location.pathname === path;

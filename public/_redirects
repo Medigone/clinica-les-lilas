@@ -2,8 +2,8 @@
 /traitements  /tratamientos  301!
 /traitements/hyperthermie-oncologique  /tratamientos/hipertermia-oncologica  301!
 /traitements/sueroterapia  /tratamientos/sueroterapia  301!
-/traitements/medecine-regenerative  /tratamientos/medicina-regenerativa  301!
-/traitements/soutien-immunitaire  /tratamientos/soporte-inmunologico  301!
+/traitements/medecine-regenerative  /tratamientos  301!
+/traitements/soutien-immunitaire  /tratamientos  301!
 /a-propos  /sobre-nosotros  301!
 /contact  /contacto  301!
 /contact/merci  /contacto/gracias  301!
@@ -11,8 +11,8 @@
 /politique-confidentialite  /aviso-legal  301!
 /hipertermia-oncologica  /tratamientos/hipertermia-oncologica  301!
 /sueroterapia  /tratamientos/sueroterapia  301!
-/medicina-regenerativa  /tratamientos/medicina-regenerativa  301!
-/soporte-inmunologico  /tratamientos/soporte-inmunologico  301!
+/medicina-regenerativa  /tratamientos  301!
+/soporte-inmunologico  /tratamientos  301!
 /faq  /  301!
 /consulta-inicial  /contacto  301!
 /tu-recorrido  /medicina-integrativa  301!

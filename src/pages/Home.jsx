@@ -42,7 +42,7 @@ const MEDICAL_ORG_SCHEMA = {
   name: 'Clínica Les Lilas',
   alternateName: 'Clinica Les Lilas Alicante',
   description:
-    'Clínica privada de medicina integrativa en San Juan de Alicante. Especializada en hipertermia oncológica electromodulada, sueroterapia intravenosa, medicina regenerativa y soporte inmunológico.',
+    'Clínica privada de medicina integrativa en San Juan de Alicante. Especializada en hipertermia oncológica electromodulada y sueroterapia intravenosa.',
   url: SITE_URL,
   logo: `${SITE_URL}/assets/Logo_clinica_les_lilas.svg`,
   telephone: '+34614067537',
@@ -80,11 +80,6 @@ const MEDICAL_ORG_SCHEMA = {
       name: 'Sueroterapia intravenosa',
       url: `${SITE_URL}${ROUTES.SUEROTERAPIA}`,
     },
-    {
-      '@type': 'MedicalTherapy',
-      name: 'Medicina regenerativa',
-      url: `${SITE_URL}${ROUTES.MEDECINE_REGENERATIVE}`,
-    },
   ],
   sameAs: ['https://www.instagram.com/clinicaleslilas/'],
 };
@@ -92,8 +87,6 @@ const MEDICAL_ORG_SCHEMA = {
 const CARE_HERO_IMAGES = {
   [ROUTES.HIPERTERMIA]: '/assets/about-bg.png',
   [ROUTES.SUEROTERAPIA]: '/assets/iv_therapy_bg.png',
-  [ROUTES.MEDECINE_REGENERATIVE]: '/assets/traitements_bg.png',
-  [ROUTES.SOUTIEN_IMMUNITAIRE]: '/assets/soutien_immunitaire_bg.png',
 };
 
 const VALUE_BLOCK_ICONS = [

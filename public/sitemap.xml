@@ -2,85 +2,73 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://clinicaleslilas.com/</loc>
-    <lastmod>2026-03-13</lastmod>
+    <lastmod>2026-03-17</lastmod>
     <changefreq>monthly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
     <loc>https://clinicaleslilas.com/medicina-integrativa</loc>
-    <lastmod>2026-03-13</lastmod>
+    <lastmod>2026-03-17</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
     <loc>https://clinicaleslilas.com/tratamientos</loc>
-    <lastmod>2026-03-13</lastmod>
+    <lastmod>2026-03-17</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
     <loc>https://clinicaleslilas.com/tratamientos/hipertermia-oncologica</loc>
-    <lastmod>2026-03-13</lastmod>
+    <lastmod>2026-03-17</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
     <loc>https://clinicaleslilas.com/tratamientos/sueroterapia</loc>
-    <lastmod>2026-03-13</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.9</priority>
-  </url>
-  <url>
-    <loc>https://clinicaleslilas.com/tratamientos/medicina-regenerativa</loc>
-    <lastmod>2026-03-13</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.9</priority>
-  </url>
-  <url>
-    <loc>https://clinicaleslilas.com/tratamientos/soporte-inmunologico</loc>
-    <lastmod>2026-03-13</lastmod>
+    <lastmod>2026-03-17</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
     <loc>https://clinicaleslilas.com/sobre-nosotros</loc>
-    <lastmod>2026-03-13</lastmod>
+    <lastmod>2026-03-17</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
     <loc>https://clinicaleslilas.com/contacto</loc>
-    <lastmod>2026-03-13</lastmod>
+    <lastmod>2026-03-17</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://clinicaleslilas.com/aviso-legal</loc>
-    <lastmod>2026-03-13</lastmod>
+    <lastmod>2026-03-17</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.4</priority>
   </url>
   <url>
     <loc>https://clinicaleslilas.com/blog</loc>
-    <lastmod>2026-03-13</lastmod>
+    <lastmod>2026-03-17</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://clinicaleslilas.com/blog/hipertermia-oncologica</loc>
-    <lastmod>2026-03-13</lastmod>
+    <lastmod>2026-03-17</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://clinicaleslilas.com/blog/medicina-regenerativa-reparacion-celular</loc>
-    <lastmod>2026-03-13</lastmod>
+    <lastmod>2026-03-17</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://clinicaleslilas.com/blog/sueroterapia-micronutrientes</loc>
-    <lastmod>2026-03-13</lastmod>
+    <lastmod>2026-03-17</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>

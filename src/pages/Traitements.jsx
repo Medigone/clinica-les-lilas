@@ -9,8 +9,6 @@ import { ROUTES } from '../routes';
 const CARE_HERO_IMAGES = {
   [ROUTES.HIPERTERMIA]: '/assets/about-bg.png',
   [ROUTES.SUEROTERAPIA]: '/assets/iv_therapy_bg.png',
-  [ROUTES.MEDECINE_REGENERATIVE]: '/assets/medecine_regen_bg.png',
-  [ROUTES.SOUTIEN_IMMUNITAIRE]: '/assets/soutien_immunitaire_bg.png',
 };
 
 const Traitements = () => {
