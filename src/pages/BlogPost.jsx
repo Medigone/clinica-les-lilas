@@ -197,7 +197,7 @@ const BlogPost = () => {
         <section className="pb-8">
           <div className="max-w-4xl mx-auto px-6 md:px-12 lg:px-16">
             <div className="rounded-[1.75rem] overflow-hidden aspect-[2/1] bg-primary/5">
-              <img src={image} alt={title} className="w-full h-full object-cover" />
+              <img src={image} alt={title} loading="lazy" decoding="async" className="w-full h-full object-cover" />
             </div>
           </div>
         </section>
@@ -297,6 +297,8 @@ const BlogPost = () => {
                       <img
                         src={rp.image}
                         alt={rp.title}
+                        loading="lazy"
+                        decoding="async"
                         className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                       />
                     ) : (
