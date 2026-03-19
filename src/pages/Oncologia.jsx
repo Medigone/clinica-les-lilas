@@ -25,7 +25,7 @@ const TIER_CONFIG = {
 
 const TIER_THERAPIES = {
   support: ['soporteInmune', 'soporteNeurologico', 'vitaminaCOnco'],
-  protocolo: ['neuroSupportOnco', 'antioxidanteOnco', 'inmunidadIntensivaOnco', 'curcuminaOnco', 'equilibrioEmocionalOnco'],
+  protocolo: ['neuroSupportOnco', 'antioxidanteOnco', 'equilibrioEmocionalOnco'],
   avanzado: ['antioxidanteOncoPremium', 'cardioProtectOnco', 'mitoSupportOnco', 'inmunomodulacionOnco', 'cardioDefenseOnco'],
 };
 

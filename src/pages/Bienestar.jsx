@@ -25,8 +25,8 @@ const TIER_CONFIG = {
 
 const TIER_THERAPIES = {
   essentiel: ['defensaInmune', 'detoxCelular'],
-  advanced: ['energiaTotal', 'neuroRecovery', 'equilibrioMental', 'vitalidadCelular', 'inmunidadPlus', 'antiInflam'],
-  prestige: ['nadLongevity', 'nadVitalBoost', 'performanceSport', 'longevityElite', 'polyphenolLongevity'],
+  advanced: ['energiaTotal', 'neuroRecovery', 'equilibrioMental', 'vitalidadCelular', 'inmunidadPlus'],
+  prestige: ['nadLongevity', 'nadVitalBoost', 'performanceSport', 'longevityElite'],
 };
 
 const TherapyCard = ({ therapy, gradient, tierBadge, tierBadgeBg, labels, contactPath }) => (

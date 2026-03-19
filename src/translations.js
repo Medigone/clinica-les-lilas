@@ -413,29 +413,6 @@ export const translations = {
           ],
           duration: '55–65 min',
         },
-        inmunidadIntensivaOnco: {
-          name: 'Terapia Inmunidad Intensiva Onco',
-          subtitle: 'Inmunidad alta dosis y modulación del selenio',
-          tags: ['Vitamina C 50g', 'Selenio 900mcg'],
-          benefits: [
-            'Immunité haute dose + modulation Sélénium',
-            'Action pro-oxydante sélective à haute dose',
-            'Soutien en phase active de traitement oncologique',
-          ],
-          duration: '90–120 min',
-          note: 'Protocole adapté à la phase du traitement oncologique.',
-        },
-        curcuminaOnco: {
-          name: 'Terapia Curcumina Onco',
-          subtitle: 'Antiinflamatorio oncológico de precisión',
-          tags: ['Curcumina IV 150mg', 'Vitamina C 7.5g'],
-          benefits: [
-            'Anti-inflammatoire oncologique de précision — biodisponibilité totale',
-            'Synergie antioxydante Curcumina + Vit C',
-            'Soutien des parcours longs — confort et résilience',
-          ],
-          duration: '60–75 min',
-        },
         equilibrioEmocionalOnco: {
           name: 'Terapia Equilibrio Emocional Onco',
           subtitle: 'Equilibrio emocional y soporte nervioso en oncología',
@@ -617,17 +594,6 @@ export const translations = {
           ],
           duration: '55–65 min',
         },
-        antiInflam: {
-          name: 'Terapia Anti-Inflam IV',
-          subtitle: 'Antiinflamatorio de precisión y antioxidante avanzado',
-          tags: ['Curcumina IV 150mg', 'Vitamina C 7.5g'],
-          benefits: [
-            'Anti-inflammatoire de précision (100× supérieur à la capsule)',
-            'Synergie antioxydante renforcée',
-            'Confort articulaire, métabolique et digestif',
-          ],
-          duration: '60–75 min',
-        },
         nadLongevity: {
           name: 'NAD+ Longevity',
           subtitle: 'Longevidad, claridad mental y cofactores B',
@@ -671,17 +637,6 @@ export const translations = {
             'Offre haut de gamme pour la longévité',
           ],
           duration: '100–130 min',
-        },
-        polyphenolLongevity: {
-          name: 'Polyphenol Longevity',
-          subtitle: 'Poliphenol premium — longevidad, inmunidad y antioxidante celular',
-          tags: ['EGCG', 'Vitamina C 7.5g'],
-          benefits: [
-            'Puissant polyphénol anti-âge et immunomodulateur',
-            'Synergie antioxydante EGCG + Vitamina C haute biodisponibilité',
-            'Longévité cellulaire, cardioprotection et soutien métabolique',
-          ],
-          duration: '90–120 min',
         },
       },
       personalized: {
@@ -1323,29 +1278,6 @@ export const translations = {
           ],
           duration: '55–65 min',
         },
-        inmunidadIntensivaOnco: {
-          name: 'Terapia Inmunidad Intensiva Onco',
-          subtitle: 'Inmunidad alta dosis y modulación del selenio',
-          tags: ['Vitamina C 50g', 'Selenio 900mcg'],
-          benefits: [
-            'High-dose immunity + Selenium modulation',
-            'Selective pro-oxidant action at high dose',
-            'Support during active oncological treatment phase',
-          ],
-          duration: '90–120 min',
-          note: 'Protocol adapted to the phase of oncological treatment.',
-        },
-        curcuminaOnco: {
-          name: 'Terapia Curcumina Onco',
-          subtitle: 'Antiinflamatorio oncológico de precisión',
-          tags: ['Curcumina IV 150mg', 'Vitamina C 7.5g'],
-          benefits: [
-            'Precision oncological anti-inflammatory — total bioavailability',
-            'Curcumin + Vit C antioxidant synergy',
-            'Support for long pathways — comfort and resilience',
-          ],
-          duration: '60–75 min',
-        },
         equilibrioEmocionalOnco: {
           name: 'Terapia Equilibrio Emocional Onco',
           subtitle: 'Equilibrio emocional y soporte nervioso en oncología',
@@ -1527,17 +1459,6 @@ export const translations = {
           ],
           duration: '55–65 min',
         },
-        antiInflam: {
-          name: 'Terapia Anti-Inflam IV',
-          subtitle: 'Antiinflamatorio de precisión y antioxidante avanzado',
-          tags: ['Curcumina IV 150mg', 'Vitamina C 7.5g'],
-          benefits: [
-            'Precision anti-inflammatory (100× superior to capsule)',
-            'Enhanced antioxidant synergy',
-            'Joint, metabolic and digestive comfort',
-          ],
-          duration: '60–75 min',
-        },
         nadLongevity: {
           name: 'NAD+ Longevity',
           subtitle: 'Longevidad, claridad mental y cofactores B',
@@ -1581,17 +1502,6 @@ export const translations = {
             'Top-tier longevity offering',
           ],
           duration: '100–130 min',
-        },
-        polyphenolLongevity: {
-          name: 'Polyphenol Longevity',
-          subtitle: 'Poliphenol premium — longevidad, inmunidad y antioxidante celular',
-          tags: ['EGCG', 'Vitamina C 7.5g'],
-          benefits: [
-            'Powerful anti-aging polyphenol and immunomodulator',
-            'EGCG + Vitamina C antioxidant synergy with high bioavailability',
-            'Cellular longevity, cardioprotection and metabolic support',
-          ],
-          duration: '90–120 min',
         },
       },
       personalized: {
@@ -2217,29 +2127,6 @@ export const translations = {
           ],
           duration: '55–65 min',
         },
-        inmunidadIntensivaOnco: {
-          name: 'Terapia Inmunidad Intensiva Onco',
-          subtitle: 'Inmunidad alta dosis y modulación del selenio',
-          tags: ['Vitamina C 50g', 'Selenio 900mcg'],
-          benefits: [
-            'Inmunidad alta dosis + modulación Selenio',
-            'Acción pro-oxidante selectiva a alta dosis',
-            'Soporte en fase activa de tratamiento oncológico',
-          ],
-          duration: '90–120 min',
-          note: 'Protocolo adaptado a la fase del tratamiento oncológico.',
-        },
-        curcuminaOnco: {
-          name: 'Terapia Curcumina Onco',
-          subtitle: 'Antiinflamatorio oncológico de precisión',
-          tags: ['Curcumina IV 150mg', 'Vitamina C 7.5g'],
-          benefits: [
-            'Antiinflamatorio oncológico de precisión — biodisponibilidad total',
-            'Sinergia antioxidante Curcumina + Vit C',
-            'Soporte de recorridos largos — confort y resiliencia',
-          ],
-          duration: '60–75 min',
-        },
         equilibrioEmocionalOnco: {
           name: 'Terapia Equilibrio Emocional Onco',
           subtitle: 'Equilibrio emocional y soporte nervioso en oncología',
@@ -2421,17 +2308,6 @@ export const translations = {
           ],
           duration: '55–65 min',
         },
-        antiInflam: {
-          name: 'Terapia Anti-Inflam IV',
-          subtitle: 'Antiinflamatorio de precisión y antioxidante avanzado',
-          tags: ['Curcumina IV 150mg', 'Vitamina C 7.5g'],
-          benefits: [
-            'Antiinflamatorio de precisión (100× superior a la cápsula)',
-            'Sinergia antioxidante reforzada',
-            'Confort articular, metabólico y digestivo',
-          ],
-          duration: '60–75 min',
-        },
         nadLongevity: {
           name: 'NAD+ Longevity',
           subtitle: 'Longevidad, claridad mental y cofactores B',
@@ -2475,17 +2351,6 @@ export const translations = {
             'Oferta de alta gama para la longevidad',
           ],
           duration: '100–130 min',
-        },
-        polyphenolLongevity: {
-          name: 'Polyphenol Longevity',
-          subtitle: 'Poliphenol premium — longevidad, inmunidad y antioxidante celular',
-          tags: ['EGCG', 'Vitamina C 7.5g'],
-          benefits: [
-            'Potente polifenol antiedad e inmunomodulador',
-            'Sinergia antioxidante EGCG + Vitamina C alta biodisponibilidad',
-            'Longevidad celular, cardioprotección y soporte metabólico',
-          ],
-          duration: '90–120 min',
         },
       },
       personalized: {
