@@ -7,7 +7,8 @@ import { getIndexableRoutes } from './seo-paths.mjs';
 const SITE_URL = 'https://clinicaleslilas.com';
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
-const outputPath = path.resolve(__dirname, '../public/sitemap.xml');
+const distPath = path.resolve(__dirname, '../dist/sitemap.xml');
+const publicPath = path.resolve(__dirname, '../public/sitemap.xml');
 const lastmod = new Date().toISOString().slice(0, 10);
 
 function getMetadata(route) {
@@ -35,4 +36,8 @@ ${getIndexableRoutes()
 </urlset>
 `;
 
-fs.writeFileSync(outputPath, xml, 'utf8');
+// Écrit dans dist/ (build) et public/ (dev)
+fs.writeFileSync(publicPath, xml, 'utf8');
+if (fs.existsSync(path.dirname(distPath))) {
+  fs.writeFileSync(distPath, xml, 'utf8');
+}
