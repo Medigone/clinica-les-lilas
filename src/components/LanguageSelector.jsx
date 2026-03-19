@@ -10,10 +10,9 @@ const LanguageSelector = ({ inMenu = false, onLanguageSelected }) => {
     { code: 'es', name: 'Español', flag: '🇪🇸' },
   ];
 
-  const handleChange = (e) => {
+  const handleChange = async (e) => {
     const code = e.target.value;
-    console.info('[LanguageSelector] Native select change ->', code);
-    setLanguage(code);
+    await setLanguage(code);
     onLanguageSelected?.(code);
   };
 

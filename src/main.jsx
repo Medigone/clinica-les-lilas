@@ -7,14 +7,23 @@ import '@fontsource/dm-sans/600.css'
 import '@fontsource/dm-sans/700.css'
 import '@fontsource/dm-sans/400-italic.css'
 import './index.css'
-import './i18n'
+import { loadInitialTranslationBundle, useLanguageStore } from './store/languageStore'
 
-ReactDOM.createRoot(document.getElementById('root')).render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>,
-)
+const root = document.getElementById('root')
 
-// Signal pour vite-plugin-prerender — doit être APRÈS render()
-document.dispatchEvent(new Event('render-event'))
+loadInitialTranslationBundle()
+  .catch(() =>
+    import('./locales-data/es.js').then(({ default: data }) => {
+      useLanguageStore.getState().hydrateFromBundle('es', data)
+    }),
+  )
+  .then(() => {
+    ReactDOM.createRoot(root).render(
+      <React.StrictMode>
+        <App />
+      </React.StrictMode>,
+    )
+    // Signal pour vite-plugin-prerender — doit être APRÈS render()
+    document.dispatchEvent(new Event('render-event'))
+  })
 
