@@ -2,20 +2,15 @@
 <html lang="es">
   <head>
     <meta charset="UTF-8" />
-    <!--
-      GOOGLE ADS - À activer lors du lancement des campagnes :
-      1. Insérer le script gtag.js juste après cette ligne (remplacer G-XXXXXXXXXX par votre ID de mesure) :
-         <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
-         <script>
-           window.dataLayer = window.dataLayer || [];
-           function gtag(){dataLayer.push(arguments);}
-           gtag('js', new Date());
-           gtag('config', 'G-XXXXXXXXXX');
-         </script>
-      2. Conversion tracking : le formulaire Contact a un id="contact-form" pour faciliter le tracking.
-         - Page de remerciement : /contacto/gracias (utiliser pour "Conversion page" dans Google Ads)
-         - Événement : déclencher gtag('event', 'conversion', {...}) sur l'envoi réussi ou via la page de remerciement
-    -->
+    <!-- Google tag (gtag.js) — Analytics / Google Ads -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-JVVG41EQLB"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-JVVG41EQLB');
+    </script>
+    <!-- Conversions : formulaire #contact-form, page /contacto/gracias ; gtag('event','conversion',{...}) si besoin -->
     <link rel="icon" type="image/x-icon" href="/assets/favicon.ico" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="description" content="Clínica Les Lilas - Medicina integrativa y tratamientos personalizados en Alicante. Consulta inicial, hipertermia oncológica, sueroterapia." />
