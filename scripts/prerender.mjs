@@ -12,7 +12,6 @@ const HOST = '127.0.0.1';
 const PORT = 4173;
 const BASE_URL = `http://${HOST}:${PORT}`;
 const ROUTES = getPrerenderRoutes();
-const CHROME_EXECUTABLE = '/Applications/Google Chrome.app/Contents/MacOS/Google Chrome';
 
 const MIME_TYPES = {
   '.css': 'text/css; charset=utf-8',
@@ -36,6 +35,54 @@ async function pathExists(targetPath) {
   } catch {
     return false;
   }
+}
+
+function getBrowserCandidates() {
+  return [
+    process.env.PUPPETEER_EXECUTABLE_PATH,
+    process.env.CHROME_BIN,
+    process.env.CHROMIUM_BIN,
+    '/usr/bin/google-chrome-stable',
+    '/usr/bin/google-chrome',
+    '/usr/bin/chromium-browser',
+    '/usr/bin/chromium',
+    '/snap/bin/chromium',
+    '/Applications/Google Chrome.app/Contents/MacOS/Google Chrome',
+  ].filter(Boolean);
+}
+
+async function launchBrowser() {
+  const launchBaseOptions = {
+    headless: true,
+    args: ['--no-sandbox', '--disable-setuid-sandbox'],
+  };
+  const attempted = [];
+
+  for (const executablePath of getBrowserCandidates()) {
+    if (!(await pathExists(executablePath))) continue;
+
+    try {
+      return await puppeteer.launch({ ...launchBaseOptions, executablePath });
+    } catch (error) {
+      attempted.push(`${executablePath}: ${error.message}`);
+    }
+  }
+
+  try {
+    return await puppeteer.launch(launchBaseOptions);
+  } catch (error) {
+    attempted.push(`bundled-browser: ${error.message}`);
+  }
+
+  process.stderr.write(
+    [
+      '[prerender] Aucun navigateur compatible trouve; prerender ignore.',
+      'Le build Vite continue et le sitemap sera quand meme genere.',
+      attempted.length ? attempted.join(' | ') : 'Aucune tentative de lancement reussie.',
+    ].join(' '),
+  );
+
+  return null;
 }
 
 async function resolveFilePath(requestPath) {
@@ -131,11 +178,12 @@ async function main() {
 
   await new Promise((resolve) => server.listen(PORT, HOST, resolve));
 
-  const browser = await puppeteer.launch({
-    executablePath: CHROME_EXECUTABLE,
-    headless: true,
-    args: ['--no-sandbox', '--disable-setuid-sandbox'],
-  });
+  const browser = await launchBrowser();
+
+  if (!browser) {
+    await new Promise((resolve) => server.close(resolve));
+    return;
+  }
 
   try {
     for (const route of ROUTES) {
