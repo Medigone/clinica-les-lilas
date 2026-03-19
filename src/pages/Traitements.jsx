@@ -4,6 +4,9 @@ import { ArrowRight } from 'iconoir-react';
 import { useLanguageStore } from '../store/languageStore';
 import PageHead from '../components/PageHead';
 import HeroBlock from '../components/HeroBlock';
+import ResponsiveCoverImage, {
+  SIZES_TRAITEMENTS_GRID,
+} from '../components/ResponsiveCoverImage';
 import { ROUTES } from '../routes';
 
 const CARE_HERO_IMAGES = {
@@ -44,13 +47,10 @@ const Traitements = () => {
                   className="block overflow-hidden bg-white rounded-2xl border border-gray-200 hover:border-primary/20 hover:shadow-lg transition-all"
                 >
                   <div className="h-44 overflow-hidden">
-                    <img
-                      src={CARE_HERO_IMAGES[card.path] || '/assets/traitements_bg.png'}
-                      alt=""
-                      loading="lazy"
-                      decoding="async"
+                    <ResponsiveCoverImage
+                      pngSrc={CARE_HERO_IMAGES[card.path] || '/assets/traitements_bg.png'}
+                      sizes={SIZES_TRAITEMENTS_GRID}
                       className="w-full h-full object-cover object-center"
-                      aria-hidden
                     />
                   </div>
                   <div className="p-8">

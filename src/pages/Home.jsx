@@ -16,10 +16,21 @@ import {
 import { useLanguageStore } from '../store/languageStore';
 import PageHead from '../components/PageHead';
 import HeroBlock from '../components/HeroBlock';
+import ResponsiveCoverImage, {
+  SIZES_HOME_CARE_GRID,
+} from '../components/ResponsiveCoverImage';
 import CTABlock from '../components/CTABlock';
 import { ROUTES } from '../routes';
 
 const SITE_URL = 'https://clinicaleslilas.com';
+
+/** Préchargement LCP : WebP « milieu de gamme » ; le <picture> choisira la variante exacte via srcset */
+const HOME_HERO_LCP_PRELOAD = {
+  href: '/assets/bg_hero_2-1280.webp',
+  imageSrcSet:
+    '/assets/bg_hero_2-640.webp 640w, /assets/bg_hero_2-960.webp 960w, /assets/bg_hero_2-1280.webp 1280w, /assets/bg_hero_2-1600.webp 1600w',
+  imageSizes: '100vw',
+};
 
 const WEBSITE_SCHEMA = {
   '@context': 'https://schema.org',
@@ -143,6 +154,15 @@ const Home = () => {
       />
 
       <Helmet>
+        <link
+          rel="preload"
+          as="image"
+          type="image/webp"
+          href={HOME_HERO_LCP_PRELOAD.href}
+          imageSrcSet={HOME_HERO_LCP_PRELOAD.imageSrcSet}
+          imageSizes={HOME_HERO_LCP_PRELOAD.imageSizes}
+          fetchPriority="high"
+        />
         {/* WebSite schema */}
         <script type="application/ld+json">{JSON.stringify(WEBSITE_SCHEMA)}</script>
 
@@ -207,11 +227,10 @@ const Home = () => {
                   className={`block overflow-hidden rounded-[1.75rem] ${CARD_BG} border border-gray-200/60 shadow-[0_2px_12px_rgba(0,0,0,0.04)] hover:shadow-[0_4px_20px_rgba(0,0,0,0.06)] transition-all`}
                 >
                   <div className="h-44 overflow-hidden">
-                    <img
-                      src={CARE_HERO_IMAGES[card.path] || '/assets/traitements_bg.png'}
-                      alt=""
+                    <ResponsiveCoverImage
+                      pngSrc={CARE_HERO_IMAGES[card.path] || '/assets/traitements_bg.png'}
+                      sizes={SIZES_HOME_CARE_GRID}
                       className="w-full h-full object-cover object-left"
-                      aria-hidden
                     />
                   </div>
                   <div className="p-8">

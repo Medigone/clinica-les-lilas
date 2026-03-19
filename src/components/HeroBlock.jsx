@@ -1,5 +1,6 @@
 import React from 'react';
 import CTABlock from './CTABlock';
+import ResponsiveCoverImage, { SIZES_FULL_VIEWPORT } from './ResponsiveCoverImage';
 
 /**
  * Hero section unifié basé sur le modèle Hyperthermie.
@@ -25,11 +26,11 @@ const HeroBlock = ({
       }`}
     >
       <div className="absolute inset-0 z-0">
-        <img
-          src={imageSrc}
-          alt=""
+        <ResponsiveCoverImage
+          pngSrc={imageSrc}
+          sizes={SIZES_FULL_VIEWPORT}
           className="w-full h-full object-cover object-right md:object-center"
-          aria-hidden
+          priority
         />
         <div className="absolute inset-0 bg-gradient-to-r from-white/95 via-white/85 to-white/40 md:from-white/95 md:via-white/75 md:to-white/30" />
       </div>
