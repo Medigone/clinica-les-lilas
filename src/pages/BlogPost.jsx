@@ -4,6 +4,7 @@ import { Helmet } from 'react-helmet-async';
 import { NavArrowRight, NavArrowLeft } from 'iconoir-react';
 import { useLanguageStore } from '../store/languageStore';
 import PageHead from '../components/PageHead';
+import ResponsiveCoverImage from '../components/ResponsiveCoverImage';
 import CTABlock from '../components/CTABlock';
 import WhatsAppButton from '../components/WhatsAppButton';
 import NotFound from './NotFound';
@@ -308,7 +309,12 @@ const BlogPost = () => {
         <section className="pb-8">
           <div className="max-w-4xl mx-auto px-6 md:px-12 lg:px-16">
             <div className="rounded-[1.75rem] overflow-hidden aspect-[2/1] bg-primary/5">
-              <img src={image} alt={title} loading="lazy" decoding="async" className="w-full h-full object-cover" />
+              <ResponsiveCoverImage
+                pngSrc={image}
+                sizes="(max-width: 1024px) 100vw, 896px"
+                alt={title}
+                className="w-full h-full object-cover"
+              />
             </div>
           </div>
         </section>
@@ -516,11 +522,10 @@ const BlogPost = () => {
                 >
                   <div className="aspect-[16/9] overflow-hidden bg-primary/5">
                     {rp.image ? (
-                      <img
-                        src={rp.image}
+                      <ResponsiveCoverImage
+                        pngSrc={rp.image}
+                        sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
                         alt={rp.title}
-                        loading="lazy"
-                        decoding="async"
                         className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                       />
                     ) : (

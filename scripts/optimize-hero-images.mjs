@@ -13,6 +13,7 @@ const jobs = [
   { file: 'bg_hero_2.png', widths: [640, 960, 1280, 1600] },
   { file: 'about-bg.png', widths: [480, 800, 1280, 1600] },
   { file: 'iv_therapy_bg.png', widths: [640, 960, 1280, 1600] },
+  { file: 'alicante-3840x1408.jpg', widths: [640, 960, 1280, 1600, 1920] },
 ];
 
 const quality = 82;

@@ -7,6 +7,7 @@ const WEBP_WIDTHS_BY_STEM = {
   'bg_hero_2': [640, 960, 1280, 1600],
   'about-bg': [480, 800, 1280, 1600],
   iv_therapy_bg: [640, 960, 1280, 1600],
+  'alicante-3840x1408': [640, 960, 1280, 1600, 1920],
 };
 
 function stemFromPngSrc(pngSrc) {
@@ -31,7 +32,8 @@ export default function ResponsiveCoverImage({
   fetchPriority: fetchPriorityProp,
   loading: loadingProp,
   decoding = 'async',
-  'aria-hidden': ariaHidden = true,
+  alt = '',
+  'aria-hidden': ariaHidden = alt === '' ? true : undefined,
 }) {
   const stem = stemFromPngSrc(pngSrc);
   const widths = widthsOverride ?? (stem ? WEBP_WIDTHS_BY_STEM[stem] : null);
@@ -40,13 +42,13 @@ export default function ResponsiveCoverImage({
   const fetchPriority = priority ? 'high' : fetchPriorityProp;
 
   const imgProps = {
-    alt: '',
+    alt,
     className,
     sizes,
     loading,
     decoding,
     fetchPriority,
-    'aria-hidden': ariaHidden,
+    ...(ariaHidden !== undefined ? { 'aria-hidden': ariaHidden } : {}),
   };
 
   if (pngSrcMobile) {

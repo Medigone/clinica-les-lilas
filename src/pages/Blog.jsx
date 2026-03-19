@@ -4,6 +4,7 @@ import { NavArrowRight } from 'iconoir-react';
 import { useLanguageStore } from '../store/languageStore';
 import PageHead from '../components/PageHead';
 import HeroBlock from '../components/HeroBlock';
+import ResponsiveCoverImage, { SIZES_TRAITEMENTS_GRID } from '../components/ResponsiveCoverImage';
 import { getBlogPath, ROUTES } from '../routes';
 import { getBlogPosts } from '../blog';
 
@@ -92,11 +93,10 @@ const Blog = () => {
                 >
                   <div className="aspect-[16/9] overflow-hidden bg-primary/5">
                     {post.image ? (
-                      <img
-                        src={post.image}
+                      <ResponsiveCoverImage
+                        pngSrc={post.image}
+                        sizes={SIZES_TRAITEMENTS_GRID}
                         alt={post.title}
-                        loading="lazy"
-                        decoding="async"
                         className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                       />
                     ) : (
