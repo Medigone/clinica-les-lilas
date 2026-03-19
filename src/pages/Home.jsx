@@ -24,12 +24,18 @@ import { ROUTES } from '../routes';
 
 const SITE_URL = 'https://clinicaleslilas.com';
 
-/** Préchargement LCP : WebP « milieu de gamme » ; le <picture> choisira la variante exacte via srcset */
-const HOME_HERO_LCP_PRELOAD = {
+/** Préchargement LCP : mobile = PNG portrait ; desktop = WebP (le <picture> affine via srcset) */
+const HOME_HERO_LCP_PRELOAD_MOBILE = {
+  href: '/assets/iv.png',
+  media: '(max-width: 767px)',
+};
+
+const HOME_HERO_LCP_PRELOAD_DESKTOP = {
   href: '/assets/bg_hero_2-1280.webp',
   imageSrcSet:
     '/assets/bg_hero_2-640.webp 640w, /assets/bg_hero_2-960.webp 960w, /assets/bg_hero_2-1280.webp 1280w, /assets/bg_hero_2-1600.webp 1600w',
   imageSizes: '100vw',
+  media: '(min-width: 768px)',
 };
 
 const WEBSITE_SCHEMA = {
@@ -157,10 +163,18 @@ const Home = () => {
         <link
           rel="preload"
           as="image"
+          href={HOME_HERO_LCP_PRELOAD_MOBILE.href}
+          media={HOME_HERO_LCP_PRELOAD_MOBILE.media}
+          fetchPriority="high"
+        />
+        <link
+          rel="preload"
+          as="image"
           type="image/webp"
-          href={HOME_HERO_LCP_PRELOAD.href}
-          imageSrcSet={HOME_HERO_LCP_PRELOAD.imageSrcSet}
-          imageSizes={HOME_HERO_LCP_PRELOAD.imageSizes}
+          href={HOME_HERO_LCP_PRELOAD_DESKTOP.href}
+          imageSrcSet={HOME_HERO_LCP_PRELOAD_DESKTOP.imageSrcSet}
+          imageSizes={HOME_HERO_LCP_PRELOAD_DESKTOP.imageSizes}
+          media={HOME_HERO_LCP_PRELOAD_DESKTOP.media}
           fetchPriority="high"
         />
         {/* WebSite schema */}
@@ -172,6 +186,7 @@ const Home = () => {
 
       <HeroBlock
         imageSrc="/assets/bg_hero_2.png"
+        imageSrcMobile="/assets/iv.png"
         h1={t('home.hero.h1')}
         text={t('home.hero.text')}
         ctaNote={t('home.hero.ctaNote')}

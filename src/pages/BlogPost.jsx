@@ -5,6 +5,7 @@ import { NavArrowRight, NavArrowLeft } from 'iconoir-react';
 import { useLanguageStore } from '../store/languageStore';
 import PageHead from '../components/PageHead';
 import CTABlock from '../components/CTABlock';
+import WhatsAppButton from '../components/WhatsAppButton';
 import NotFound from './NotFound';
 import { CONTACT, getBlogPath, getCanonicalBlogSlug, ROUTES } from '../routes';
 import { getBlogPost, getBlogPosts } from '../blog';
@@ -48,6 +49,27 @@ const mdxComponents = {
   ),
   li: ({ children }) => <li className="text-base md:text-lg leading-relaxed">{children}</li>,
   strong: ({ children }) => <strong className="font-semibold text-primary">{children}</strong>,
+  a: ({ href, children, ...props }) => {
+    const isExternal = href?.startsWith('http');
+    const className = 'text-primary underline underline-offset-2 hover:text-primary/80 font-medium';
+    if (!isExternal && href?.startsWith('/')) {
+      return (
+        <Link to={href} className={className} {...props}>
+          {children}
+        </Link>
+      );
+    }
+    return (
+      <a
+        href={href}
+        className={className}
+        {...(isExternal ? { target: '_blank', rel: 'noopener noreferrer' } : {})}
+        {...props}
+      >
+        {children}
+      </a>
+    );
+  },
   blockquote: ({ children }) => (
     <blockquote className="border-l-4 border-primary/30 pl-4 py-2 my-6 text-text/70 italic">
       {children}
@@ -79,10 +101,10 @@ const BlogPost = () => {
 
   if (!post) return <NotFound />;
 
-  const { Component, title, description, date, image, faq, category, tags } = post;
-  const relatedPosts = allPosts
-    .filter((p) => p.slug !== canonicalSlug && p.category === category)
-    .slice(0, 2);
+  const { Component, title, description, date, image, faq, category, tags, disclaimer, metaTitle, relatedSlugs } = post;
+  const relatedPosts = relatedSlugs?.length
+    ? allPosts.filter((p) => relatedSlugs.includes(p.slug)).slice(0, 2)
+    : allPosts.filter((p) => p.slug !== canonicalSlug && p.category === category).slice(0, 2);
 
   const formatDate = (dateStr) => {
     const d = new Date(dateStr);
@@ -140,10 +162,93 @@ const BlogPost = () => {
         }
       : null;
 
+  const alicanteSchemas =
+    canonicalSlug === 'hipertermia-oncologica-alicante'
+      ? [
+          {
+            '@context': 'https://schema.org',
+            '@type': 'MedicalClinic',
+            name: 'Clínica Les Lilas',
+            url: SITE_URL,
+            telephone: '+34614067537',
+            email: 'info@clinicaleslilas.com',
+            address: {
+              '@type': 'PostalAddress',
+              streetAddress: 'Avinguda de la Diagonal, 4',
+              addressLocality: "Sant Joan d'Alacant",
+              postalCode: '03550',
+              addressRegion: 'Alicante',
+              addressCountry: 'ES',
+            },
+            geo: { '@type': 'GeoCoordinates', latitude: 38.4012, longitude: -0.4321 },
+            openingHoursSpecification: {
+              '@type': 'OpeningHoursSpecification',
+              dayOfWeek: ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday'],
+              opens: '09:00',
+              closes: '19:00',
+            },
+            medicalSpecialty: 'Oncology',
+            availableService: {
+              '@type': 'MedicalTherapy',
+              name: 'Hipertermia oncológica electromodulada',
+              description:
+                'Tratamiento complementario al tratamiento oncológico convencional que aplica calor localizado para potenciar la eficacia de la quimioterapia y la radioterapia.',
+            },
+            areaServed: ['Alicante', 'Elche', 'Torrevieja', 'Benidorm', 'Costa Blanca', 'Murcia'],
+          },
+          {
+            '@context': 'https://schema.org',
+            '@type': 'FAQPage',
+            mainEntity: [
+              {
+                '@type': 'Question',
+                name: '¿Es Clínica Les Lilas el único centro de hipertermia en Alicante?',
+                acceptedAnswer: {
+                  '@type': 'Answer',
+                  text: 'Sí. Clínica Les Lilas es el único centro especializado en hipertermia oncológica electromodulada en la provincia de Alicante y en toda la Costa Blanca.',
+                },
+              },
+              {
+                '@type': 'Question',
+                name: '¿Necesito una derivación de mi oncólogo para acceder al tratamiento?',
+                acceptedAnswer: {
+                  '@type': 'Answer',
+                  text: 'No. Los pacientes pueden contactar directamente con la clínica. En la primera consulta se valora la indicación y se coordina con el oncólogo de referencia del paciente.',
+                },
+              },
+              {
+                '@type': 'Question',
+                name: '¿Cuánto cuesta la hipertermia oncológica en Alicante?',
+                acceptedAnswer: {
+                  '@type': 'Answer',
+                  text: 'La sesión individual tiene un precio de 200 €. Existen packs de 3 y 6 sesiones. El precio incluye la sesión completa de 60-90 minutos con monitorización médica.',
+                },
+              },
+              {
+                '@type': 'Question',
+                name: '¿Puedo hacer la primera consulta por videollamada si vengo de fuera de Alicante?',
+                acceptedAnswer: {
+                  '@type': 'Answer',
+                  text: 'Sí. La primera valoración puede realizarse online para evaluar la indicación antes de planificar los desplazamientos.',
+                },
+              },
+              {
+                '@type': 'Question',
+                name: '¿La hipertermia es compatible con la quimioterapia actual?',
+                acceptedAnswer: {
+                  '@type': 'Answer',
+                  text: 'En la mayoría de los casos, sí. La coordinación con el oncólogo del paciente es parte del protocolo de la clínica. La primera consulta permite verificar la compatibilidad.',
+                },
+              },
+            ],
+          },
+        ]
+      : null;
+
   return (
     <>
       <PageHead
-        title={`${title} | Clínica Les Lilas`}
+        title={metaTitle || `${title} | Clínica Les Lilas`}
         description={description}
         path={getBlogPath(canonicalSlug)}
         keywords={tags?.join(', ')}
@@ -152,9 +257,15 @@ const BlogPost = () => {
       <Helmet>
         <script type="application/ld+json">{JSON.stringify(blogPostingSchema)}</script>
         <script type="application/ld+json">{JSON.stringify(breadcrumbSchema)}</script>
-        {faqSchema && (
-          <script type="application/ld+json">{JSON.stringify(faqSchema)}</script>
-        )}
+        {alicanteSchemas
+          ? alicanteSchemas.map((schema, i) => (
+              <script key={i} type="application/ld+json">
+                {JSON.stringify(schema)}
+              </script>
+            ))
+          : faqSchema && (
+              <script type="application/ld+json">{JSON.stringify(faqSchema)}</script>
+            )}
       </Helmet>
 
       {/* Breadcrumb */}
@@ -235,7 +346,7 @@ const BlogPost = () => {
 
       {/* FAQ */}
       {faq?.length > 0 && (
-        <section className="py-16 bg-white/60">
+        <section id="blog-faq" className="py-16 bg-white/60 scroll-mt-24">
           <div className="max-w-4xl mx-auto px-6 md:px-12 lg:px-16">
             <h2 className="text-2xl md:text-3xl font-bold text-primary mb-8">
               {t('blog.faqTitle')}
@@ -274,9 +385,120 @@ const BlogPost = () => {
       {/* CTA */}
       <section className="py-16">
         <div className="max-w-4xl mx-auto px-6 md:px-12 lg:px-16 text-center">
-          <CTABlock variant="requestConsultation" size="default" reason="blog" />
+          {(canonicalSlug === 'hipertermia-oncologica' ||
+            canonicalSlug === 'sueroterapia-micronutrientes' ||
+            canonicalSlug === 'hipertermia-oncologica-alicante') ? (
+            (() => {
+              const ctaConfigs = {
+                'hipertermia-oncologica': {
+                  reason: 'hipertermia',
+                  es: {
+                    intro: '¿Tienes preguntas sobre la hipertermia oncológica o quieres saber si es adecuada para tu situación?',
+                    whatsapp: 'Escríbenos por WhatsApp',
+                    contact: 'Solicitar consulta inicial',
+                    waText: 'Hola%2C%20me%20gustar%C3%ADa%20informarme%20sobre%20la%20hipertermia%20oncol%C3%B3gica%20electromodulada',
+                  },
+                  fr: {
+                    intro: "Des questions sur l'hyperthermie oncologique ou souhaitez-vous savoir si elle convient à votre situation ?",
+                    whatsapp: 'Écrivez-nous sur WhatsApp',
+                    contact: 'Demander une consultation initiale',
+                    waText: "Bonjour%2C%20je%20souhaiterais%20m%27informer%20sur%20l%27hyperthermie%20oncologique%20%C3%A9lectromodul%C3%A9e",
+                  },
+                  en: {
+                    intro: 'Do you have questions about oncological hyperthermia or would you like to know if it is suitable for your situation?',
+                    whatsapp: 'Contact us on WhatsApp',
+                    contact: 'Request initial consultation',
+                    waText: 'Hello%2C%20I%20would%20like%20to%20learn%20more%20about%20electromodulated%20oncological%20hyperthermia',
+                  },
+                },
+                'hipertermia-oncologica-alicante': {
+                  reason: 'hipertermia-alicante',
+                  es: {
+                    intro: 'Clínica Les Lilas — San Juan de Alicante. Único centro especializado en hipertermia oncológica electromodulada en la Costa Blanca.',
+                    whatsapp: 'Escríbenos por WhatsApp',
+                    contact: 'Solicitar consulta inicial',
+                    waText: 'Hola%2C%20me%20gustar%C3%ADa%20informarme%20sobre%20la%20hipertermia%20oncol%C3%B3gica%20en%20Alicante',
+                  },
+                  fr: {
+                    intro: "Clínica Les Lilas — San Juan de Alicante. Seul centre spécialisé en hyperthermie oncologique électromodulée sur la Costa Blanca.",
+                    whatsapp: 'Écrivez-nous sur WhatsApp',
+                    contact: 'Demander une consultation initiale',
+                    waText: "Bonjour%2C%20je%20souhaiterais%20m'informer%20sur%20l'hyperthermie%20oncologique%20%C3%A0%20Alicante",
+                  },
+                  en: {
+                    intro: 'Clínica Les Lilas — San Juan de Alicante. The only centre specialised in electromodulated oncological hyperthermia on the Costa Blanca.',
+                    whatsapp: 'Contact us on WhatsApp',
+                    contact: 'Request initial consultation',
+                    waText: 'Hello%2C%20I%20would%20like%20to%20learn%20more%20about%20oncological%20hyperthermia%20in%20Alicante',
+                  },
+                },
+                'sueroterapia-micronutrientes': {
+                  reason: 'sueroterapia',
+                  es: {
+                    intro: '¿Quieres saber qué protocolo de sueroterapia es el más adecuado para ti?',
+                    whatsapp: 'Escríbenos por WhatsApp',
+                    contact: 'Solicitar valoración personalizada',
+                    waText: 'Hola%2C%20quiero%20informarme%20sobre%20la%20sueroterapia%20intravenosa%20en%20Alicante',
+                  },
+                  fr: {
+                    intro: 'Vous voulez savoir quel protocole de suerothérapie vous convient le mieux ?',
+                    whatsapp: 'Écrivez-nous sur WhatsApp',
+                    contact: 'Demander une évaluation personnalisée',
+                    waText: "Bonjour%2C%20je%20souhaite%20m'informer%20sur%20la%20sueroth%C3%A9rapie%20intraveineuse%20%C3%A0%20Alicante",
+                  },
+                  en: {
+                    intro: 'Would you like to know which sueroterapia protocol is most suitable for you?',
+                    whatsapp: 'Contact us on WhatsApp',
+                    contact: 'Request personalised assessment',
+                    waText: 'Hello%2C%20I%20would%20like%20to%20learn%20more%20about%20intravenous%20sueroterapia%20in%20Alicante',
+                  },
+                },
+              };
+              const config = ctaConfigs[canonicalSlug];
+              const cta = config[language] || config.es;
+              return (
+                <div>
+                  <p className="text-base md:text-lg leading-relaxed text-text/80 mb-6">{cta.intro}</p>
+                  <div className="flex flex-col sm:flex-row items-center justify-center gap-3">
+                    <a
+                      href={`https://wa.me/34614067537?text=${cta.waText}`}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="inline-flex items-center justify-center px-4 py-2 rounded-lg font-medium text-sm text-white bg-[#25D366] hover:bg-[#1ebe5a] hover:shadow-lg transition-all"
+                    >
+                      {cta.whatsapp}
+                    </a>
+                    <Link
+                      to={`${ROUTES.CONTACT}?reason=${config.reason}&language=${language}`}
+                      className="inline-flex items-center justify-center px-4 py-2 rounded-lg font-medium text-sm text-white bg-primary hover:bg-primary/90 hover:shadow-lg transition-all"
+                    >
+                      {cta.contact}
+                    </Link>
+                  </div>
+                </div>
+              );
+            })()
+          ) : (
+            <div className="flex flex-col sm:flex-row items-center justify-center gap-3">
+              <WhatsAppButton shortLabel className="!px-4 !py-2 !rounded-lg !text-sm" />
+              <Link
+                to={`${ROUTES.CONTACT}?reason=blog&language=${language}`}
+                className="inline-flex items-center justify-center px-4 py-2 rounded-lg font-medium text-sm text-white bg-primary hover:bg-primary/90 hover:shadow-lg transition-all"
+              >
+                {t('cta.requestConsultation')}
+              </Link>
+            </div>
+          )}
         </div>
       </section>
+
+      {disclaimer && (
+        <section className="pb-8">
+          <div className="max-w-4xl mx-auto px-6 md:px-12 lg:px-16">
+            <p className="text-sm text-text/60 leading-relaxed italic">{disclaimer}</p>
+          </div>
+        </section>
+      )}
 
       {/* Related articles */}
       {relatedPosts.length > 0 && (

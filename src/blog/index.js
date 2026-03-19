@@ -23,6 +23,9 @@ export function getBlogPosts(language) {
       tags: fm.tags || [],
       image: fm.image,
       faq: fm.faq || [],
+      disclaimer: fm.disclaimer || null,
+      metaTitle: fm.metaTitle || null,
+      relatedSlugs: fm.relatedSlugs || null,
       Component: mod.default,
     });
   }

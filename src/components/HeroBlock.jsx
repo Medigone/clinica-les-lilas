@@ -8,6 +8,7 @@ import ResponsiveCoverImage, { SIZES_FULL_VIEWPORT } from './ResponsiveCoverImag
  */
 const HeroBlock = ({
   imageSrc,
+  imageSrcMobile,
   h1,
   subtitle,
   text,
@@ -28,8 +29,13 @@ const HeroBlock = ({
       <div className="absolute inset-0 z-0">
         <ResponsiveCoverImage
           pngSrc={imageSrc}
+          pngSrcMobile={imageSrcMobile}
           sizes={SIZES_FULL_VIEWPORT}
-          className="w-full h-full object-cover object-right md:object-center"
+          className={
+            imageSrcMobile
+              ? 'w-full h-full object-cover object-center md:object-right lg:object-center'
+              : 'w-full h-full object-cover object-right md:object-center'
+          }
           priority
         />
         <div className="absolute inset-0 bg-gradient-to-r from-white/95 via-white/85 to-white/40 md:from-white/95 md:via-white/75 md:to-white/30" />

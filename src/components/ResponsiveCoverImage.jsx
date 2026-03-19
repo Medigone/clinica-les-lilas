@@ -17,8 +17,12 @@ function stemFromPngSrc(pngSrc) {
 /**
  * Fond en object-cover : WebP responsives + repli PNG.
  */
+const MD_UP_MEDIA = '(min-width: 768px)';
+
 export default function ResponsiveCoverImage({
   pngSrc,
+  /** Image affichée sous md (ex. portrait mobile) ; pngSrc sert d’art pour md+ */
+  pngSrcMobile,
   sizes,
   className,
   widths: widthsOverride,
@@ -44,6 +48,28 @@ export default function ResponsiveCoverImage({
     fetchPriority,
     'aria-hidden': ariaHidden,
   };
+
+  if (pngSrcMobile) {
+    const webpSrcSet =
+      stem && widths?.length
+        ? widths.map((w) => `/assets/${stem}-${w}.webp ${w}w`).join(', ')
+        : null;
+
+    return (
+      <picture className="block h-full w-full">
+        {webpSrcSet && (
+          <source
+            type="image/webp"
+            media={MD_UP_MEDIA}
+            srcSet={webpSrcSet}
+            sizes={sizes}
+          />
+        )}
+        <source media={MD_UP_MEDIA} srcSet={pngSrc} sizes={sizes} />
+        <img src={pngSrcMobile} {...imgProps} />
+      </picture>
+    );
+  }
 
   if (!stem || !widths?.length) {
     return <img src={pngSrc} {...imgProps} />;
