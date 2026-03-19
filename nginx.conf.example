@@ -28,7 +28,7 @@ server {
   rewrite ^/blog/medecine-regenerative-cellules$ /blog/medicina-regenerativa-reparacion-celular permanent;
 
   location / {
-    try_files $uri $uri/ $uri.html =404;
+    try_files $uri $uri/index.html $uri.html /index.html;
   }
 
   error_page 404 /404.html;
