@@ -3,7 +3,7 @@ RewriteEngine On
 Redirect 301 /notre-approche /medicina-integrativa
 Redirect 301 /traitements /tratamientos
 Redirect 301 /traitements/hyperthermie-oncologique /tratamientos/hipertermia-oncologica
-Redirect 301 /traitements/sueroterapia /tratamientos/sueroterapia
+Redirect 301 /traitements/sueroterapia /tratamientos/bienestar-prevencion
 Redirect 301 /traitements/medecine-regenerative /tratamientos
 Redirect 301 /traitements/soutien-immunitaire /tratamientos
 Redirect 301 /a-propos /sobre-nosotros
@@ -12,7 +12,7 @@ Redirect 301 /contact/merci /contacto/gracias
 Redirect 301 /mentions-legales /aviso-legal
 Redirect 301 /politique-confidentialite /aviso-legal
 Redirect 301 /hipertermia-oncologica /tratamientos/hipertermia-oncologica
-Redirect 301 /sueroterapia /tratamientos/sueroterapia
+Redirect 301 /sueroterapia /tratamientos/bienestar-prevencion
 Redirect 301 /medicina-regenerativa /tratamientos
 Redirect 301 /soporte-inmunologico /tratamientos
 Redirect 301 /faq /

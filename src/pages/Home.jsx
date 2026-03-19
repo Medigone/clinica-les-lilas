@@ -143,12 +143,6 @@ const Home = () => {
       />
 
       <Helmet>
-        {/* hreflang — site monolingue côté URL, les 3 locales pointent vers la même racine */}
-        <link rel="alternate" hreflang="es" href={`${SITE_URL}/`} />
-        <link rel="alternate" hreflang="fr" href={`${SITE_URL}/`} />
-        <link rel="alternate" hreflang="en" href={`${SITE_URL}/`} />
-        <link rel="alternate" hreflang="x-default" href={`${SITE_URL}/`} />
-
         {/* WebSite schema */}
         <script type="application/ld+json">{JSON.stringify(WEBSITE_SCHEMA)}</script>
 

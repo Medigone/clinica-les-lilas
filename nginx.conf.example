@@ -8,7 +8,7 @@ server {
   rewrite ^/notre-approche$ /medicina-integrativa permanent;
   rewrite ^/traitements$ /tratamientos permanent;
   rewrite ^/traitements/hyperthermie-oncologique$ /tratamientos/hipertermia-oncologica permanent;
-  rewrite ^/traitements/sueroterapia$ /tratamientos/sueroterapia permanent;
+  rewrite ^/traitements/sueroterapia$ /tratamientos/bienestar-prevencion permanent;
   rewrite ^/traitements/medecine-regenerative$ /tratamientos permanent;
   rewrite ^/traitements/soutien-immunitaire$ /tratamientos permanent;
   rewrite ^/a-propos$ /sobre-nosotros permanent;
@@ -17,7 +17,7 @@ server {
   rewrite ^/mentions-legales$ /aviso-legal permanent;
   rewrite ^/politique-confidentialite$ /aviso-legal permanent;
   rewrite ^/hipertermia-oncologica$ /tratamientos/hipertermia-oncologica permanent;
-  rewrite ^/sueroterapia$ /tratamientos/sueroterapia permanent;
+  rewrite ^/sueroterapia$ /tratamientos/bienestar-prevencion permanent;
   rewrite ^/medicina-regenerativa$ /tratamientos permanent;
   rewrite ^/soporte-inmunologico$ /tratamientos permanent;
   rewrite ^/faq$ / permanent;

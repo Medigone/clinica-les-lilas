@@ -63,11 +63,6 @@ const Hyperthermie = () => {
         <script type="application/ld+json">{JSON.stringify(faqSchema)}</script>
         {/* LocalBusiness + MedicalClinic structured data */}
         <script type="application/ld+json">{JSON.stringify(localBusinessSchema)}</script>
-        {/* hreflang for es / fr / en */}
-        <link rel="alternate" hrefLang="es" href={`${SITE_URL}/tratamientos/hipertermia-oncologica`} />
-        <link rel="alternate" hrefLang="fr" href={`${SITE_URL}/traitements/hyperthermie-oncologique`} />
-        <link rel="alternate" hrefLang="en" href={`${SITE_URL}/tratamientos/hipertermia-oncologica`} />
-        <link rel="alternate" hrefLang="x-default" href={`${SITE_URL}/tratamientos/hipertermia-oncologica`} />
       </Helmet>
       <SchemaServiceOrg
         name={t('meta.hyperthermie.title')}
